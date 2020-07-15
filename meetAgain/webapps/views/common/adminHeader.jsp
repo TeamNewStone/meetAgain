@@ -38,7 +38,16 @@
     </button>
     <div class="collapse navbar-collapse mr-auto" id="navbarNavDropdown-3">
       <ul class="navbar-nav ml-auto text-center">
-        <li class="nav-item mr-2">
+        
+        <li class="nav-item text-white">
+          <a class="nav-link" href="#" style="position: relative; right: 10%; top: 25%;">비밀번호 변경</a>
+        </li>
+        
+        <li class="nav-item text-white">
+          <a class="nav-link" href="#" style="position: relative; right: 5%; top: 25%;">로그아웃</a>
+        </li>
+        
+<!--         <li class="nav-item mr-2">
           <a class="btn btn-outline-light" href="/index.html">
             Live Preview
           </a>
@@ -48,7 +57,8 @@
           <a class="btn btn-light" href="#">
             Download
           </a>
-        </li>
+        </li> -->
+        
       </ul>
     </div>
 </nav>

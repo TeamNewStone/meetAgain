@@ -20,7 +20,7 @@
     <script src="resources/js/lazy.js"></script>
     <script src="resources/js/demo.js"></script>
 
-    <script>
+<!--     <script>
 
 
       function show1(){
@@ -43,6 +43,6 @@
 
       });
 
-    </script>
+    </script> -->
   </body>
 </html>

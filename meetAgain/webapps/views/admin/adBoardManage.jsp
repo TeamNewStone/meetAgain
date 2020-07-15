@@ -9,39 +9,33 @@ $('.nav-item').addClass('canSee').removeClass('cantSee');
 </script>
 
         <div class="col-md-8 offset-md-2 content">
-          <h2>Alerts</h2>
-<p>You can create alerts using the <code>.alert</code> class combined with a contextual modifier class to provide colour (e.g. <code>.alert-info</code>).</p>
+          <h2>게시글 관리</h2>
 
 <div class="component">
-  <!-- Primary Alert -->
-  <div class="alert alert-primary" role="alert">
-    <strong>Primary!</strong> This is an primary alert.
-  </div>
-
-  <!-- Secondary Alert -->
-  <div class="alert alert-secondary" role="alert">
-    <strong>Secondary!</strong> This is an secondary alert.
-  </div>
-
-  <!-- Info Alert -->
-  <div class="alert alert-info" role="alert">
-    <strong>Info!</strong> This is an info alert.
-  </div>
-
-  <!-- Success Alert -->
-  <div class="alert alert-success" role="alert">
-    <strong>Success!</strong> This is an success alert.
-  </div>
-
-  <!-- Warning Alert -->
-  <div class="alert alert-warning" role="alert">
-    <strong>Warning!</strong> This is an warning alert.
-  </div>
-
-  <!-- Danger Alert -->
-  <div class="alert alert-danger" role="alert">
-    <strong>Danger!</strong> This is an danger alert.
-  </div>
+<table style="text-align:center;margin:auto; width:120%;">
+<thead>
+<tr>
+	<th>No.</th>
+	<th>모임명</th>
+	<th>게시글 제목</th>
+	<th>신고 사유</th>
+	<th>신고자</th>
+	<th>상태</th>
+</tr>
+</thead>
+<tbody>
+<c:forEach var="i" begin="1" end="3">
+<tr>
+	<td>${ i }</td>
+	<td>test ${ i }</td>
+	<td>test ${ i }</td>
+	<td>test ${ i }</td>
+	<td>test ${ i }</td>
+	<td>test ${ i }</td>
+</tr>
+</c:forEach>
+</tbody>
+</table>
 </div>
 <pre><code>&lt;!-- Primary Alert --&gt;
 &lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
