@@ -16,12 +16,11 @@
 		</ul>
 	</div>
 	<div class="social mt-4 mt-md-0">
+	<p>Contact Us</p>
     <p>
       Team NewStone <br>
-
-      서울특별시 강남구 역삼동 <br>
-      호산빌딩 KH정보교육원 352 Class <br>
-
+            서울특별시 강남구 역삼동 <br>
+            호산빌딩 KH정보교육원 352 Class <br>
       031-123-4567 <br>
     </p>
   </div>

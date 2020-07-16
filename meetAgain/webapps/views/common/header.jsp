@@ -22,7 +22,35 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <style>
-      @media(max-width: 760px) { #piechart { width: 100px !important; height: 100px  !important;} }
+    #piechart{
+    	width: 400px; 
+    	height: 500px; 
+    	text-align: center;
+    }
+      @media(max-width:720px){
+      
+      }
+      @media(min-width:720px)and(max-width:990px){
+      
+	      #piechart{
+	      	width : 1px;
+	      	height : 10px;
+	      }
+      }
+      @media(min-width:990px){
+      
+      	#login{
+      		position: absolute;
+      		right: 29%;
+      		top : 25%;
+      	}
+      	
+      	#userIcon{
+      	position : absolute;
+      	right: 26%;
+      	top:15%;
+      	}
+      }
     </style>
   </head>
   <body class="index">
@@ -52,13 +80,12 @@
                 <a class="dropdown-item" href="landing.html" target="_blank">Landing</a>
               </div>
             </li>
-            <li class="nav-item text-white">
-              <a class="nav-link" href="#" style="position: absolute; right: 10%; top: 25%;">로그인</a>
+            <li class="nav-item dropdown mx-2 text-white" id="login">
+              <a class="nav-link" href="#">로그인</a>
             </li>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <li class="nav-item mx-2">
-              <img src="resources/img/usericon.png" alt="usericon" data-toggle="dropdown" class="img-fluid rounded-circle" style="width : 70px; position: absolute;
-              right: 5%; top: 5%;">
+            <li class="nav-item dropdown mx-2" id="userIcon">
+              <img src="resources/img/usericon.png" alt="usericon" data-toggle="dropdown" class="img-fluid rounded-circle" style="width : 60px;">
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="nav-inner-primary_dropdown_1">
                 <a class="dropdown-item" href="#" target="_blank">로그아웃</a>
                 <a class="dropdown-item" href="profile.html" target="_blank">마이페이지</a>
