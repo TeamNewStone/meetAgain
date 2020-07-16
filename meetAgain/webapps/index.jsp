@@ -5,32 +5,42 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <c:import url="/views/common/header.jsp" />
-    <div class="page-hero" id="banner">
-      <div class="container">
-        <div class="row"> 
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="col-12 col-lg-12" src="resources/img/dog-2.jpg" alt="First slide">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="resources/img/dog-3.jpg" alt="Second slide">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="resources/img/dog-4.jpg" alt="Third slide">
-        </div>
-      </div>
+
+<div class="row"> 
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="resources/img/dog-2.jpg" alt="First slide">
     </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="resources/img/dog-3.jpg" alt="Second slide">
     </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="resources/img/dog-4.jpg" alt="Third slide">
     </div>
-    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
   <!-- 차트 시작 -->
 	<div class="page-hero" id="banner">
   	<div class="container">
       <div class="row"> 
         <div class="col-sm-4 col-lg-5">
           <h4>7월 첫째주 모임이 제일 많이 생성된 지역</h4>
-          <div id="piechart" style="width: 500px; height: 500px; text-align: center;"></div>
+          <div id="piechart"></div>
         </div>
         <div class="col-sm-4 col-lg-5 offset-lg-1">
           <h4>7월 첫째주 모임이 제일 많이 생성된 지역</h4>
