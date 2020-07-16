@@ -14,11 +14,11 @@
     <meta name="description" content="A new design system for developing with less effort.">
     <meta name="author" content="BootstrapBay">
 
-    <link href="assets/img/favicon.ico" rel="icon" type="image/png">
+    <link href="../../resources/img/favicon.ico" rel="icon" type="image/png">
     
-    <link rel="stylesheet" href="./assets/vendor/bootstrap/bootstrap.min.css">
-		<link rel="stylesheet" href="./assets/css/lazy.css">
-		<link rel="stylesheet" href="./assets/css/demo.css">
+    <link rel="stylesheet" href="../../resources/vendor/bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="../../resources/css/lazy.css">
+		<link rel="stylesheet" href="../../resources/css/demo.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
     <style>
       #textFm{
@@ -34,7 +34,7 @@
     <nav class="navbar navbar-expand-md navbar-dark bg-primary mb-4 fixed-top">
     <div class="container">
 
-      <a class="navbar-brand d-flex align-items-center" href="./"><img src="assets/img/logo_white.svg" alt="Example Navbar 1" class="mr-2" height="30">다시 만나</a>
+      <a class="navbar-brand d-flex align-items-center" href="./"><img src="../../resources/img/logo_white.svg" alt="Example Navbar 1" class="mr-2" height="30">다시 만나</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown-3" aria-controls="navbarNavDropdown-3"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -68,7 +68,7 @@
   <div class="info">
     <div class="row">
 	    <div class="col-12 col-md-4 text-center">
-		    <img src="assets/img/lorde.png" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 180px;">
+		    <img src="../../resources/img/lorde.png" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 180px;">
 	    </div>
 	    
       <div class="col-12 col-md-4">
@@ -131,7 +131,7 @@
         
         <div class="row">
           <div class="col-12 col-md-4">
-          <button type="button" class="btn btn-outline-primary btn-pill" onclick="myPage1();">마이페이지</button></div>
+          <button type="button" class="btn btn-outline-primary btn-pill" onclick="mainMyPage();">마이페이지</button></div>
           <div class="col-12 col-md-4">
           <button type="button" class="btn btn-outline-primary btn-pill" onclick="myPageOther();">부가정보</button></div>
           <div class="col-12 col-md-4">
@@ -161,28 +161,28 @@
     <div class="tab-pane fade show active" id="photos">
 				<div class="row">					
 					<div class="col-12 col-md-4">
-						<div class="square" style="background-image:url('assets/img/dog-5.jpg');"></div>
+						<div class="square" style="background-image:url('../../resources/img/dog-5.jpg');"></div>
           </div>
           
           <div class="col-12 col-md-8">
-            <div class="square" style="background-image:url('assets/img/dog-5.jpg');"></div>
+            <div class="square" style="background-image:url('../../resources/img/dog-5.jpg');"></div>
           </div>
           
           <div class="col-12 col-md-8">
-            <div class="square" style="background-image:url('assets/img/dog-5.jpg');"></div>
+            <div class="square" style="background-image:url('../../resources/img/dog-5.jpg');"></div>
           </div>
 
 					<div class="col-12 col-md-4">
-						<div class="square" style="background-image:url('assets/img/dog-6.jpg');"></div>
+						<div class="square" style="background-image:url('../../resources/img/dog-6.jpg');"></div>
 					</div>
 					<div class="col-12 col-md-4">
-						<div class="square" style="background-image:url('assets/img/dog-7.jpg');"></div>
+						<div class="square" style="background-image:url('../../resources/img/dog-7.jpg');"></div>
 					</div>
 					<div class="col-12 col-md-4">
-						<!-- <div class="square" style="background-image:url('assets/img/dog-7.jpg');"></div> -->
+						<!-- <div class="square" style="background-image:url('../../resources/img/dog-7.jpg');"></div> -->
 					</div>
 					<div class="col-12 col-md-4">
-						<div class="square" style="background-image:url('assets/img/dog-3.jpg');"></div>
+						<div class="square" style="background-image:url('../../resources/img/dog-3.jpg');"></div>
 					</div>
 				</div>
     </div>				      
@@ -232,23 +232,23 @@
 
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="./assets/vendor/jquery/jquery.min.js"></script>
-    <script src="./assets/vendor/popper/popper.min.js"></script>
-    <script src="./assets/vendor/bootstrap/bootstrap.min.js" ></script>
+    <script src="../../resources/vendor/jquery/jquery.min.js"></script>
+    <script src="../../resources/vendor/popper/popper.min.js"></script>
+    <script src="../../resources/vendor/bootstrap/bootstrap.min.js" ></script>
 
     <!-- optional plugins -->
-    <script src="./assets/vendor/nouislider/js/nouislider.min.js"></script>
+    <script src="../../resources/vendor/nouislider/js/nouislider.min.js"></script>
 
     <!--   lazy javascript -->
-    <script src="./assets/js/lazy.js"></script>
+    <script src="../../resources/js/lazy.js"></script>
     
     <!-- 스크립트작성 -->
     <script>
-      function mainHome() {
-        location.href="myPage1.html";
+      function mainMyPage() {
+        location.href="myPage1.jsp";
       }
       function myPageOther() {        
-        location.href="myPageOther.html";
+        location.href="myPageOther.jsp";
       }    
     </script>
   </body>
