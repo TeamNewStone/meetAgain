@@ -45,18 +45,18 @@
               <a class="nav-link" href="#" id="nav-inner-primary_dropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">공지사항</a>
             </li>
             <li class="nav-item dropdown mx-8" id="review">
-              <a class="nav-link" href="#" id="nav-inner-primary_dropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">소모임</a>
+              <a class="nav-link" href="#" id="nav-inner-primary_dropdown_2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">소모임</a>
             </li>
             </ul>
             </div>
             <div class="text-right">
 			<ul class="navbar-nav" id="login-nav">
             <li class="nav-item dropdown mx-2 text-white" id="login">
-              <a class="nav-link" href="#">로그인</a>
+              <a class="nav-link" href="/meetAgain/views/login.jsp">로그인</a>
             </li>
             <li class="nav-item dropdown mx-2" id="userIcon">
-              <img src="/meetAgain/resources/img/usericon.png" alt="usericon" data-toggle="dropdown" class="img-fluid rounded-circle" style="width : 60px;">
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="nav-inner-primary_dropdown_1">
+              <img src="/meetAgain/resources/img/usericon.png" alt="usericon" data-toggle="dropdown" class="test img-fluid rounded-circle" style="width : 60px;">
+              <div class="dropdown-menu dropdown-menu-right dropMenuDiv" aria-labelledby="nav-inner-primary_dropdown_3">
                 <a class="dropdown-item" href="#" target="_blank">로그아웃</a>
                 <a class="dropdown-item" href="profile.html" target="_blank">마이페이지</a>
                 <a class="dropdown-item" href="#" target="_blank">개인정보수정</a>
@@ -77,5 +77,8 @@
 	  		  $('#userIcon').css('width','40px');
 	  	  } 
 	    });
+    $('.test').on('click',function(){
+    	$('.dropMenuDiv').toggle();
+    });
     </script>
     <!-- header 끝 -->

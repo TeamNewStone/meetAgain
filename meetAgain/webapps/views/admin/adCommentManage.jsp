@@ -12,15 +12,23 @@ $('.nav-item').addClass('canSee').removeClass('cantSee');
           <h2>댓글 관리</h2>
 
 <div class="component">
-<table class="table" style="text-align:center;margin:auto; width:130%;">
+<table class="table" style="text-align:center;margin:auto; width:100%;">
+<colgroup>
+<col width="5%"/>
+<col width="20%"/>
+<col width="30%"/>
+<col width="15%"/>
+<col width="15%"/>
+<col width="15%"/>
+</colgroup>
 <thead>
 <tr>
 	<th>No.</th>
-	<th width="20%">댓글 내용</th>
-	<th width="30%">신고 회원</th>
+	<th>댓글 내용</th>
+	<th>신고 회원</th>
 	<th>신고 사유</th>
 	<th>신고자</th>
-	<th width="15%">상태</th>
+	<th>상태</th>
 </tr>
 </thead>
 <tbody>
