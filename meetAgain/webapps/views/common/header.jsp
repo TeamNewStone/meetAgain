@@ -23,9 +23,31 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="/meetAgain/resources/vendor/jquery/jquery-3.5.1.min.js"></script>
     <style>
-		#login{
-			margin-top: 5%;
-		}
+@media(min-width :992px) {
+	#login {
+		position: absolute;
+		right: 25%;
+		top: 25%;
+	}
+	#userIcon {
+		position: absolute;
+		right: 20%;
+		top: 15%;
+	}
+}
+
+@media(min-width :1601px) {
+	#login {
+		position: absolute;
+		right: 29%;
+		top: 25%;
+	}
+	#userIcon {
+		position: absolute;
+		right: 26%;
+		top: 15%;
+	}
+}
     </style>
   </head>
   <body class="index">
@@ -38,34 +60,30 @@
           aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse col-12" id="navbarNavDropdown-7">
-        	<div class="text-right col-8">
-	        <ul class="navbar-nav col-4">
-            <li class="nav-item dropdown mx-8" id="notice">
-              <a class="nav-link" href="#" id="nav-inner-primary_dropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">공지사항</a>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown-7">
+	        <ul class="navbar-nav">
+            <li class="nav-item dropdown" id="notice">
+              <a class="nav-link" href="#" id="nav-inner-primary_dropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="goNotice();">공지사항</a>
             </li>
-            <li class="nav-item dropdown mx-8" id="review">
-              <a class="nav-link" href="#" id="nav-inner-primary_dropdown_2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">소모임</a>
+            <li class="nav-item dropdown" id="review">
+              <a class="nav-link" href="#" id="nav-inner-primary_dropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">소모임</a>
             </li>
             </ul>
             </div>
-            <div class="text-right">
 			<ul class="navbar-nav" id="login-nav">
-            <li class="nav-item dropdown mx-2 text-white" id="login">
+            <li class="nav-item dropdown text-white" id="login">
               <a class="nav-link" href="/meetAgain/views/login.jsp">로그인</a>
             </li>
-            <li class="nav-item dropdown mx-2" id="userIcon">
+            <li class="nav-item dropdown" id="userIcon">
               <img src="/meetAgain/resources/img/usericon.png" alt="usericon" data-toggle="dropdown" class="test img-fluid rounded-circle" style="width : 60px;">
-              <div class="dropdown-menu dropdown-menu-right dropMenuDiv" aria-labelledby="nav-inner-primary_dropdown_3">
+              <div class="dropdown-menu dropdown-menu-right dropMenuDiv" aria-labelledby="nav-inner-primary_dropdown_1">
                 <a class="dropdown-item" href="#" target="_blank">로그아웃</a>
                 <a class="dropdown-item" href="profile.html" target="_blank">마이페이지</a>
                 <a class="dropdown-item" href="#" target="_blank">개인정보수정</a>
               </div>
             </li>
           </ul>
-          </div>
         </div>
-      </div>
     </nav>
     <script>
 			</div>
