@@ -14,19 +14,23 @@
     <meta name="description" content="A new design system for developing with less effort.">
     <meta name="author" content="BootstrapBay">
 
-    <link href="assets/img/favicon.ico" rel="icon" type="image/png">
+    <link href="../../resources/img/favicon.ico" rel="icon" type="image/png">
     
-    <link rel="stylesheet" href="./assets/vendor/bootstrap/bootstrap.min.css">
-		<link rel="stylesheet" href="./assets/css/lazy.css">
-		<link rel="stylesheet" href="./assets/css/demo.css">
+    <link rel="stylesheet" href="../../resources/vendor/bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="../../resources/css/lazy.css">
+		<link rel="stylesheet" href="../../resources/css/demo.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
     <style>
       #textFm{
         margin-top: 5%;
         margin-bottom: 5%;        
       }
+      #_mbtiBtn{
+        font-size: 10px;
+      }
       .btn-pill{
         font-size: 10px;
+        text-align: center;
       }
     </style>
   </head>
@@ -34,7 +38,7 @@
     <nav class="navbar navbar-expand-md navbar-dark bg-primary mb-4 fixed-top">
     <div class="container">
 
-      <a class="navbar-brand d-flex align-items-center" href="./"><img src="assets/img/logo_white.svg" alt="Example Navbar 1" class="mr-2" height="30">다시 만나</a>
+      <a class="navbar-brand d-flex align-items-center" href="./"><img src="../../resources/img/logo_white.svg" alt="Example Navbar 1" class="mr-2" height="30">다시 만나</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown-3" aria-controls="navbarNavDropdown-3"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -63,89 +67,131 @@
     </div>
   </nav>
 
-<!-- 기본정보 시작 -->
+<!-- 부가정보 시작 -->
 <div class="container">
   <div class="info">
     <div class="row">
 	    <div class="col-12 col-md-4 text-center">
-		    <img src="assets/img/lorde.png" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 180px;">
+		    <img src="../../resources/img/lorde.png" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 180px;">
 	    </div>
 	    
       <div class="col-12 col-md-4">
         
         <div class="row" id="textline">            
           <div class="col-12 col-md-4 text-right"><p id="textFm">별자리</p></div>
-          <div class="col-12 col-md-8"><input type="email" class="form-control" id="email" placeholder="Your Email Address"></div>
-          <div class="col-12 col-md-4 text-right"><p id="textFm">MBTI</p></div>
+          <div class="col-12 col-md-4" style="margin-bottom: 10px;"><input type="email" class="form-control"></div>
           <div class="col-12 col-md-4"></div>
-          <div class="col-12 col-md-4"><button type="button" class="btn btn-light" style="font-size: 10px;
+
+          <div class="col-12 col-md-4 text-right"><p id="textFm">MBTI</p></div>
+          <div class="col-12 col-md-4" style="margin-bottom: 10px;"><input type="text"class="form-control"></div>
+          
+          <div class="col-12 col-md-4"><button type="button" id="_mbtiBtn" class="btn btn-light" style="font-size: 10px;
             padding-bottom: 3px; 
             padding-top: 3px;
             padding-left: 5px;
             padding-right: 3px;
             margin-left: 20px;
-            margin-top: 5px;">테스트해보기</button></div>
+            margin-top: 7px;" onclick=mbtiTest();>테스트해보기</button></div>
           <div class="col-12 col-md-4 text-right"><p id="textFm">혈액형</p></div>
-          <div class="col-12 col-md-8"><input type="email" class="form-control" id="email" placeholder="Your Email Address"></div>
-          <div class="col-12 col-md-4 text-right"><p id="textFm">키워드</p></div>
-          <div class="col-12 col-md-8"><input type="email" class="form-control" id="email" placeholder="Your Email Address"></div>
+          <div class="col-12 col-md-8" style="margin-top: 5px; margin-bottom: 10px;">A</div>
+          <div class="col-12 col-md-4 text-right" style="margin-top: 5px;"><p id="textFm">키워드</p></div>
+          <div class="col-12 col-md-8"><input type="text"class="form-control"></div>
+          
+          <div class="col-12 col-md-12"><br></div>
+          
+          <div class="form-group col-12 text-center" style="background: beige;">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="_makeitem" value="option1">
+              <label class="form-check-label" for="inlineCheckbox1">만들기</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="_car" value="option2">
+              <label class="form-check-label" for="inlineCheckbox2">자동차</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="_book" value="option1">
+              <label class="form-check-label" for="inlineCheckbox1">책</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="_service" value="option2">
+              <label class="form-check-label" for="inlineCheckbox2">봉사</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="_game" value="option1">
+              <label class="form-check-label" for="inlineCheckbox1">게임</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="_lang" value="option2">
+              <label class="form-check-label" for="inlineCheckbox2">외국어</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="_relation" value="option1">
+              <label class="form-check-label" for="inlineCheckbox1">사교/인맥</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="_cook" value="option2">
+              <label class="form-check-label" for="inlineCheckbox2">요리</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="_concert" value="option1">
+              <label class="form-check-label" for="inlineCheckbox1">문화/공연</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="_pics" value="option2">
+              <label class="form-check-label" for="inlineCheckbox2">사진/영상</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="_animal" value="option1">
+              <label class="form-check-label" for="inlineCheckbox1">반려동물</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="_music" value="option2">
+              <label class="form-check-label" for="inlineCheckbox2">음악/댄스</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="_sport" value="option2">
+              <label class="form-check-label" for="inlineCheckbox2">스포츠</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="_travel" value="option2">
+              <label class="form-check-label" for="inlineCheckbox2">여행</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="_freedom" value="option2">
+              <label class="form-check-label" for="inlineCheckbox2">자유주제</label>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-12"><br></div>
+
+          <!-- <div class="row"> -->
+            <div class="col-12 col-md-4"><button type="button" class="btn btn-outline-primary btn-pill" onclick="mainMyPage();">마이페이지</button></div>          
+            <div class="col-12 col-md-4"><button type="reset" class="btn btn-outline-primary btn-pill" style="margin-left: 13px;">초기화</button></div>          
+            <div class="col-12 col-md-4"><button type="button" class="btn btn-outline-primary btn-pill">수정완료</button></div>  
+          <!-- </div> -->
+
         </div>
 
       </div>
 
     </div>
-  </div>
-	<!-- <div class="navigation d-flex justify-content-center">
-    <ul class="nav nav-primary nav-tabs mt-3 d-flex flex-column flex-md-row">
-      <li class="nav-item">
-        <a class="nav-link active" data-toggle="tab" href="#photos">
-          <i class="fa fa-heart"></i> 나의 소모임
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#saved">
-          <i class="fa fa-list-alt"></i> 작성한 게시글
-        </a>
-      </li>      
-    </ul>
-  </div> -->  
+  </div>	
   
   <div class="profile-tabs tab-content">
     <div class="tab-pane fade show active" id="photos">
 				<div class="row">					
 					<div class="col-12 col-md-4">
-						<div class="square" style="background-image:url('assets/img/dog-5.jpg');"></div>
-          </div>
-          
+						<div class="square" style="background-image:url('../../resources/img/dog-5.jpg');"></div>
+          </div>          
           <div class="col-12 col-md-8">
-            <div class="square" style="background-image:url('assets/img/dog-5.jpg');"></div>
+            <div class="square" style="background-image:url('../../resources/img/dog-5.jpg');"></div>
           </div>
-          
-          <div class="col-12 col-md-8">
-            <div class="square" style="background-image:url('assets/img/dog-5.jpg');"></div>
-          </div>
-
-					<div class="col-12 col-md-4">
-						<div class="square" style="background-image:url('assets/img/dog-6.jpg');"></div>
-					</div>
-					<div class="col-12 col-md-4">
-						<div class="square" style="background-image:url('assets/img/dog-7.jpg');"></div>
-					</div>
-					<div class="col-12 col-md-4">
-						<!-- <div class="square" style="background-image:url('assets/img/dog-7.jpg');"></div> -->
-					</div>
-					<div class="col-12 col-md-4">
-						<div class="square" style="background-image:url('assets/img/dog-3.jpg');"></div>
-					</div>
 				</div>
-    </div>				      
-
-    <div class="tab-pane fade text-center" id="saved">
-      <p class="lead"><span class="text-danger"><i class="far fa-frown-open"></i></span> 비어있음.</p>
-    </div>    
+    </div>
   </div>
 
 </div>
+<!-- 부가정보 끝 -->
 
     
 <footer class="footer-1 bg-light text-dark">
@@ -184,21 +230,24 @@
 
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="./assets/vendor/jquery/jquery.min.js"></script>
-    <script src="./assets/vendor/popper/popper.min.js"></script>
-    <script src="./assets/vendor/bootstrap/bootstrap.min.js" ></script>
+    <script src="../../resources/vendor/jquery/jquery.min.js"></script>
+    <script src="../../resources/vendor/popper/popper.min.js"></script>
+    <script src="../../resources/vendor/bootstrap/bootstrap.min.js" ></script>
 
     <!-- optional plugins -->
-    <script src="./assets/vendor/nouislider/js/nouislider.min.js"></script>
+    <script src="../../resources/vendor/nouislider/js/nouislider.min.js"></script>
 
     <!--   lazy javascript -->
-    <script src="./assets/js/lazy.js"></script>
+    <script src="../../resources/js/lazy.js"></script>
     
     <!-- 스크립트작성 -->
     <script>
-      function mainHome() {
-        location.href="myPage1.html";
-      }      
+      function mainMyPage() {
+        location.href="myPage1.jsp";
+      }
+      function mbtiTest() {
+        window.open().location.href="https://www.16personalities.com/ko";
+      }
     </script>
   </body>
 </html>
