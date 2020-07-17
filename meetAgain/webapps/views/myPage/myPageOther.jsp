@@ -91,7 +91,7 @@
             padding-left: 5px;
             padding-right: 3px;
             margin-left: 20px;
-            margin-top: 7px;">테스트해보기</button></div>
+            margin-top: 7px;" onclick=mbtiTest();>테스트해보기</button></div>
           <div class="col-12 col-md-4 text-right"><p id="textFm">혈액형</p></div>
           <div class="col-12 col-md-8" style="margin-top: 5px; margin-bottom: 10px;">A</div>
           <div class="col-12 col-md-4 text-right" style="margin-top: 5px;"><p id="textFm">키워드</p></div>
@@ -165,7 +165,7 @@
           <div class="col-12 col-md-12"><br></div>
 
           <!-- <div class="row"> -->
-            <div class="col-12 col-md-4"><button type="button" class="btn btn-outline-primary btn-pill" onclick="mainHome();">마이페이지</button></div>          
+            <div class="col-12 col-md-4"><button type="button" class="btn btn-outline-primary btn-pill" onclick="mainMyPage();">마이페이지</button></div>          
             <div class="col-12 col-md-4"><button type="reset" class="btn btn-outline-primary btn-pill" style="margin-left: 13px;">초기화</button></div>          
             <div class="col-12 col-md-4"><button type="button" class="btn btn-outline-primary btn-pill">수정완료</button></div>  
           <!-- </div> -->
@@ -242,9 +242,12 @@
     
     <!-- 스크립트작성 -->
     <script>
-      function mainHome() {
+      function mainMyPage() {
         location.href="myPage1.jsp";
-      }      
+      }
+      function mbtiTest() {
+        window.open().location.href="https://www.16personalities.com/ko";
+      }
     </script>
   </body>
 </html>
