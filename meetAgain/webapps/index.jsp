@@ -16,13 +16,13 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="resources/img/BANNER1.jpg" alt="First slide">
+      <img class="d-block w-100" src="/meetAgain/resources/img/BANNER1.jpg" alt="First slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="resources/img/BANNER2.jpg" alt="Second slide">
+      <img class="d-block w-100" src="/meetAgain/resources/img/BANNER2.jpg" alt="Second slide">
     </div>
    <!--  <div class="carousel-item">
-      <img class="d-block w-100" src="resources/img/dog-4.jpg" alt="Third slide">
+      <img class="d-block w-100" src="/meetAgain/resources/img/dog-4.jpg" alt="Third slide">
     </div> -->
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -41,13 +41,13 @@
 <div class="page-hero" id="banner">
   	<div class="container">
       <div class="row"> 
-        <div class="col-sm-12 col-md-12 col-lg-5">
+        <div class="col-sm-12 col-md-12 col-lg-6">
           <h4>7월 첫째주 모임이 제일 많이 생성된 지역</h4>
-          <div id="piechart" style="width:500px; height:500px;"></div>
+          <div id="piechart" style="width:100%; height:500px;"></div>
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-5 offset-lg-1">
+        <div class="col-sm-12 col-md-12 col-lg-6">
           <h4>7월 첫째주 모임이 제일 많이 생성된 지역</h4>
-          <div id="curve_chart" style="width: 500px; height: 500px"></div>
+          <div id="curve_chart" style="width: 100%; height: 500px"></div>
       </div>
       </div>
     </div>
@@ -119,7 +119,7 @@
           <div class="component">
 						<div class="card">
 							<div class="card-header">
-						  	<img class="card-img" src="resources/img/dog-1.jpg" alt="dog">
+						  	<img class="card-img" src="/meetAgain/resources/img/dog-1.jpg" alt="dog">
 							</div>
 						  <div class="card-body">
 							  <span class="badge badge-success mb-2">Pets</span>
@@ -136,7 +136,7 @@
           <div class="component">
             <div class="card">
 							<div class="card-header">
-						  	<img class="card-img" src="resources/img/dog-2.jpg" alt="dog">
+						  	<img class="card-img" src="/meetAgain/resources/img/dog-2.jpg" alt="dog">
 							</div>
 						  <div class="card-body">
 							  <span class="badge badge-warning mb-2">Vacation</span>
@@ -154,7 +154,7 @@
           <div class="component">
 						<div class="card">
 							<div class="card-header">
-						  	<img class="card-img" src="resources/img/dog-3.jpg" alt="dog">
+						  	<img class="card-img" src="/meetAgain/resources/img/dog-3.jpg" alt="dog">
 							</div>
 						  <div class="card-body">
 							  <span class="badge badge-secondary mb-2">Hobby</span>
@@ -175,15 +175,15 @@
 
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="resources/vendor/jquery/jquery.min.js"></script>
-    <script src="resources/vendor/popper/popper.min.js"></script>
-    <script src="resources/vendor/bootstrap/bootstrap.min.js" ></script>
+    <script src="/meetAgain/resources/vendor/jquery/jquery.min.js"></script>
+    <script src="/meetAgain/resources/vendor/popper/popper.min.js"></script>
+    <script src="/meetAgain/resources/vendor/bootstrap/bootstrap.min.js" ></script>
 
     <!-- optional plugins -->
-    <script src="resources/vendor/nouislider/js/nouislider.min.js"></script>
+    <script src="/meetAgain/resources/vendor/nouislider/js/nouislider.min.js"></script>
 
     <!--   lazy javascript -->
-    <script src="resources/js/lazy.js"></script>
+    <script src="/meetAgain/resources/js/lazy.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
