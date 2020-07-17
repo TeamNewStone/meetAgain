@@ -3,9 +3,16 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+
+<style>
+  #Btn{
+    font-size: 10px;
+  }
+</style>
+
 <c:import url="/views/common/header.jsp" />
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="utf-8">
@@ -15,11 +22,11 @@
     <meta name="description" content="A new design system for developing with less effort.">
     <meta name="author" content="BootstrapBay">
 
-    <link href="../../resources/img/favicon.ico" rel="icon" type="image/png">
+    <link href="/meetAgain/resources/img/favicon.ico" rel="icon" type="image/png">
     
-    <link rel="stylesheet" href="../../resources/vendor/bootstrap/bootstrap.min.css">
-		<link rel="stylesheet" href="../../resources/css/lazy.css">
-		<link rel="stylesheet" href="../../resources/css/demo.css">
+    <link rel="stylesheet" href="/meetAgain/resources/vendor/bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="/meetAgain/resources/css/lazy.css">
+		<link rel="stylesheet" href="/meetAgain/resources/css/demo.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
     <style>
       #textFm{
@@ -35,7 +42,7 @@
     <nav class="navbar navbar-expand-md navbar-dark bg-primary mb-4 fixed-top">
     <div class="container">
 
-      <a class="navbar-brand d-flex align-items-center" href="./"><img src="../../resources/img/logo_white.svg" alt="Example Navbar 1" class="mr-2" height="30">다시 만나</a>
+      <a class="navbar-brand d-flex align-items-center" href="./"><img src="/meetAgain/resources/img/logo_white.svg" alt="Example Navbar 1" class="mr-2" height="30">다시 만나</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown-3" aria-controls="navbarNavDropdown-3"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -62,14 +69,15 @@
         </ul>
       </div>
     </div>
-  </nav>
+  </nav> -->
 
-<!-- 기본정보 시작 -->
+<!-- 기본정보수정 시작 -->
+<div class="col-12"><br></div>
 <div class="container">
   <div class="info">
     <div class="row">
 	    <div class="col-12 col-md-4 text-center">
-		    <img src="../../resources/img/lorde.png" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 180px;">
+		    <img src="/meetAgain/resources/img/lorde.png" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 180px;">
 	    </div>
 	    
       <div class="col-12 col-md-4">
@@ -132,11 +140,11 @@
         
         <div class="row">
           <div class="col-12 col-md-4">
-          <button type="button" class="btn btn-outline-primary btn-pill" onclick="mainMyPage();">마이페이지</button></div>
+          <button type="button" class="btn btn-outline-primary btn-pill" onclick="mainMyPage();" id="Btn">마이페이지</button></div>
           <div class="col-12 col-md-4">
-          <button type="button" class="btn btn-outline-primary btn-pill" onclick="myPageOther();">부가정보</button></div>
+          <button type="button" class="btn btn-outline-primary btn-pill" onclick="myPageOther();" id="Btn">부가정보</button></div>
           <div class="col-12 col-md-4">
-          <button type="button" class="btn btn-outline-primary btn-pill">수정완료</button></div>              
+          <button type="button" class="btn btn-outline-primary btn-pill" id="Btn">수정완료</button></div>              
         </div>            
 
       </div>
@@ -158,46 +166,44 @@
     </ul>
   </div> -->  
   
-  <div class="profile-tabs tab-content">
+  <div class="profile profile-tabs tab-content">
     <div class="tab-pane fade show active" id="photos">
 				<div class="row">					
 					<div class="col-12 col-md-4">
-						<div class="square" style="background-image:url('../../resources/img/dog-5.jpg');"></div>
+						<div class="square" style="background-image:url('/meetAgain/resources/img/dog-5.jpg');"></div>
           </div>
           
           <div class="col-12 col-md-8">
-            <div class="square" style="background-image:url('../../resources/img/dog-5.jpg');"></div>
+            <div class="square" style="background-image:url('/meetAgain/resources/img/dog-5.jpg');"></div>
           </div>
           
           <div class="col-12 col-md-8">
-            <div class="square" style="background-image:url('../../resources/img/dog-5.jpg');"></div>
+            <div class="square" style="background-image:url('/meetAgain/resources/img/dog-5.jpg');"></div>
           </div>
 
 					<div class="col-12 col-md-4">
-						<div class="square" style="background-image:url('../../resources/img/dog-6.jpg');"></div>
+						<div class="square" style="background-image:url('/meetAgain/resources/img/dog-6.jpg');"></div>
 					</div>
 					<div class="col-12 col-md-4">
-						<div class="square" style="background-image:url('../../resources/img/dog-7.jpg');"></div>
+						<div class="square" style="background-image:url('/meetAgain/resources/img/dog-7.jpg');"></div>
 					</div>
 					<div class="col-12 col-md-4">
-						<!-- <div class="square" style="background-image:url('../../resources/img/dog-7.jpg');"></div> -->
+						<!-- <div class="square" style="background-image:url('/meetAgain/resources/img/dog-7.jpg');"></div> -->
 					</div>
 					<div class="col-12 col-md-4">
-						<div class="square" style="background-image:url('../../resources/img/dog-3.jpg');"></div>
+						<div class="square" style="background-image:url('/meetAgain/resources/img/dog-3.jpg');"></div>
 					</div>
 				</div>
     </div>				      
-
-    <!-- 작성한 게시물 -->
-    <div class="tab-pane fade text-center" id="saved">
-      <p class="lead"><span class="text-danger"><i class="far fa-frown-open"></i></span> 비어있음.</p>
-    </div>    
+    
   </div>
 
 </div>
 
+<!-- 기본정보수정 끝 -->
     
-<footer class="footer-1 bg-light text-dark">
+
+<!-- <footer class="footer-1 bg-light text-dark">
 <div class="container">
 <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
 	<div class="links">
@@ -230,20 +236,21 @@
 </div>
 </div>
 </footer>
- <c:import url="/views/common/footer.jsp" />
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="../../resources/vendor/jquery/jquery.min.js"></script>
-    <script src="../../resources/vendor/popper/popper.min.js"></script>
-    <script src="../../resources/vendor/bootstrap/bootstrap.min.js" ></script>
+  </body>
+</html> -->
 
-    <!-- optional plugins -->
-    <script src="../../resources/vendor/nouislider/js/nouislider.min.js"></script>
+<c:import url="/views/common/footer.jsp" />
 
-    <!--   lazy javascript -->
-    <script src="../../resources/js/lazy.js"></script>
-    
-    <!-- 스크립트작성 -->
+    <!-- 기본정보 스크립트 작성 -->
+    <!--   jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/meetAgain/resources/vendor/popper/popper.min.js"></script>
+    <script src="/meetAgain/resources/vendor/bootstrap/bootstrap.min.js" ></script>
+	<!-- optional plugins -->
+    <script src="/meetAgain/resources/vendor/nouislider/js/nouislider.min.js"></script>
+      <!-- lazy javascript -->
+    <script src="/meetAgain/resources/js/lazy.js"></script>    
+
     <script>
       function mainMyPage() {
         location.href="myPage1.jsp";
@@ -252,5 +259,4 @@
         location.href="myPageOther.jsp";
       }    
     </script>
-  </body>
-</html>
+

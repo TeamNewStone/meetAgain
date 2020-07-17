@@ -3,9 +3,24 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+
+<style>
+    #textFm{
+        margin-top: 5%;
+        margin-bottom: 5%;        
+      }
+      #_mbtiBtn{
+        font-size: 10px;
+      }
+      #Btn{
+        font-size: 10px;
+        text-align: center;
+      }
+  </style>
+      
 <c:import url="/views/common/header.jsp" />
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="utf-8">
@@ -15,11 +30,11 @@
     <meta name="description" content="A new design system for developing with less effort.">
     <meta name="author" content="BootstrapBay">
 
-    <link href="../../resources/img/favicon.ico" rel="icon" type="image/png">
+    <link href="/meetAgain/resources/img/favicon.ico" rel="icon" type="image/png">
     
-    <link rel="stylesheet" href="../../resources/vendor/bootstrap/bootstrap.min.css">
-		<link rel="stylesheet" href="../../resources/css/lazy.css">
-		<link rel="stylesheet" href="../../resources/css/demo.css">
+    <link rel="stylesheet" href="/meetAgain/resources/vendor/bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="/meetAgain/resources/css/lazy.css">
+		<link rel="stylesheet" href="/meetAgain/resources/css/demo.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
     <style>
       #textFm{
@@ -35,11 +50,12 @@
       }
     </style>
   </head>
+  
   <body class="profile" style="font-weight: bold;">
     <nav class="navbar navbar-expand-md navbar-dark bg-primary mb-4 fixed-top">
     <div class="container">
 
-      <a class="navbar-brand d-flex align-items-center" href="./"><img src="../../resources/img/logo_white.svg" alt="Example Navbar 1" class="mr-2" height="30">다시 만나</a>
+      <a class="navbar-brand d-flex align-items-center" href="./"><img src="/meetAgain/resources/img/logo_white.svg" alt="Example Navbar 1" class="mr-2" height="30">다시 만나</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown-3" aria-controls="navbarNavDropdown-3"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -66,14 +82,15 @@
         </ul>
       </div>
     </div>
-  </nav>
+  </nav> --> 
 
 <!-- 부가정보 시작 -->
+<div class="col-12"><br></div>
 <div class="container">
   <div class="info">
     <div class="row">
 	    <div class="col-12 col-md-4 text-center">
-		    <img src="../../resources/img/lorde.png" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 180px;">
+		    <img src="/meetAgain/resources/img/lorde.png" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 180px;">
 	    </div>
 	    
       <div class="col-12 col-md-4">
@@ -92,7 +109,7 @@
             padding-left: 5px;
             padding-right: 3px;
             margin-left: 20px;
-            margin-top: 7px;" onclick=mbtiTest();>테스트해보기</button></div>
+            margin-top: 7px;" onclick="mbtiTest();">테스트해보기</button></div>
           <div class="col-12 col-md-4 text-right"><p id="textFm">혈액형</p></div>
           <div class="col-12 col-md-8" style="margin-top: 5px; margin-bottom: 10px;">A</div>
           <div class="col-12 col-md-4 text-right" style="margin-top: 5px;"><p id="textFm">키워드</p></div>
@@ -164,38 +181,47 @@
           </div>
 
           <div class="col-12 col-md-12"><br></div>
-
-          <!-- <div class="row"> -->
-            <div class="col-12 col-md-4"><button type="button" class="btn btn-outline-primary btn-pill" onclick="mainMyPage();">마이페이지</button></div>          
-            <div class="col-12 col-md-4"><button type="reset" class="btn btn-outline-primary btn-pill" style="margin-left: 13px;">초기화</button></div>          
-            <div class="col-12 col-md-4"><button type="button" class="btn btn-outline-primary btn-pill">수정완료</button></div>  
-          <!-- </div> -->
+          
+            <div class="col-12 col-md-4"><button type="button" class="btn btn-outline-primary btn-pill" onclick="mainMyPage();" id="Btn">마이페이지</button></div>          
+            <div class="col-12 col-md-4"><button type="reset" class="btn btn-outline-primary btn-pill" style="margin-left: 13px;" id="Btn">초기화</button></div>          
+            <div class="col-12 col-md-4"><button type="button" class="btn btn-outline-primary btn-pill" id="Btn">수정완료</button></div>  
+            <button type="reset">초기화</button>
 
         </div>
 
       </div>
 
+			
+			
+      
+			<!-- row end -->	
     </div>
-  </div>	
-  
-  <div class="profile-tabs tab-content">
-    <div class="tab-pane fade show active" id="photos">
-				<div class="row">					
-					<div class="col-12 col-md-4">
-						<div class="square" style="background-image:url('../../resources/img/dog-5.jpg');"></div>
-          </div>          
-          <div class="col-12 col-md-8">
-            <div class="square" style="background-image:url('../../resources/img/dog-5.jpg');"></div>
-          </div>
-				</div>
-    </div>
-  </div>
+    
+    <div class="profile profile-tabs tab-content">
+      <div class="tab-pane fade show active" id="photos">
+        <div class="row">
 
+          <div class="col-12 col-md-4">
+            <div class="square"
+              style="background-image: url('/meetAgain/resources/img/dog-5.jpg');"></div>
+          </div>
+          <div class="col-12 col-md-8">
+            <div class="square"
+              style="background-image: url('/meetAgain/resources/img/dog-5.jpg');"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+	
 </div>
+
 <!-- 부가정보 끝 -->
 
     
-<footer class="footer-1 bg-light text-dark">
+<!-- <footer class="footer-1 bg-light text-dark">
 <div class="container">
 <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
 	<div class="links">
@@ -227,28 +253,37 @@
 	<p class="small">&copy; 2019, made with <span class="text-danger"><i class="fas fa-heart"></i></span> by BootstrapBay</p>
 </div>
 </div>
-</footer>
+</footer> 
+    
+  </body>
+</html> -->
+
 <c:import url="/views/common/footer.jsp" />
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="../../resources/vendor/jquery/jquery.min.js"></script>
-    <script src="../../resources/vendor/popper/popper.min.js"></script>
-    <script src="../../resources/vendor/bootstrap/bootstrap.min.js" ></script>
+    <!-- 부가정보 스크립트 작성 -->    
+    <!--   jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/meetAgain/resources/vendor/popper/popper.min.js"></script>
+    <script src="/meetAgain/resources/vendor/bootstrap/bootstrap.min.js" ></script>
+	<!-- optional plugins -->
+    <script src="/meetAgain/resources/vendor/nouislider/js/nouislider.min.js"></script>
+      <!-- lazy javascript -->
+    <script src="/meetAgain/resources/js/lazy.js"></script>    
 
-    <!-- optional plugins -->
-    <script src="../../resources/vendor/nouislider/js/nouislider.min.js"></script>
-
-    <!--   lazy javascript -->
-    <script src="../../resources/js/lazy.js"></script>
-    
-    <!-- 스크립트작성 -->
     <script>
       function mainMyPage() {
         location.href="myPage1.jsp";
       }
-      function mbtiTest() {    	  
-        window.open("https://www.16personalities.com/ko");
-      }
+      function mbtiTest() {                
+        var url = "https://www.16personalities.com/ko";
+    	window.open(url, '_blank');
+      }      
     </script>
-  </body>
-</html>
+    
+
+
+
+
+
+
+
+
