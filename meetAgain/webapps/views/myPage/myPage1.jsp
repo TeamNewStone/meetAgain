@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../../resources/vendor/bootstrap/bootstrap.min.css">
 		<link rel="stylesheet" href="../../resources/css/lazy.css">
 		<link rel="stylesheet" href="../../resources/css/demo.css">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css">
   </head>
   <body class="profile">
     <nav class="navbar navbar-expand-md navbar-dark bg-primary mb-4 fixed-top">
