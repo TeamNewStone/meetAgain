@@ -90,6 +90,6 @@
     	location.href='/meetAgain/views/board/notice.jsp';
     }
     
- 
+ // g
     </script>
     <!-- header 끝 -->
