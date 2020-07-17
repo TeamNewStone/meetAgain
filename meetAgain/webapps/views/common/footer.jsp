@@ -8,15 +8,24 @@
 <div class="container">
 <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
 	<div class="links">
+		<p>&nbsp;&nbsp;Site Map </p>
 		<ul class="footer-menu list-unstyled d-flex flex-row text-center text-md-left">
 			<li><a href="https://bootstrapbay.com/" target="_blank">공지사항</a></li>
 			<li><a href="https://bootstrapbay.com/about" target="_blank">자주묻는 질문</a></li>
+		</ul>
+		<br />
+		<ul class="footer-menu list-unstyled d-flex flex-row text-center text-md-left">
 			<li><a href="https://bootstrapbay.com/blog/" target="_blank">마이페이지</a></li>
 			<li><a href="https://bootstrapbay.com/terms" target="_blank">리뷰</a></li>
 		</ul>
+		
 	</div>
 	<div class="social mt-4 mt-md-0">
-	<p>Contact Us</p>
+	<p>Contact Us
+		<svg width="1.3em" height="1.6em" viewBox="0 0 16 16" class="bi bi-envelope" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+	  	<path fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+		</svg>
+	</p>
     <p>
       Team NewStone <br>
             서울특별시 강남구 역삼동 <br>
