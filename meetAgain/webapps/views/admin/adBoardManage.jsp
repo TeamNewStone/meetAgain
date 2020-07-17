@@ -12,15 +12,23 @@ $('.nav-item').addClass('canSee').removeClass('cantSee');
           <h2>게시글 관리</h2>
 
 <div class="component">
-<table class="table" style="text-align:center;margin:auto; width:130%;">
+<table class="table" style="text-align:center;margin:auto; width:100%;">
+<colgroup>
+<col width="5%"/>
+<col width="20%"/>
+<col width="30%"/>
+<col width="15%"/>
+<col width="15%"/>
+<col width="15%"/>
+</colgroup>
 <thead>
 <tr>
 	<th>No.</th>
-	<th width="20%">모임명</th>
-	<th width="30%">게시글 제목</th>
+	<th>모임명</th>
+	<th>게시글 제목</th>
 	<th>신고 사유</th>
 	<th>신고자</th>
-	<th width="15%">상태</th>
+	<th>상태</th>
 </tr>
 </thead>
 <tbody>
@@ -53,6 +61,7 @@ $(function(){
 			//console.log($(this).parent().children().eq(0).text());
 		
 			//var nno = $(this).parent().children().eq(0).text();
+			
 			
 			<%-- location.href="<%=request.getContextPath()%>/selectOne.no?nno=" + nno; --%>
 		});
