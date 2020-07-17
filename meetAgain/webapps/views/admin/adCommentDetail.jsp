@@ -36,14 +36,62 @@ $('.nav-item').addClass('canSee').removeClass('cantSee');
 </tr>
 <tr>
 	<td colspan="4">
-		<button type="button" class="btn btn-outline-secondary" onclick="window.open('/meetAgain/views/admin/adHandle.jsp','_blank','width=400,height=450')">처리하기</button> &nbsp;
+		<button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#handleModal">처리하기</button> &nbsp;
 		<button type="button" class="btn btn-outline-secondary">게시글로 이동</button>
 	</td>
 </tr>
 </table>
+<!-- the modal -->
+<div class="modal fade" id="handleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">어떻게 처리하시겠습니까?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="#">
+        <div>
+        <p style="color:#a3a3a3; font-size:15px">댓글 처리</p>
+        <div class="custom-control custom-checkbox my-2">
+		<input type="checkbox" class="custom-control-input" id="customCheck1" checked>
+		<label class="custom-control-label" for="customCheck1">삭제 여부</label>
+		&nbsp;&nbsp;&nbsp;
 
+        </div>
+		
+<div class="form-group">
+  <select class="custom-select" style="width:">
+    <option selected>Open this select menu</option>
+    <option value="1">스팸 / 광고</option>
+    <option value="2">폭력적 또는 혐오스러운 콘텐츠</option>
+    <option value="3">증오 또는 학대하는 콘텐츠</option>
+    <option value="4">성적인 콘텐츠</option>
+    <option value="5">기타</option>
+  </select>
+</div>
 
+		
+        </div>
+        <br />
+        <div>
+        <p style="color:#a3a3a3; font-size:15px">회원 처리</p>
+<div class="form-group">
+  <select class="custom-select" style="width:">
+    <option selected>Open this select menu</option>
+    <option value="1">경고</option>
+  </select>
+</div>
+        </div>
+              <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-info">Reject</button>
+        <button type="button" class="btn btn-success">Submit</button>
+      </div>
 
+</div>
 </div>
 
 

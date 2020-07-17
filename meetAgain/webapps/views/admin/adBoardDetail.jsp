@@ -59,93 +59,45 @@ $('.nav-item').addClass('canSee').removeClass('cantSee');
       <div class="modal-body">
         <form action="#">
         <div>
-        <span style="color:#c7c8c9; font-size:15px">게시글 처리</span>
-        &nbsp;&nbsp;&nbsp;
-        <span>
-     	<select name="bHandle" id="bHandle">
-		<option value="--선택--" selected>--선택--</option>
-		<option value="광고/홍보">광고/홍보</option>
-		<option value="비방성">비방성</option>
-		
-		</select>
-        </span>
+        <p style="color:#a3a3a3; font-size:15px">게시글 처리</p>
         <div class="custom-control custom-checkbox my-2">
 		<input type="checkbox" class="custom-control-input" id="customCheck1" checked>
 		<label class="custom-control-label" for="customCheck1">삭제 여부</label>
-		</div>
+		&nbsp;&nbsp;&nbsp;
+
+        </div>
+		
+<div class="form-group">
+  <select class="custom-select" style="width:">
+    <option selected>Open this select menu</option>
+    <option value="1">광고 / 홍보</option>
+    <option value="2">비방성</option>
+    <option value="3">음란물</option>
+  </select>
+</div>
+
+		
         </div>
         <br />
         <div>
-        <p>회원 처리</p>
-        <span>
-     	<select name="bHandle" id="bHandle">
-		<option value="--선택--" selected>--선택--</option>
-		<option value="광고/홍보">경고</option>
-		<option value="비방성">..</option>
-		
-		</select>
-        </span>
+        <p style="color:#a3a3a3; font-size:15px">회원 처리</p>
+<div class="form-group">
+  <select class="custom-select" style="width:">
+    <option selected>Open this select menu</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+</div>
         </div>
-        
-        
-        
-        
-<!--         	<table style="text-align:center;">
-        		<tr style="color:#c7c8c9;">
-        			<td>게시글 처리</td>
-        			<td colspan="3">
-					<select name="bHandle" id="bHandle">
-					<option value="--선택--" selected>--선택--</option>
-					<option value="광고/홍보">광고/홍보</option>
-					<option value="비방성">비방성</option>
-					
-					</select>
-        			</td>
-        		
-        		</tr>
-        		<tr>
-        			<td>
-        				  <div class="custom-control custom-checkbox my-2">
-						    <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
-						    <label class="custom-control-label" for="customCheck1">삭제 여부</label>
-						  </div>
-        			</td>
-        			<td></td>
-        			<td></td>
-        			<td></td>
-        		</tr>
-
-        	       <tr style="color:#c7c8c9;">
-        			<td>회원 처리</td>
-        			<td>
-					<select name="bHandle" id="bHandle">
-					<option value="--선택--" selected>--선택--</option>
-					<option value="광고/홍보">광고/홍보</option>
-					<option value="비방성">비방성</option>
-					
-					</select>
-        			</td>
-        		
-        		</tr>
-
-        	</table>
- -->        
-<!--         </form>
-      </div>
-      <div class="modal-footer">
+              <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-info">Reject</button>
         <button type="button" class="btn btn-success">Submit</button>
       </div>
-    </div>
-  </div>
+        
+
+</form>
 </div>
-
-
-
-</div>
-
-
-
-
 </body>
-</html> -->
+</html> 
