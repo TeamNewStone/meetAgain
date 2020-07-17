@@ -6,12 +6,13 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <c:import url="/views/common/header.jsp" />
 
+<!-- 메인 배너 시작 -->
 <div class="row"> 
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+   <!--  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -34,21 +35,23 @@
   </a>
 </div>
 </div>
+<!-- 메인배너 끝 -->
+
   <!-- 차트 시작 -->
-	<div class="page-hero" id="banner">
+<div class="page-hero" id="banner">
   	<div class="container">
       <div class="row"> 
-        <div class="col-sm-4 col-lg-5">
+        <div class="col-sm-12 col-md-12 col-lg-5">
           <h4>7월 첫째주 모임이 제일 많이 생성된 지역</h4>
-          <div id="piechart"></div>
+          <div id="piechart" style="width:500px; height:500px;"></div>
         </div>
-        <div class="col-sm-4 col-lg-5 offset-lg-1">
+        <div class="col-sm-12 col-md-12 col-lg-5 offset-lg-1">
           <h4>7월 첫째주 모임이 제일 많이 생성된 지역</h4>
           <div id="curve_chart" style="width: 500px; height: 500px"></div>
       </div>
       </div>
     </div>
-	</div>
+	</div> 
   <!-- 차트 끝-->
 
 <!-- 공지사항 시작-->
@@ -196,21 +199,24 @@
           ['Sleep',    2]
         ]);
 
-        var options = {
+         var options = {
           //title: '7월 첫째주 모임이 제일 많이 생성된 지역',
           slices: {
             0: { color: '#ffb5b6' },
             1: { color: '#132742' },
-            2: { color: 'ivory', fontColor: 'black' },
+            2: { color: 'ivory'},
             3: { color: '#132742' },
             4: { color: '#ffb5b6' }
           },
           legend : {position: 'none'}
         };
+        
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
+
         chart.draw(data, options);
+
       }
 
       
@@ -238,6 +244,8 @@
 
         chart.draw(data, options);
       }
+      
+     
     </script>
  <c:import url="/views/common/footer.jsp" />
 

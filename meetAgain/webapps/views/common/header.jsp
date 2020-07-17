@@ -21,35 +21,41 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="resources/vendor/jquery/jquery-3.5.1.min.js"></script>
     <style>
-    #piechart{
-    	width: 400px; 
-    	height: 500px; 
-    	text-align: center;
-    }
-      @media(max-width:720px){
-      
-      }
-      @media(min-width:720px)and(max-width:990px){
-      
-	      #piechart{
-	      	width : 1px;
-	      	height : 10px;
-	      }
-      }
-      @media(min-width:990px){
-      
-      	#login{
-      		position: absolute;
-      		right: 29%;
-      		top : 25%;
-      	}
+	
+      @media(min-width:768px){
       	
-      	#userIcon{
-      	position : absolute;
-      	right: 26%;
-      	top:15%;
-      	}
+      }
+      
+	  @media(min-width:992px)and(max-width:1600px){
+	  
+	  #login{
+	      		position: absolute;
+				right: 10%;
+	      		top : 25%;
+	      	}
+	  #userIcon{
+	      	position : absolute;
+	      	right: 10%;
+	      	top:15%;
+	      	}
+	      	
+
+	  }
+      @media(min-width:1601px){
+      
+	      	#login{
+	      		position: absolute;
+	      		right: 29%;
+	      		top : 25%;
+	      	}
+	      	
+	      	#userIcon{
+	      	position : absolute;
+	      	right: 26%;
+	      	top:15%;
+	      	}
       }
     </style>
   </head>
@@ -65,20 +71,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown-7">
 	        <ul class="navbar-nav">
-            <li class="nav-item dropdown mx-2">
+            <li class="nav-item dropdown mx-2" id="notice">
               <a class="nav-link" href="#" id="nav-inner-primary_dropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">공지사항</a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="nav-inner-primary_dropdown_1">
-                <a class="dropdown-item" href="documentation/getting_started.html" target="_blank">Getting Started</a>
-                <a class="dropdown-item" href="documentation/alerts.html" target="_blank">Core Elements</a>
-              </div>
             </li>
-            <li class="nav-item dropdown mx-2">
+            <li class="nav-item dropdown mx-2" id="review">
               <a class="nav-link" href="#" id="nav-inner-primary_dropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">리뷰</a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="nav-inner-primary_dropdown_1">
-                <a class="dropdown-item" href="register.html" target="_blank">Register</a>
-                <a class="dropdown-item" href="profile.html" target="_blank">Profile</a>
-                <a class="dropdown-item" href="landing.html" target="_blank">Landing</a>
-              </div>
             </li>
             <li class="nav-item dropdown mx-2 text-white" id="login">
               <a class="nav-link" href="#">로그인</a>
@@ -96,4 +93,15 @@
         </div>
       </div>
     </nav>
+    <script>
+    // 화면크기가 992 미만일 경우 유저사진 notice li 위로 올리기
+    $(function(){
+	  	  var windowWidth = $(window).width();
+	  	  console.log($(window).width());
+	  	  if(windowWidth < 992){
+	  		  $('#userIcon').insertBefore('#notice');
+	  		  $('#userIcon').css('width','40px');
+	  	  } 
+	    });
+    </script>
     <!-- header 끝 -->
