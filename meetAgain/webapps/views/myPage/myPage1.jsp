@@ -3,9 +3,16 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+
+<style>
+  #_fwfw{
+   font-size: 20px;
+ }
+</style>
+
 <c:import url="/views/common/header.jsp" />
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="utf-8">
@@ -15,18 +22,18 @@
     <meta name="description" content="A new design system for developing with less effort.">
     <meta name="author" content="BootstrapBay">
 
-    <link href="../../resources/img/favicon.ico" rel="icon" type="image/png">
+    <link href="/meetAgain/resources/img/favicon.ico" rel="icon" type="image/png">
     
-    <link rel="stylesheet" href="../../resources/vendor/bootstrap/bootstrap.min.css">
-		<link rel="stylesheet" href="../../resources/css/lazy.css">
-		<link rel="stylesheet" href="../../resources/css/demo.css">
+    <link rel="stylesheet" href="/meetAgain/resources/vendor/bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="/meetAgain/resources/css/lazy.css">
+		<link rel="stylesheet" href="/meetAgain/resources/css/demo.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css">
   </head>
   <body class="profile">
     <nav class="navbar navbar-expand-md navbar-dark bg-primary mb-4 fixed-top">
     <div class="container">
 
-      <a class="navbar-brand d-flex align-items-center" href="../../index.jsp"><img src="../../resources/img/logo_white.svg" alt="Example Navbar 1" class="mr-2" height="30">다시 만나</a>
+      <a class="navbar-brand d-flex align-items-center" href="../../index.jsp"><img src="/meetAgain/resources/img/logo_white.svg" alt="Example Navbar 1" class="mr-2" height="30">다시 만나</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown-3" aria-controls="navbarNavDropdown-3"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -53,12 +60,15 @@
         </ul>
       </div>
     </div>
-  </nav>
+  </nav> -->
+
+<!-- 마이페이지 메인 시작 -->
+<div class="col-12"><br></div>
 <div class="container">
   <div class="info">
     <div class="row">
 	    <div class="col-12 col-md-4 text-center">
-		    <img src="../../resources/img/lorde.png" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 180px;">
+		    <img src="/meetAgain/resources/img/lorde.png" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 180px;">
 	    </div>
 	    <div class="col-12 col-md-8 d-flex flex-column align-items-center align-items-lg-start">
 		    <div class="d-flex flex-row align-items-start mt-3 mt-lg-0">
@@ -66,14 +76,15 @@
 		    		<h2 class="mb-0">에바 그린</h2>
 			    </div>
 		    	<a href="#a" class="btn btn-primary btn-pill btn-sm ml-3 mt-1">팔로우하기</a>
+        </div>
+        <br>
+		    <div class="stats d-flex flex-row align-items-center align-items-lg-start text-center text-lg-left" id="_follow">
+			    <div class="posts ml-2 ml-lg-0"><p class="lead" id="_fwfw"><b>134</b> 소모임</p></div>&nbsp;
+			    <div class="posts"><p class="lead" id="_fwfw"><b>6.6m</b> 팔로워</p></div>&nbsp;
+			    <div class="posts"><p class="lead" id="_fwfw"><b>201</b> 팔로잉</p></div>&nbsp;
+          <div><button type="button" class="lead btn btn-sm btn-light" onclick="accountEdit();">정보수정</button></div>
 		    </div>
-		    <div class="stats d-flex flex-row align-items-center align-items-lg-start text-center text-lg-left">
-			    <div class="posts ml-2 ml-lg-0"><p class="lead"><b>134</b> 소모임</p></div>
-			    <div class="posts"><p class="lead"><b>6.6m</b> 팔로워</p></div>
-			    <div class="posts"><p class="lead"><b>201</b> 팔로잉</p></div>
-          <div><button type="button" class="lead btn btn-sm btn-light" style="margin: 10px;" onclick="accountEdit();">정보수정</button></div>
-		    </div>
-		    <p class="lead mb-0 mt-2"><b>나의 키워드</b></p>
+		    <p class="lead mb-0 mt-2" style="color: green;"><b>나의 키워드</b></p>
         <p class="lead text-center text-lg-left">#키워드</p>
 	    </div>
     </div>
@@ -94,26 +105,26 @@
   </div>
   
   <!-- 나의 소모임 시작 -->
-  <div class="profile-tabs tab-content">
+  <div class="profile profile-tabs tab-content">
     <div class="tab-pane fade show active" id="photos">
 				<div class="row">
 					<div class="col-12 col-md-4">
-						<div class="square" style="background-image:url('../../resources/img/dog-4.jpg');"></div>
+						<div class="square" style="background-image:url('/meetAgain/resources/img/dog-4.jpg');"></div>
 					</div>
 					<div class="col-12 col-md-4">
-						<div class="square" style="background-image:url('../../resources/img/dog-5.jpg');"></div>
+						<div class="square" style="background-image:url('/meetAgain/resources/img/dog-5.jpg');"></div>
 					</div>
 					<div class="col-12 col-md-4">
-						<div class="square" style="background-image:url('../../resources/img/dog-6.jpg');"></div>
+						<div class="square" style="background-image:url('/meetAgain/resources/img/dog-6.jpg');"></div>
 					</div>
 					<div class="col-12 col-md-4">
-						<div class="square" style="background-image:url('../../resources/img/dog-7.jpg');"></div>
+						<div class="square" style="background-image:url('/meetAgain/resources/img/dog-7.jpg');"></div>
 					</div>
 					<div class="col-12 col-md-4">
-						<div class="square" style="background-image:url('../../resources/img/dog-8.jpg');"></div>
+						<div class="square" style="background-image:url('/meetAgain/resources/img/dog-8.jpg');"></div>
 					</div>
 					<div class="col-12 col-md-4">
-						<div class="square" style="background-image:url('../../resources/img/dog-3.jpg');"></div>
+						<div class="square" style="background-image:url('/meetAgain/resources/img/dog-3.jpg');"></div>
 					</div>
 				</div>
 				<div class="d-flex justify-content-center my-5">
@@ -129,8 +140,9 @@
 
 </div>
 
+<!-- 마이페이지 메인 끝 -->
     
-<footer class="footer-1 bg-light text-dark">
+<!-- <footer class="footer-1 bg-light text-dark">
 <div class="container">
 <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
 	<div class="links">
@@ -163,24 +175,35 @@
 </div>
 </div>
 </footer>
+
+  </body>
+</html> -->
+
  <c:import url="/views/common/footer.jsp" />
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="../../resources/vendor/jquery/jquery.min.js"></script>
-    <script src="../../resources/vendor/popper/popper.min.js"></script>
-    <script src="../../resources/vendor/bootstrap/bootstrap.min.js" ></script>
-
-    <!-- optional plugins -->
-    <script src="../../resources/vendor/nouislider/js/nouislider.min.js"></script>
-
-    <!--   lazy javascript -->
-    <script src="../../resources/js/lazy.js"></script>
+    <!-- 마인펭이지 메인 스크립트작성 -->
+    <!--   jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/meetAgain/resources/vendor/popper/popper.min.js"></script>
+    <script src="/meetAgain/resources/vendor/bootstrap/bootstrap.min.js" ></script>
+	<!-- optional plugins -->
+    <script src="/meetAgain/resources/vendor/nouislider/js/nouislider.min.js"></script>
+      <!-- lazy javascript -->
+    <script src="/meetAgain/resources/js/lazy.js"></script>
     
-    <!-- 스크립트작성 -->
     <script>
       function accountEdit() {
         location.href="myPage2.jsp";
       }
     </script>
-  </body>
-</html>
+    
+
+
+
+
+
+
+
+
+
+
+    
