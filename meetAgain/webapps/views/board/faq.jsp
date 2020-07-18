@@ -7,6 +7,8 @@
 <c:import url="/views/common/header.jsp" />
 <div class="container">
 	<div class="intro">
+		<h1>FAQ</h1>
+		<br>
 		<div class="row">
 			<div class="col-12">
 				<div class="accordion" id="accordionExample">
