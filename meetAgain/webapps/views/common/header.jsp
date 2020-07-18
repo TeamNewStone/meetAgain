@@ -15,13 +15,13 @@
 
     <link href="/meetAgain/resources/img/favicon.ico" rel="icon" type="image/png">
     
-    <link rel="stylesheet" href="/meetAgain/resources/vendor/bootstrap/bootstrap.min.css">
-		<link rel="stylesheet" href="/meetAgain/resources/css/lazy.css">
-		<link rel="stylesheet" href="/meetAgain/resources/css/demo.css">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="/meetAgain/resources/vendor/jquery/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="/meetAgain/resources/vendor/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="/meetAgain/resources/css/lazy.css">
+	<link rel="stylesheet" href="/meetAgain/resources/css/demo.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <style>
 @media(min-width :992px) {
 	#login {
@@ -48,6 +48,11 @@
 		top: 15%;
 	}
 }
+
+#noticePaging ul li{
+	display : inline-block;
+	text-align : center;
+}
     </style>
   </head>
   <body class="index">
@@ -55,7 +60,7 @@
       <!--header 시작-->
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <div class="container">
-        <a class="navbar-brand" href="./"><img src="/meetAgain/resources/img/logo.png" alt="Example Navbar 1" class="mr-2" height="30"></a>
+        <a class="navbar-brand" href="/meetAgain/index.jsp"><img src="/meetAgain/resources/img/logo.png" alt="Example Navbar 1" class="mr-2" height="30"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown-7" aria-controls="navbarNavDropdown-7"
           aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -86,10 +91,7 @@
         </div>
     </nav>
     <script>
-			</div>
-		</div>
-	</nav>
-	<script>
+
     // 화면크기가 992 미만일 경우 유저사진 notice li 위로 올리기
     $(function(){
 	  	  var windowWidth = $(window).width();
@@ -107,7 +109,6 @@
     function goNotice(){
     	location.href='/meetAgain/views/board/notice.jsp';
     }
-    
- // g
+  
     </script>
     <!-- header 끝 -->
