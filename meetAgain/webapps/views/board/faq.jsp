@@ -7,6 +7,8 @@
 <c:import url="/views/common/header.jsp" />
 <div class="container">
 	<div class="intro">
+		<h1>FAQ</h1>
+		<br>
 		<div class="row">
 			<div class="col-12">
 				<div class="accordion" id="accordionExample">
@@ -80,7 +82,7 @@
 								proident. Ad vegan excepteur butcher vice lomo. Leggings
 								occaecat craft beer farm-to-table, raw denim aesthetic synth
 								nesciunt you probably haven't heard of them accusamus labore
-								sustainable VHS.</div>
+								sustainable VHS.tests</div>
 						</div>
 					</div>
 				</div>
