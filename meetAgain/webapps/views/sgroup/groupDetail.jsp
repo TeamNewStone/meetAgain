@@ -109,12 +109,13 @@
 					</tr>
 					<tr>
 						<td><h5>모임인원</h5></td>
-						<td colspan="2">
-							<div class="progress progress-lg">
+						<td colspan="2" style="display: flex; align-items: center;">
+							<div class="progress progress-lg" style="width:50%; float:left;" >
 								<div class="progress-bar bg-info" role="progressbar"
 									style="width: 25%;" aria-valuenow="50" aria-valuemin="0"
 									aria-valuemax="100"></div>
-							</div> 5/10
+							</div>
+							<div style="float:left;"><h5> &nbsp;5/10 </h5></div> 
 						</td>
 
 					</tr>
@@ -128,7 +129,7 @@
 							<div id="piechart" style="width: 300px; "></div>
 						</td>
 						<td style="text-align: right;"><button type="button"
-								class="btn btn-danger">멤버 리스트</button></td>
+								class="btn btn-danger" onclick="clickMemList();">멤버 리스트</button></td>
 					</tr>
 				</table>
 
@@ -172,6 +173,10 @@ function drawChart() {
 
   chart.draw(data, options);
 
+}
+
+function clickMemList(){
+	location.href='/meetAgain/views/sgroup/memberList.jsp';
 }
 </script>
 <c:import url="/views/common/footer.jsp" />
