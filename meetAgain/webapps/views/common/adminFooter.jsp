@@ -20,29 +20,5 @@
     <script src="resources/js/lazy.js"></script>
     <script src="resources/js/demo.js"></script>
 
-<!--     <script>
-
-
-      function show1(){
-        $('.nav-item').addClass('cantSee').removeClass('canSee');
-      }
-
-      $('#declare').click(function(){
-        function show(){
-        $('.nav-item').addClass('canSee').removeClass('cantSee');
-      }
-        return show();
-
-      });
-
-      $('#gManage, #mManage').click(function(){
-        function show(){
-        $('.nav-item').removeClass('canSee').addClass('cantSee');
-      }
-        return show();
-
-      });
-
-    </script> -->
   </body>
 </html>
