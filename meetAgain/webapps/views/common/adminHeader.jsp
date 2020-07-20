@@ -12,6 +12,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="description" content="A new design system for developing with less effort.">
     <meta name="author" content="BootstrapBay">
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="${ pageContext.request.contextPath }/resources/vendor/jquery/jquery-3.5.1.min.js"></script>
 
     <link href="assets/img/favicon.ico" rel="icon" type="image/png">
     <link rel="stylesheet" href="/meetAgain/resources/vendor/bootstrap/bootstrap.min.css">
@@ -104,18 +107,17 @@
 </div>        
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="/meetAgain/resources/vendor/jquery/jquery.min.js"></script>
-    <script src="/meetAgain/resources/vendor/jquery/jquery-3.5.1.min.js"> </script>
     <script src="/meetAgain/resources/vendor/popper/popper.min.js"> </script>
     <script src="/meetAgain/resources/vendor/bootstrap/bootstrap.min.js" ></script>
 
     <!-- optional plugins -->
-    <script src="/meetAgain/resources/vendor/nouislider/js/nouislider.min.js"> </script>
+    <script src="/meetAgain/resources/vendor/nouislider/js/nouislider.min.js"></script>
 
     <!-- prism for code documentation -->
     <script src="/meetAgain/resources/vendor/prism/prism.js"> </script>
 
     <!--   lazy javascript -->
-    <script src="/meetAgain/resources/js/lazy.js"> </script>
+    <script src="/meetAgain/resources/js/lazy.js"></script>
     <script src="/meetAgain/resources/js/demo.js"></script>
 
     <script>
