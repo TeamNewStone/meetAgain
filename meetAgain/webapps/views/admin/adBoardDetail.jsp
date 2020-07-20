@@ -12,7 +12,14 @@ $('.nav-item').addClass('canSee').removeClass('cantSee');
           <h2>게시글 관리</h2>
 
 <div class="component">
-<table class="table" style="text-align:center;margin:auto; width:130%;">
+<table class="table" style="text-align:center;margin:auto; width:100%;">
+<colgroup>
+<col width="25%"/>
+<col width="25%"/>
+<col width="25%"/>
+<col width="25%"/>
+
+</colgroup>
 
 <tr>
 	<th>모임명</th>
@@ -81,6 +88,7 @@ $('.nav-item').addClass('canSee').removeClass('cantSee');
         <br />
         <div>
         <p style="color:#a3a3a3; font-size:15px">회원 처리</p>
+        <p style="font-size:15px; font-weight:bold;">피신고자 (경고 3회)</p>
 <div class="form-group">
   <select class="custom-select" style="width:">
     <option selected>Open this select menu</option>
