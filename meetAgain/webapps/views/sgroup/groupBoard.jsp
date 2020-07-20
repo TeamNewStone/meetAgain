@@ -7,6 +7,7 @@
 <div class="container">
 	<c:import url="/views/common/groupHeader.jsp" />
 	<!--===================== 소모임 페이지의 바디 부분 =====================-->
+	
 	<div id="tableArea">
 		<table class="table" align="center" id="listArea" style="width: 100%;">
 			<tr>
@@ -57,4 +58,5 @@
 	</div>
 	<br /> <br /> <br /> <br />
 </div>
+
 <c:import url="/views/common/footer.jsp" />
