@@ -63,7 +63,7 @@ $('.nav-item').addClass('canSee').removeClass('cantSee');
         </div>
 		
 <div class="form-group">
-  <select class="custom-select" style="width:">
+  <select class="custom-select">
     <option selected>Open this select menu</option>
     <option value="1">스팸 / 광고</option>
     <option value="2">폭력적 또는 혐오스러운 콘텐츠</option>

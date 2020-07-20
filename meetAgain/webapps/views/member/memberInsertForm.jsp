@@ -17,7 +17,7 @@
 						  <h1>회원가입</h1>
 					  <br />
 					  </div>
-					  <form style="line-height:1em;">
+					  <form style="line-height:1em;"action="memberInsertSuccess.jsp">
 						  <div class="form-group">
 						    <label for="exampleInputEmail1">* 이메일</label>
 						    <input type="email" class="form-control" id="Email1" aria-describedby="emailHelp" placeholder="123@example.com" readonly>
@@ -52,7 +52,7 @@
 							<label for="zipCode" style="display:block;">* 주소(집)</label>
 								<input type="text" class="form-control2" id="zipCode1"
 									name="zipCode" placeholder="우편번호" style="width:50px important;" required>
-								<button type="button" class="btn btn-secondary mb-2" value="1" onclick="addrSearch1();">검색</button>
+								<button type="button" class="btn btn-secondary mb-2" onclick="addrSearch1();">검색</button>
 								<input type="text" class="form-control" id="address1"
 									name="address1" placeholder="상세주소" required>
 						</div>
@@ -61,7 +61,7 @@
 							<label for="zipCode" style="display:block;">주소(직장)</label>
 								<input type="text" class="form-control2" id="zipCode2"
 									name="zipCode" placeholder="우편번호" style="width:50px important;">
-								<button type="button" class="btn btn-secondary mb-2" value="2" onclick="addrSearch2();">검색</button>
+								<button type="button" class="btn btn-secondary mb-2" onclick="addrSearch2();">검색</button>
 								<input type="text" class="form-control" id="address2"
 									name="address" placeholder="상세주소">
 						</div>
@@ -70,7 +70,7 @@
 							<label for="zipCode" style="display:block;">주소(관심)</label>
 								<input type="text" class="form-control2" id="zipCode3"
 									name="zipCode" placeholder="우편번호" style="width:50px important;">
-								<button type="button" class="btn btn-secondary mb-2" value="3" onclick="addrSearch3();">검색</button>
+								<button type="button" class="btn btn-secondary mb-2" onclick="addrSearch3();">검색</button>
 								<input type="text" class="form-control" id="address3"
 									name="address" placeholder="상세주소" >
 						</div>
