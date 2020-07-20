@@ -78,6 +78,7 @@ $('.nav-item').addClass('canSee').removeClass('cantSee');
         <br />
         <div>
         <p style="color:#a3a3a3; font-size:15px">회원 처리</p>
+        <p style="font-size:15px; font-weight:bold;">피신고자 (경고 3회)</p>
 <div class="form-group">
   <select class="custom-select" style="width:">
     <option selected>Open this select menu</option>
