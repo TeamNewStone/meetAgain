@@ -17,65 +17,64 @@
 						  <h1>부가정보</h1>
 					  <br />
 					  </div>
-					  <form style="line-height:1em;"action="memberInsertSuccess.jsp">
-						  <div class="form-group">
-						    <label for="exampleInputEmail1">* 이메일</label>
-						    <input type="email" class="form-control" id="Email1" aria-describedby="emailHelp" placeholder="123@example.com" readonly>
-						    <!-- <small id="emailHelp" class="form-text text-info">We'll never share your email with anyone else.</small> -->
+					  <form style="line-height:1em;"action="${ pageContext.request.contextPath }">
+						  <div class="form-group" style="text-align:center;">
+						  <img src="/meetAgain/resources/img/usericon.png" id="sampleImg" alt="usericon" class="img-fluid rounded-circle" style="width : 120px;">
+						  <br />
+						  <button type="button" id="mimgBtn">사진 첨부</button>
+								<input type="file" name="userImg" id="profileImgBtn" style="display: none;"
+								onchange="loadImg(this);" />
+
 						  </div>
 						  <div class="form-group">
-						    <label for="exampleInputPassword1">* 이름</label>
-						    <input type="text" class="form-control" id="userName" placeholder="홍길동" readonly>
+						    <label for="blood">혈액형</label>
+						    <input type="text" class="form-control" id="blood" maxlength="2" placeholder="ex) AB">
 						  </div>
 						  <div class="form-group">
-						    <label for="exampleInputPassword1">*닉네임</label>
-						    <input type="text" class="form-control" id="NickName" placeholder="2자 이상 6자 이하로 작성해주세요." maxlength="6" required>
-						    <small><span class="error_next_box text-info" id="nickNoMsg" style="display:none;color:red;" aria-live="assertive"></span></small>
+						    <label for="constellation">별자리</label>
+						    <input type="text" class="form-control" id="constellation" placeholder="염소자리" readonly>
 						  </div>
 						  <div class="form-group">
-						    <label for="exampleInputPassword1">* 성별</label><br />
-						    <label class="box-radio-input"><input type="radio" name="cp_item" value="옵션1" checked="checked" disabled><span>남자</span></label>
-						    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							<label class="box-radio-input"><input type="radio" name="cp_item" value="옵션2" disabled><span>여자</span></label>
+						    <label for="MBTI">MBTI &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						    <button type="button" class="btn btn-outline-secondary" onclick="window.open('https://www.16personalities.com/ko','_blank')">테스트하러 가기</button></label><br />
+						    <input type="text" class="form-control" id="MBTI" placeholder="ex) ISFP" >
 						  </div>
 						  <div class="form-group">
-						    <label for="exampleInputPassword1">* 생년월일</label>
-						    <input type="text" class="form-control" id="birthday" placeholder="1990-01-01" readonly>
+						    <label for="interest">주 관심사</label>
+						    <div class="custom-control custom-checkbox my-2">
+						    <span>
+						    <input type="checkbox" class="custom-control-input" id="customCheck1">
+						    <label class="custom-control-label" for="customCheck1" style="width:150px;">운동</label></span>
+						    &nbsp;&nbsp;&nbsp;&nbsp;<span>
+						    <input type="checkbox" class="custom-control-input" id="customCheck2">
+						    <label class="custom-control-label" for="customCheck2">소통</label></span>
+						    </div>
+						    <div class="custom-control custom-checkbox my-2">
+						    <span>
+						    <input type="checkbox" class="custom-control-input" id="customCheck3">
+						    <label class="custom-control-label" for="customCheck3" style="width:150px;">공부</label></span>
+						     &nbsp;&nbsp;&nbsp;&nbsp;<span>
+						    <input type="checkbox" class="custom-control-input" id="customCheck4">
+						    <label class="custom-control-label" for="customCheck4">취업</label></span>
+						    </div>
+						    <div class="custom-control custom-checkbox my-2">
+						    <span>
+						    <input type="checkbox" class="custom-control-input" id="customCheck5">
+						    <label class="custom-control-label" for="customCheck5" style="width:150px;">음악 / 댄스</label></span>
+						     &nbsp;&nbsp;&nbsp;&nbsp;<span>
+						    <input type="checkbox" class="custom-control-input" id="customCheck6">
+						    <label class="custom-control-label" for="customCheck6">고상한 취미</label></span>
+						    </div>
 						  </div>
+						  <br />
 						  <div class="form-group">
-						    <label for="exampleInputPassword1">* 전화번호</label>
-						    <input type="text" class="form-control" id="phoneNo" required>
-						    <small><span class="error_next_box" id="iphoneNoMsg" style="display:none;color:red;" aria-live="assertive"></span></small>
+						    <label for="exampleInputPassword1">키워드</label>
+						    <small id="emailHelp" class="form-text text-info">본인을 소개하는 키워드를 # 태그를 이용해 자유롭게 표현해주세요!</small>
+						    <input type="text" class="form-control" id="phoneNo" >
 						  </div>
-						  
-						  <div class="form-group">
-							<label for="zipCode" style="display:block;">* 주소(집)</label>
-								<input type="text" class="form-control2" id="zipCode1"
-									name="zipCode" placeholder="우편번호" style="width:50px important;" required>
-								<button type="button" class="btn btn-secondary mb-2" onclick="addrSearch1();">검색</button>
-								<input type="text" class="form-control" id="address1"
-									name="address1" placeholder="상세주소" required>
-						</div>
-						
-						<div class="form-group">
-							<label for="zipCode" style="display:block;">주소(직장)</label>
-								<input type="text" class="form-control2" id="zipCode2"
-									name="zipCode" placeholder="우편번호" style="width:50px important;">
-								<button type="button" class="btn btn-secondary mb-2" onclick="addrSearch2();">검색</button>
-								<input type="text" class="form-control" id="address2"
-									name="address" placeholder="상세주소">
-						</div>
-						
-						<div class="form-group">
-							<label for="zipCode" style="display:block;">주소(관심)</label>
-								<input type="text" class="form-control2" id="zipCode3"
-									name="zipCode" placeholder="우편번호" style="width:50px important;">
-								<button type="button" class="btn btn-secondary mb-2" onclick="addrSearch3();">검색</button>
-								<input type="text" class="form-control" id="address3"
-									name="address" placeholder="상세주소" >
-						</div>
+
 <br />
-						  <button type="submit" class="btn btn-block btn-secondary" onclick="return send();">가입하기</button>
+						  <button type="submit" class="btn btn-block btn-secondary" >등록하기</button>
 						</form>
 
 		  		</div>
@@ -94,182 +93,22 @@
 
 <script>
 
-$('#phone').keyup(function(){
-	var phoneChk = /^[0-9]$/;
-	if(!phoneChk.test($(this).val())){
-		$(this).val($(this).val().replace(phoneChk,''));
-		$(this).focus();
-	}
-	
-
-	
+$('#mimgBtn').on('click', function() {
+	$('#profileImgBtn').click();
 });
 
+function loadImg(value) {
 
-function isCellPhone(p) {
-    var regPhone = /^((01[1|6|7|8|9])[1-9][0-9]{6,7})$|(010[1-9][0-9]{7})$/;
-    return regPhone.test(p);
-}
+	if (value.files && value.files[0]) {
 
-function send(){
-    if(!isCellPhone($('#phoneNo').val())) {
-        showErrorMsg($("#iphoneNoMsg"),"형식에 맞지 않는 번호입니다.");
-        return false;
-    }else{
-    	$("#iphoneNoMsg").hide();
-    }
-    
-    if($('#NickName').val().length < 2){
-    	showErrorMsg($("#nickNoMsg"),"최소 2자 이상 입력해야 합니다.");
-        return false;
-    }else{
-    	$("#nickNoMsg").hide();
-    }
-}
-function showErrorMsg(obj, msg) {
-    obj.attr("class", "error_next_box");
-    obj.html(msg);
-    obj.show();
-}
+		var reader = new FileReader();
 
+		reader.onload = function(e) {
+			$('#sampleImg').attr('src', e.target.result);
+		}
 
-// 참조 API : http://postcode.map.daum.net/guide
-function addrSearch1() {
-	new daum.Postcode(
-			{
-				oncomplete : function(data) {
-					// 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
-
-					// 각 주소의 노출 규칙에 따라 주소를 조합한다.
-					// 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
-					var fullAddr = ''; // 최종 주소 변수
-					var extraAddr = ''; // 조합형 주소 변수
-
-					// 사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
-					if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
-						fullAddr = data.roadAddress;
-
-					} else { // 사용자가 지번 주소를 선택했을 경우(J)
-						fullAddr = data.jibunAddress;
-					}
-
-					// 사용자가 선택한 주소가 도로명 타입일때 조합한다.
-					if (data.userSelectedType === 'R') {
-						//법정동명이 있을 경우 추가한다.
-						if (data.bname !== '') {
-							extraAddr += data.bname;
-						}
-						// 건물명이 있을 경우 추가한다.
-						if (data.buildingName !== '') {
-							extraAddr += (extraAddr !== '' ? ', '
-									+ data.buildingName : data.buildingName);
-						}
-						// 조합형주소의 유무에 따라 양쪽에 괄호를 추가하여 최종 주소를 만든다.
-						fullAddr += (extraAddr !== '' ? ' (' + extraAddr
-								+ ')' : '');
-					}
-
-					// 우편번호와 주소 정보를 해당 필드에 넣는다.
-					$('#zipCode1').val(data.zonecode); //5자리 새우편번호 사용
-
-					$('#address1').val(fullAddr);
-
-					// 커서를 상세주소 필드로 이동한다.
-					$('#address1').focus();
-				}
-			}).open();
-};
-//참조 API : http://postcode.map.daum.net/guide
-function addrSearch2() {
-	new daum.Postcode(
-			{
-				oncomplete : function(data) {
-					// 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
-
-					// 각 주소의 노출 규칙에 따라 주소를 조합한다.
-					// 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
-					var fullAddr = ''; // 최종 주소 변수
-					var extraAddr = ''; // 조합형 주소 변수
-
-					// 사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
-					if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
-						fullAddr = data.roadAddress;
-
-					} else { // 사용자가 지번 주소를 선택했을 경우(J)
-						fullAddr = data.jibunAddress;
-					}
-
-					// 사용자가 선택한 주소가 도로명 타입일때 조합한다.
-					if (data.userSelectedType === 'R') {
-						//법정동명이 있을 경우 추가한다.
-						if (data.bname !== '') {
-							extraAddr += data.bname;
-						}
-						// 건물명이 있을 경우 추가한다.
-						if (data.buildingName !== '') {
-							extraAddr += (extraAddr !== '' ? ', '
-									+ data.buildingName : data.buildingName);
-						}
-						// 조합형주소의 유무에 따라 양쪽에 괄호를 추가하여 최종 주소를 만든다.
-						fullAddr += (extraAddr !== '' ? ' (' + extraAddr
-								+ ')' : '');
-					}
-
-					// 우편번호와 주소 정보를 해당 필드에 넣는다.
-					$('#zipCode2').val(data.zonecode); //5자리 새우편번호 사용
-
-					$('#address2').val(fullAddr);
-
-					// 커서를 상세주소 필드로 이동한다.
-					$('#address2').focus();
-				}
-			}).open();
-};
-//참조 API : http://postcode.map.daum.net/guide
-function addrSearch3() {
-	new daum.Postcode(
-			{
-				oncomplete : function(data) {
-					// 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
-
-					// 각 주소의 노출 규칙에 따라 주소를 조합한다.
-					// 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
-					var fullAddr = ''; // 최종 주소 변수
-					var extraAddr = ''; // 조합형 주소 변수
-
-					// 사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
-					if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
-						fullAddr = data.roadAddress;
-
-					} else { // 사용자가 지번 주소를 선택했을 경우(J)
-						fullAddr = data.jibunAddress;
-					}
-
-					// 사용자가 선택한 주소가 도로명 타입일때 조합한다.
-					if (data.userSelectedType === 'R') {
-						//법정동명이 있을 경우 추가한다.
-						if (data.bname !== '') {
-							extraAddr += data.bname;
-						}
-						// 건물명이 있을 경우 추가한다.
-						if (data.buildingName !== '') {
-							extraAddr += (extraAddr !== '' ? ', '
-									+ data.buildingName : data.buildingName);
-						}
-						// 조합형주소의 유무에 따라 양쪽에 괄호를 추가하여 최종 주소를 만든다.
-						fullAddr += (extraAddr !== '' ? ' (' + extraAddr
-								+ ')' : '');
-					}
-
-					// 우편번호와 주소 정보를 해당 필드에 넣는다.
-					$('#zipCode3').val(data.zonecode); //5자리 새우편번호 사용
-
-					$('#address3').val(fullAddr);
-
-					// 커서를 상세주소 필드로 이동한다.
-					$('#address3').focus();
-				}
-			}).open();
+		reader.readAsDataURL(value.files[0]);
+	}
 };
 
 

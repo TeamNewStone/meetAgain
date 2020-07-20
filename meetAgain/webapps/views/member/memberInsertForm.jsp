@@ -17,33 +17,33 @@
 						  <h1>회원가입</h1>
 					  <br />
 					  </div>
-					  <form style="line-height:1em;"action="memberInsertSuccess.jsp">
+					  <form style="line-height:1em;">
 						  <div class="form-group">
-						    <label for="exampleInputEmail1">* 이메일</label>
+						    <label for="Email1">* 이메일</label>
 						    <input type="email" class="form-control" id="Email1" aria-describedby="emailHelp" placeholder="123@example.com" readonly>
 						    <!-- <small id="emailHelp" class="form-text text-info">We'll never share your email with anyone else.</small> -->
 						  </div>
 						  <div class="form-group">
-						    <label for="exampleInputPassword1">* 이름</label>
+						    <label for="userName">* 이름</label>
 						    <input type="text" class="form-control" id="userName" placeholder="홍길동" readonly>
 						  </div>
 						  <div class="form-group">
-						    <label for="exampleInputPassword1">*닉네임</label>
+						    <label for="NickName">*닉네임</label>
 						    <input type="text" class="form-control" id="NickName" placeholder="2자 이상 6자 이하로 작성해주세요." maxlength="6" required>
 						    <small><span class="error_next_box text-info" id="nickNoMsg" style="display:none;color:red;" aria-live="assertive"></span></small>
 						  </div>
 						  <div class="form-group">
-						    <label for="exampleInputPassword1">* 성별</label><br />
-						    <label class="box-radio-input"><input type="radio" name="cp_item" value="옵션1" checked="checked" disabled><span>남자</span></label>
+						    <label for="gender">* 성별</label><br />
+						    <label class="box-radio-input"><input type="radio" name="gender" value="옵션1" checked="checked" disabled><span>남자</span></label>
 						    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							<label class="box-radio-input"><input type="radio" name="cp_item" value="옵션2" disabled><span>여자</span></label>
+							<label class="box-radio-input"><input type="radio" name="gender" value="옵션2" disabled><span>여자</span></label>
 						  </div>
 						  <div class="form-group">
-						    <label for="exampleInputPassword1">* 생년월일</label>
+						    <label for="birthday">* 생년월일</label>
 						    <input type="text" class="form-control" id="birthday" placeholder="1990-01-01" readonly>
 						  </div>
 						  <div class="form-group">
-						    <label for="exampleInputPassword1">* 전화번호</label>
+						    <label for="phoneNo">* 전화번호</label>
 						    <input type="text" class="form-control" id="phoneNo" required>
 						    <small><span class="error_next_box" id="iphoneNoMsg" style="display:none;color:red;" aria-live="assertive"></span></small>
 						  </div>
@@ -52,7 +52,7 @@
 							<label for="zipCode" style="display:block;">* 주소(집)</label>
 								<input type="text" class="form-control2" id="zipCode1"
 									name="zipCode" placeholder="우편번호" style="width:50px important;" required>
-								<button type="button" class="btn btn-secondary mb-2" onclick="addrSearch1();">검색</button>
+								<button type="button" class="btn btn-secondary mb-2" value="1" onclick="addrSearch1();">검색</button>
 								<input type="text" class="form-control" id="address1"
 									name="address1" placeholder="상세주소" required>
 						</div>
@@ -61,7 +61,7 @@
 							<label for="zipCode" style="display:block;">주소(직장)</label>
 								<input type="text" class="form-control2" id="zipCode2"
 									name="zipCode" placeholder="우편번호" style="width:50px important;">
-								<button type="button" class="btn btn-secondary mb-2" onclick="addrSearch2();">검색</button>
+								<button type="button" class="btn btn-secondary mb-2" value="2" onclick="addrSearch2();">검색</button>
 								<input type="text" class="form-control" id="address2"
 									name="address" placeholder="상세주소">
 						</div>
@@ -70,7 +70,7 @@
 							<label for="zipCode" style="display:block;">주소(관심)</label>
 								<input type="text" class="form-control2" id="zipCode3"
 									name="zipCode" placeholder="우편번호" style="width:50px important;">
-								<button type="button" class="btn btn-secondary mb-2" onclick="addrSearch3();">검색</button>
+								<button type="button" class="btn btn-secondary mb-2" value="3" onclick="addrSearch3();">검색</button>
 								<input type="text" class="form-control" id="address3"
 									name="address" placeholder="상세주소" >
 						</div>
