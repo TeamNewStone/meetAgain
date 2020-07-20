@@ -4,104 +4,114 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <c:import url="/views/common/header.jsp" />
-
-
-<div class="row">
-	<div class="col-md-3">
-		<p>
-			<a href="">해당 지역</a> 의 소모임 리스트를 보고 계십니다.
-		</p>
-		<div class="dropdown">
-			<button class="btn btn-secondary dropdown-toggle" type="button"
-				id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-				aria-expanded="false" style="margin-left: 100px;">지역선택</button>
-			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-				<a class="dropdown-item" href="#">역삼2동</a> <a class="dropdown-item"
-					href="#">역삼3동</a> <a class="dropdown-item" href="#">지역추가</a>
+<div class="container-fluid">
+	<br>
+	<div class="row">
+		<div class="col-2">
+			<p>
+				<a href="">해당 지역</a> 의 소모임 리스트를 보고 계십니다.
+			</p>
+			<div class="dropdown">
+				<button class="btn btn-secondary dropdown-toggle" type="button"
+					id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false" style="margin-left: 100px;">지역선택</button>
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					<a class="dropdown-item" href="#">역삼2동</a> <a class="dropdown-item"
+						href="#">역삼3동</a> <a class="dropdown-item" href="#">지역추가</a>
+				</div>
 			</div>
 		</div>
+		<div class="col-8 mx-auto">
+			<div class="row">
+				<div class="col-1"></div>
+				<div class="col-10">
+					<div class="row">
+						<div class="col-8">
+							<input type="search" class="form-control" id="search"
+								placeholder="모임을 검색하세요">
+						</div>
+						<div class="col-4">
+							<button type="button" class="btn btn-info">상세 검색 ▼</button>
+						</div>
+					</div>
+					<div class="row form-group">
+						<div class="col-6 custom-control custom-radio my-2">
+							<input type="radio" id="short-term" name="term"
+								class="custom-control-input" checked> <label
+								class="custom-control-label" for="short-term">단기</label>
+						</div>
+						<div class="col-6 custom-control custom-radio my-2">
+							<input type="radio" id="long-term" name="term"
+								class="custom-control-input"> <label
+								class="custom-control-label" for="long-term">장기</label>
+						</div>
+						<br>
+						<div class="col-2 custom-control custom-checkbox my-2">
+							<input type="checkbox" class="custom-control-input" id="health"
+								name="hobby" checked> <label
+								class="custom-control-label" for="health">운동</label>
+						</div>
+						<div class="col-2 custom-control custom-checkbox my-2">
+							<input type="checkbox" class="custom-control-input" id="study"
+								name="hobby"> <label class="custom-control-label"
+								for="study">공부</label>
+						</div>
+						<div class="col-2 custom-control custom-checkbox my-2">
+							<input type="checkbox" class="custom-control-input" id="commu"
+								name="hobby"> <label class="custom-control-label"
+								for="commu">소통</label>
+						</div>
+						<div class="col-2 custom-control custom-checkbox my-2">
+							<input type="checkbox" class="custom-control-input" id="job"
+								name="hobby"> <label class="custom-control-label"
+								for="job">취업</label>
+						</div>
+						<div class="col-2 custom-control custom-checkbox my-2">
+							<input type="checkbox" class="custom-control-input" id="ent"
+								name="hobby"> <label class="custom-control-label"
+								for="ent">음악/댄스</label>
+						</div>
+						<div class="col-2 custom-control custom-checkbox my-2">
+							<input type="checkbox" class="custom-control-input" id="gosang"
+								name="hobby"> <label class="custom-control-label"
+								for="gosang">고상한 취미</label>
+						</div>
+						<div class="custom-control custom-checkbox my-2">
+							<input type="checkbox" class="custom-control-input"
+								id="customCheck1"> <label class="custom-control-label"
+								for="customCheck1">10대</label>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox"
+								class="custom-control-input" id="customCheck2"> <label
+								class="custom-control-label" for="customCheck2">20대</label>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox"
+								class="custom-control-input" id="customCheck3"> <label
+								class="custom-control-label" for="customCheck3">30대</label>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox"
+								class="custom-control-input" id="customCheck4"> <label
+								class="custom-control-label" for="customCheck4">40대</label>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox"
+								class="custom-control-input" id="customCheck5"> <label
+								class="custom-control-label" for="customCheck5">50대 이상</label>
+						</div>
+					</div>
 
-	</div>
-	<div class="col-md-6">
-		<div class="mx-auto">
-			&nbsp;
-			<div class="form-group">
-				<div class="row">
-					<input type="search" class="form-control" id="search"
-						placeholder="모임을 검색하세요" width="80%">
-				</div>
-				<div class="row">
-					<div class="col-md-4"></div>
-					<div class="col-md-4"></div>
-					<div class="col-md-4">
-						<button type="button" class="btn btn-info" style="float: right;">상세
-							검색하기 ▼</button>
+					<div class="custom-control custom-radio my-2">
+						<input type="radio" id="customRadio1" name="customRadio"
+							class="custom-control-input"> <label
+							class="custom-control-label" for="customRadio1">남자</label>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio"
+							id="customRadio1" name="customRadio" class="custom-control-input">
+						<label class="custom-control-label" for="customRadio1">여자</label>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio"
+							id="customRadio1" name="customRadio" class="custom-control-input">
+						<label class="custom-control-label" for="customRadio1">성별무관</label>
 					</div>
 				</div>
-				<fieldset>
-					<table>
-							<tr>
-								<td><input type="radio" id="short-term" name="term"
-									class="custom-control-input"> <label
-									class="custom-control-label" for="customRadio1">단기</label></td>
-								<td><input type="radio" id="long-term" name="term"
-									class="custom-control-input"> <label
-									class="custom-control-label" for="customRadio1">장기</label></td>
-							</tr>
-							<tr>
-								<td><input type="checkbox" id="customCheck1"
-									class="custom-control-input"> <label
-									class="custom-control-label">운동</label></td>
-								<td><input type="checkbox" class="custom-control-input"
-									id="customCheck1"> <label class="custom-control-label"
-									for="customCheck1">공부</label></td>
-								<td><input type="checkbox" class="custom-control-input"
-									id="customCheck1"> <label class="custom-control-label"
-									for="customCheck1">소통</label></td>
-								<td><input type="checkbox" class="custom-control-input"
-									id="customCheck1"> <label class="custom-control-label"
-									for="customCheck1">취업</label></td>
-								<td><input type="checkbox" class="custom-control-input"
-									id="customCheck1"> <label class="custom-control-label"
-									for="customCheck1">음악/댄스</label></td>
-								<td><input type="checkbox" class="custom-control-input"
-									id="customCheck1"> <label class="custom-control-label"
-									for="customCheck1">고상한 취미</label></td>
-							</tr>
-				<div class="custom-control custom-checkbox my-2">
-					<input type="checkbox" class="custom-control-input"
-						id="customCheck1"> <label class="custom-control-label"
-						for="customCheck1">10대</label>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox"
-						class="custom-control-input" id="customCheck1"> <label
-						class="custom-control-label" for="customCheck1">20대</label>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox"
-						class="custom-control-input" id="customCheck1"> <label
-						class="custom-control-label" for="customCheck1">30대</label>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox"
-						class="custom-control-input" id="customCheck1"> <label
-						class="custom-control-label" for="customCheck1">40대</label>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox"
-						class="custom-control-input" id="customCheck1"> <label
-						class="custom-control-label" for="customCheck1">50대 이상</label>
-				</div>
-				<div class="custom-control custom-radio my-2">
-					<input type="radio" id="customRadio1" name="customRadio"
-						class="custom-control-input"> <label
-						class="custom-control-label" for="customRadio1">남자</label>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio"
-						id="customRadio1" name="customRadio" class="custom-control-input">
-					<label class="custom-control-label" for="customRadio1">여자</label>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio"
-						id="customRadio1" name="customRadio" class="custom-control-input">
-					<label class="custom-control-label" for="customRadio1">성별무관</label>
-				</div>
-					</table>
-				</fieldset>
 			</div>
+			<div class="col-1"></div>
 		</div>
 	</div>
-	<div class="col-md-3"></div>
+	<div class="col-2"></div>
 </div>
 <div class="rows">
 	<div class="row">
@@ -238,6 +248,13 @@
 		</div>
 	</div>
 </div>
+<script>
+	$(function() {
+		$('.form-group label').each(function() {
+			$(this).css('font-weight', '400');
+		});
+	});
+</script>
 <footer class="footer-1 bg-light text-dark">
 	<div class="container">
 		<div
@@ -278,16 +295,13 @@
 		</div>
 	</div>
 </footer>
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="../../resources/vendor/jquery/jquery.min.js"></script>
-<script src="../../resources/vendor/popper/popper.min.js"></script>
-<script src="../../resources/vendor/bootstrap/bootstrap.min.js"></script>
 
 <!-- optional plugins -->
-<script src="../../resources/vendor/nouislider/js/nouislider.min.js"></script>
+<script
+	src="${ pageContext.request.contextPath }/resources/vendor/nouislider/js/nouislider.min.js"></script>
 
 <!--   lazy javascript -->
-<script src="../../resources/js/lazy.js"></script>
+<script src="${ pageContext.request.contextPath }/resources/js/lazy.js"></script>
 </body>
 <c:import url="/views/common/footer.jsp" />
 

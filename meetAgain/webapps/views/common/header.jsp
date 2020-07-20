@@ -13,12 +13,18 @@
     <meta name="description" content="A new design system for developing with less effort.">
     <meta name="author" content="BootstrapBay">
 
-    <link href="/meetAgain/resources/img/favicon.ico" rel="icon" type="image/png">
+    <link href="${ pageContext.request.contextPath }/resources/img/favicon.ico" rel="icon" type="image/png">
     
-    <script src="/meetAgain/resources/vendor/jquery/jquery-3.5.1.min.js"></script>
-    <link rel="stylesheet" href="/meetAgain/resources/vendor/bootstrap/bootstrap.min.css">
-	<link rel="stylesheet" href="/meetAgain/resources/css/lazy.css">
-	<link rel="stylesheet" href="/meetAgain/resources/css/demo.css">
+    <script src="${ pageContext.request.contextPath }/resources/vendor/jquery/jquery-3.5.1.min.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="${ pageContext.request.contextPath }/resources/vendor/jquery/jquery.min.js"></script>
+	<script src="${ pageContext.request.contextPath }/resources/vendor/popper/popper.min.js"></script>
+	<script src="${ pageContext.request.contextPath }/resources/vendor/bootstrap/bootstrap.min.js"></script>
+    
+    
+    <link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/vendor/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/css/lazy.css">
+	<link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/css/demo.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
