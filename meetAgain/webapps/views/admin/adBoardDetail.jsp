@@ -77,9 +77,11 @@ $('.nav-item').addClass('canSee').removeClass('cantSee');
 <div class="form-group">
   <select class="custom-select" style="width:">
     <option selected>Open this select menu</option>
-    <option value="1">광고 / 홍보</option>
-    <option value="2">비방성</option>
-    <option value="3">음란물</option>
+    <option value="1">스팸 / 광고</option>
+    <option value="2">폭력적 또는 혐오스러운 콘텐츠</option>
+    <option value="3">증오 또는 학대하는 콘텐츠</option>
+    <option value="4">성적인 콘텐츠</option>
+    <option value="5">기타</option>
   </select>
 </div>
 
@@ -92,9 +94,7 @@ $('.nav-item').addClass('canSee').removeClass('cantSee');
 <div class="form-group">
   <select class="custom-select">
     <option selected>Open this select menu</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
+    <option value="1">경고</option>
   </select>
 </div>
         </div>
