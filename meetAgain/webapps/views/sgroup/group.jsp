@@ -16,7 +16,7 @@
 					<button class="btn btn-secondary dropdown-toggle" type="button"
 						id="dropdownMenuButton" data-toggle="dropdown"
 						aria-haspopup="true" aria-expanded="false"
-						style="margin-left: 100px;">지역선택</button>
+						style="margin-left: 100px;" >지역선택</button>
 					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 						<a class="dropdown-item" href="#">역삼2동</a> <a
 							class="dropdown-item" href="#">역삼3동</a> <a class="dropdown-item"
