@@ -43,9 +43,8 @@
 </div>
 </footer>
 <!-- footer 끝 -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="${ pageContext.request.contextPath }/resources/vendor/jquery/jquery.min.js"></script>
-    <script src="${ pageContext.request.contextPath }/resources/vendor/jquery/jquery-3.5.1.min.js"></script>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<%--     <script src="${ pageContext.request.contextPath }/resources/vendor/jquery/jquery.min.js"></script> --%>
     <script src="${ pageContext.request.contextPath }/resources/vendor/popper/popper.min.js"></script>
     <script src="${ pageContext.request.contextPath }/resources/vendor/bootstrap/bootstrap.min.js" ></script>
 
@@ -57,6 +56,6 @@
 
     <!--   lazy javascript -->
     <script src="${ pageContext.request.contextPath }/resources/js/lazy.js"></script>
-    <script src="${ pageContext.request.contextPath }/resources/js/demo.js"></script>
+    <script src="${ pageContext.request.contextPath }/resources/js/demo.js"></script>  
  </body>
 </html>

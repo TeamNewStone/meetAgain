@@ -12,15 +12,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="description" content="A new design system for developing with less effort.">
     <meta name="author" content="BootstrapBay">
-
     <link href="${ pageContext.request.contextPath }/resources/img/favicon.ico" rel="icon" type="image/png">
-    
+	
     <script src="${ pageContext.request.contextPath }/resources/vendor/jquery/jquery-3.5.1.min.js"></script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="${ pageContext.request.contextPath }/resources/vendor/jquery/jquery.min.js"></script>
-	<script src="${ pageContext.request.contextPath }/resources/vendor/popper/popper.min.js"></script>
-	<script src="${ pageContext.request.contextPath }/resources/vendor/bootstrap/bootstrap.min.js"></script>
-    
     
     <link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/vendor/bootstrap/bootstrap.min.css">
 	<link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/css/lazy.css">
@@ -82,8 +76,7 @@
               <a class="nav-link" href="#" id="nav-inner-primary_dropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">소모임</a>
             </li>
             </ul>
-            </div>
-			<ul class="navbar-nav" id="login-nav">
+			<ul class="navbar-nav ml-auto" id="login-nav">
             <li class="nav-item dropdown text-white" id="login">
               <a class="nav-link" href="/meetAgain/views/login.jsp">로그인</a>
             </li>
@@ -96,6 +89,7 @@
               </div>
             </li>
           </ul>
+          </div>
         </div>
     </nav>
     <script>
@@ -117,6 +111,7 @@
     function goNotice(){
     	location.href='/meetAgain/views/board/notice.jsp';
     }
-  
+    
+
     </script>
     <!-- header 끝 -->

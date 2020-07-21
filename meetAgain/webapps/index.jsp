@@ -174,16 +174,6 @@
 <br><br><br>
 
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="/meetAgain/resources/vendor/jquery/jquery.min.js"></script>
-    <script src="/meetAgain/resources/vendor/popper/popper.min.js"></script>
-    <script src="/meetAgain/resources/vendor/bootstrap/bootstrap.min.js" ></script>
-
-    <!-- optional plugins -->
-    <script src="/meetAgain/resources/vendor/nouislider/js/nouislider.min.js"></script>
-
-    <!--   lazy javascript -->
-    <script src="/meetAgain/resources/js/lazy.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
