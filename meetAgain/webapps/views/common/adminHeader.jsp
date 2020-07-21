@@ -12,17 +12,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="description" content="A new design system for developing with less effort.">
     <meta name="author" content="BootstrapBay">
+    <script src="${ pageContext.request.contextPath }/resources/vendor/jquery/jquery-3.5.1.min.js"></script>
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="${ pageContext.request.contextPath }/resources/vendor/jquery/jquery-3.5.1.min.js"></script>
-
-    <link href="assets/img/favicon.ico" rel="icon" type="image/png">
+    <link href="#" rel="icon" type="image/png">
     <link rel="stylesheet" href="/meetAgain/resources/vendor/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="/meetAgain/resources/css/lazy.css">
     <link rel="stylesheet" href="/meetAgain/resources/vendor/prism/prism.css">
     <link rel="stylesheet" href="/meetAgain/resources/css/demo.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
 	<link rel="stylesheet" href="/meetAgain/resources/css/admin.css">
+	
     <style>
       .canSee{
         display: block;

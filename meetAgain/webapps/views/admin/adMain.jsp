@@ -1,23 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <c:import url="/views/common/adminHeader.jsp" />
-  	<div class="container">
-      <div class="row"> 
-        <div class="col-sm-12 col-md-12 col-lg-6">
-          <h4>7월 첫째주 모임이 제일 많이 생성된 지역</h4>
-          <div id="piechart" style="width:100%; height:500px;"></div>
-          <button type="button" class="btn btn-info">Info</button>
-        </div>
-        <div class="col-sm-12 col-md-12 col-lg-6">
-          <h4>7월 첫째주 모임이 제일 많이 생성된 지역</h4>
-          <div id="curve_chart" style="width: 100%; height: 500px"></div>
-      </div>
-      </div>
-    </div>
-
+<br><br /><br /><br /><br /><br /><br />
+<div class="container">
+	<div class="row text-center">
+		<div class="col-sm-12 col-md-12 col-lg-6">
+			<h4>7월 첫째주 모임이 제일 많이 생성된 지역</h4>
+			<div id="piechart" style="width: 100%; height: 500px;"></div>
+			<button type="button" class="btn btn-info" style="position:absolute; width:60px; height:40px; top:150px; left:480px;">Info</button>
+		</div>
+		<div class="col-sm-12 col-md-12 col-lg-6">
+			<h4>7월 첫째주 모임이 제일 많이 생성된 지역</h4>
+			<div id="curve_chart" style="width: 100%; height: 500px"></div>
+		</div>
+	</div>
+</div>
+<!-- </div> -->
 <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
@@ -52,10 +53,8 @@
         chart.draw(data, options);
 
       }
-
-      
-    </script>
-    <script type="text/javascript">
+</script>
+<script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
 
@@ -79,8 +78,10 @@
         chart.draw(data, options);
       }
       
-     
-    </script> 
+      $(function(){
+    	  console.log($(window).width());
+      })
+    </script>
 </body>
 </html>
 

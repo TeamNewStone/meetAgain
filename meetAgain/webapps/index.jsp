@@ -235,6 +235,7 @@
         chart.draw(data, options);
       }
       
+      $()
      
     </script>
  <c:import url="/views/common/footer.jsp" />

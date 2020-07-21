@@ -55,6 +55,8 @@
 	display : inline-block;
 	text-align : center;
 }
+
+
     </style>
   </head>
   <body class="index">

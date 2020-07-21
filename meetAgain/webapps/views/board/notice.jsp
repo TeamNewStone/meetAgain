@@ -70,8 +70,8 @@
 <script>
 	$(function(){
 		$("#noticeTable td").click(function(){
-			var nno = $(this).parent().children().eq(0).text();
-			location.href="${ pageContext.request.contextPath }/selectOne.no?nno=" + nno;
+			var noticeNo = $(this).parent().children().eq(0).text();
+			location.href="${ pageContext.request.contextPath }/notice/noticeDetail.do?noticeNo=" + noticeNo;
 		});
 	});
 </script>
