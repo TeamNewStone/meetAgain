@@ -12,7 +12,7 @@
 			<div class="col-12">
 				<h1>공지사항</h1>
 				<br />
-				<table class="table">
+				<table class="table" id="noticeTable">
 					<thead class="thead-light">
 						<tr>
 							<th scope="col">#</th>
@@ -67,5 +67,12 @@
 <br />
 <br />
 <br />
-
+<script>
+	$(function(){
+		$("#noticeTable td").click(function(){
+			var nno = $(this).parent().children().eq(0).text();
+			location.href="${ pageContext.request.contextPath }/selectOne.no?nno=" + nno;
+		});
+	});
+</script>
 <c:import url="/views/common/footer.jsp" />
