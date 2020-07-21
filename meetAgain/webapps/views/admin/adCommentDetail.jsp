@@ -41,6 +41,7 @@ $('.nav-item').addClass('canSee').removeClass('cantSee');
 	</td>
 </tr>
 </table>
+</div></div>
 <!-- the modal -->
 <div class="modal fade" id="handleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -91,12 +92,11 @@ $('.nav-item').addClass('canSee').removeClass('cantSee');
         <button type="button" class="btn btn-info">Reject</button>
         <button type="button" class="btn btn-success">Submit</button>
       </div>
-
+</form>
 </div>
 </div>
+</div></div>
 
 
 
-
-</body>
-</html>
+<c:import url="/views/common/adminFooter.jsp"/>

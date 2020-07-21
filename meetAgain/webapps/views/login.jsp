@@ -22,8 +22,7 @@
 					  </div>
 					  <form>
 						  <div class="form-group">
-						  <a href="#"><img src="${ pageContext.request.contextPath }/resources/img/NaverLogin.PNG" alt="naverLogin" height="50" width="350"></a>
-						  <a href="#"><img src="${ pageContext.request.contextPath }/resources/img/NaverLogin_white.PNG" alt="naverLogin" height="50" width="350"></a>
+						  <a href="#"><img src="${ pageContext.request.contextPath }/resources/img/NaverLogin_white.PNG" alt="naverLogin" height="55" width="350"></a>
 
 						  </div>
 
