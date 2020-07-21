@@ -21,11 +21,9 @@
 						  <hr />
 					  </div>
 					  <form>
-						  <div class="form-group">
-						  <a href="#"><img src="${ pageContext.request.contextPath }/resources/img/NaverLogin_white.PNG" alt="naverLogin" height="55" width="350"></a>
-
-						  </div>
-
+					  <!-- 네이버아이디로로그인 버튼 노출 영역 -->
+					  <div id="naverIdLogin"></div>
+					  <!-- //네이버아이디로로그인 버튼 노출 영역 -->
 						</form>
 
 		  		</div>
@@ -41,6 +39,28 @@
 					  <br />
 					  <br />
 
+  <script type="text/javascript">
+/*   	var naver_id_login = new naver_id_login("lQZcDrHxi5UeKZeLLXqp", "http://localhost:8088/meetAgain/callBack.jsp");
+  	var state = naver_id_login.getUniqState();
+  	naver_id_login.setButton("white", 5,70);
+  	naver_id_login.setDomain("http://localhost:8088");
+  	naver_id_login.setState(state);
+  	naver_id_login.setPopup();
+  	naver_id_login.init_naver_id_login(); */
+  	
+	var naverLogin = new naver.LoginWithNaverId(
+		{
+			clientId: "lQZcDrHxi5UeKZeLLXqp",
+			callbackUrl: "http://localhost:8088/meetAgain/callBack.jsp",
+			isPopup: true, /* 팝업을 통한 연동처리 여부 */
+			loginButton: {color: "white", type: 3, height: 60} /* 로그인 버튼의 타입을 지정 */
+		}
+	);
+	
+	/* 설정정보를 초기화하고 연동을 준비 */
+	naverLogin.init();
+  	
+  </script>
 
 <c:import url="/views/common/footer.jsp"/>
 
