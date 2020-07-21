@@ -45,7 +45,7 @@ $('.nav-item').addClass('canSee').removeClass('cantSee');
 </tbody>
 </table>
 </div>
-
+</div>
 <script>
 $(function(){
 		
@@ -72,5 +72,4 @@ $(function(){
 
 
 
-</body>
-</html>
+<c:import url="/views/common/adminFooter.jsp"/>

@@ -44,7 +44,7 @@
 						  </div>
 						  <div class="form-group">
 						    <label for="phoneNo">* 전화번호</label>
-						    <input type="text" class="form-control" id="phoneNo" required>
+						    <input type="text" class="form-control" id="phoneNo" placeholder="'-'없이 번호만 입력해주세요. ex)01012345678" required>
 						    <small><span class="error_next_box" id="iphoneNoMsg" style="display:none;color:red;" aria-live="assertive"></span></small>
 						  </div>
 						  
