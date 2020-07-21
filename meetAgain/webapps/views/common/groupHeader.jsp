@@ -42,7 +42,8 @@
 			<button id="btn3" class="btn btn-outline-secondary"
 			onclick="location.href='/meetAgain/views/sgroup/groupCalendar.jsp'">캘린더</button>
 			&nbsp;
-			<button id="btn4" class="btn btn-outline-secondary">사진첩</button>
+			<button id="btn4" class="btn btn-outline-secondary"
+			onclick="location.href='/meetAgain/views/sgroup/groupAlbum.jsp'">사진첩</button>
 	
 	</div>
 </div>

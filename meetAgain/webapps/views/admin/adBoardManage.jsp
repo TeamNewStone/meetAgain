@@ -70,8 +70,7 @@ $(function(){
 
 </script>
 
+</div>
 
 
-
-</body>
-</html>
+<c:import url="/views/common/adminFooter.jsp"/>
