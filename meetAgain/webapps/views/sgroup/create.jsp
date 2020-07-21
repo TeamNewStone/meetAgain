@@ -19,135 +19,169 @@
 	</div>
 </div>
 <div class="col-md-3"></div>
-<div class="rows">
-	<div class="col-md-10 offset-md-1">
-		<div class="component">
-			<div class="card">
-				<div class="row"></div>
-				<div class="row">
-					<img src="../../resources/img/mamekim.jpg"
-						style="width: 40%; display: block; margin: 0px auto;">
-				</div>
-				<div class="card-body">
-					<div class="row">
-						<span class="badge badge-secondary mb-2"
-							style="display: block; margin: 0px auto;">excercise</span>
-					</div>
-					<div class="row">
-						<h4 class="card-title" style="display: block; margin: 0px auto;">송파구
-							팔굽치 단련 모임</h4>
-					</div>
-					<div class="rows">
-						<div class="row margin-top: 10px;">
-							<div class="col-md-6 text-center" style="padding-top: 10px;">지역</div>
-							<div class="col-md-6">
-								<div class="dropdown">
-									<button class="btn btn-secondary dropdown-toggle" type="button"
-										id="dropdownMenuButton" data-toggle="dropdown"
-										aria-haspopup="true" aria-expanded="false">사는 지역</button>
-									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-										<a class="dropdown-item" href="#">주소</a> <a
-											class="dropdown-item" href="#">주소</a> <a
-											class="dropdown-item" href="#">주소</a>
-									</div>
+<div class="card">
+	<div class="row"></div>
+	<div class="row">
+		<img src="../../resources/img/mamekim.jpg"
+			style="width: 40%; display: block; margin: 0px auto;">
+	</div>
+	<div class="card-body">
+		<div class="row">
+			<span class="badge badge-secondary mb-2"
+				style="display: block; margin: 0px auto;">excercise</span>
+		</div>
+		<div class="row">
+			<h4 class="card-title" style="display: block; margin: 0px auto;">송파구
+				팔굽치 단련 모임</h4>
+			<br><br><br>
+		</div>
+		<div class="row">
+			<div class="col-3"></div>
+			<div class="col-6">
+				<div class="rows">
+					<div class="row margin-top: 10px;">
+						<div class="col-md-6 text-center" style="padding-top: 10px;">지역</div>
+						<div class="col-md-6">
+							<div class="dropdown">
+								<button class="btn btn-secondary dropdown-toggle" type="button"
+									id="dropdownMenuButton" data-toggle="dropdown"
+									aria-haspopup="true" aria-expanded="false">사는 지역</button>
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+									<a class="dropdown-item" href="#">주소</a> <a
+										class="dropdown-item" href="#">주소</a> <a class="dropdown-item"
+										href="#">주소</a>
 								</div>
 							</div>
 						</div>
-						<div class="row" style="margin-top: 10px;">
-							<div class="col-md-6 text-center" style="padding-top: 10px;">모임
-								종류</div>
-							<div class="col-md-6">
-								<div class="dropdown">
-									<button class="btn btn-secondary dropdown-toggle "
-										type="button" id="dropdownMenuButton" data-toggle="dropdown"
-										aria-haspopup="true" aria-expanded="false"
-										style="padding-left: 32px; padding-right: 32px;">운동</button>
-									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-										<a class="dropdown-item" href="#">운동</a> <a
-											class="dropdown-item" href="#">악기</a> <a
-											class="dropdown-item" href="#">공부</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="row" style="margin-top: 10px;">
-							<div class="col-md-6 text-center">단기/장기</div>
+					</div>
+					<div class="row" style="margin-top: 10px;">
+						<div class="col-md-6 text-center" style="padding-top: 10px;">모임
+							종류</div>
+						<div class="col-md-6">
 							<div class="dropdown">
 								<button class="btn btn-secondary dropdown-toggle " type="button"
 									id="dropdownMenuButton" data-toggle="dropdown"
 									aria-haspopup="true" aria-expanded="false"
-									style="padding-left: 32px; padding-right: 32px; margin-left: 15px;">단기</button>
+									style="padding-left: 32px; padding-right: 32px;">운동</button>
 								<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-									<a class="dropdown-item" href="#">장기</a> <a
-										class="dropdown-item" href="#">단기</a>
+									<a class="dropdown-item" href="#">운동</a> <a
+										class="dropdown-item" href="#">악기</a> <a class="dropdown-item"
+										href="#">공부</a>
 								</div>
 							</div>
 						</div>
-						<div class="row" style="margin-top: 10px;">
-							<div class="col-md-6 text-center">회비 여부</div>
-							<div class="col-md-6" style="padding-left: 0px;">
-								<input type="checkbox" name="joinFee" value="fee" checked /> 금액
-								: <input type="text" name="" value="" style="width: 78px;" />
-							</div>
-						</div>
-						<div class="row" style="margin-top: 10px;">
-							<div class="col-md-6 text-center">인원 수</div>
-							<div class="col-md-6" style="padding-left: 50px;">
-								<select class="headCount">
-									<option value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-									<option value="4">4</option>
-									<option value="5">5</option>
-									<option value="6">6</option>
-									<option value="7">7</option>
-									<option value="8">8</option>
-									<option value="9">9</option>
-									<option value="10">10</option>
-								</select>
+					</div>
+					<div class="row" style="margin-top: 10px;">
+						<div class="col-md-6 text-center">단기/장기</div>
+						<div class="dropdown">
+							<button class="btn btn-secondary dropdown-toggle " type="button"
+								id="dropdownMenuButton" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false"
+								style="padding-left: 32px; padding-right: 32px; margin-left: 15px;">단기</button>
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+								<a class="dropdown-item" href="#">장기</a> <a
+									class="dropdown-item" href="#">단기</a>
 							</div>
 						</div>
 					</div>
-					<div class="form-group mx-auto">
-						<div class="row" style="margin-top: 10px;">
-							<div class="col-2 custom-control custom-radio my-2">
-								<input type="radio" id="whatever" name="gender"
-									class="custom-control-input"> <label
-									class="custom-control-label" for="whatever">성별 무관</label>
-							</div>
-							<div class="col-2 custom-control custom-radio my-2">
-								<input type="radio" id="man" name="gender"
-									class="custom-control-input"> <label
-									class="custom-control-label" for="man">남자</label>
-							</div>
-							<div class="col-2 custom-control custom-radio my-2">
-								<input type="radio" id="woman" name="gender"
-									class="custom-control-input"> <label
-									class="custom-control-label" for="woman">여자</label>
-							</div>
+					<div class="row" style="margin-top: 10px;">
+						<div class="col-md-6 text-center">회비 여부</div>
+						<div class="col-md-6" style="padding-left: 0px;">
+							<input type="checkbox" name="joinFee" value="fee" checked /> 금액
+							: <input type="text" name="" value="" style="width: 78px;" />
 						</div>
 					</div>
-					<div class="row mx-auto" style="margin-top: 10px;">
-						<div class="custom-control custom-checkbox my-2 mx-auto">
-							<input type="checkbox" class="custom-control-input"
-								id="10th"> <label class="custom-control-label"
-								for="10th">10대</label>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox"
-								class="custom-control-input" id="20th"> <label
-								class="custom-control-label" for="20th">20대</label>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox"
-								class="custom-control-input" id="30th"> <label
-								class="custom-control-label" for="30th">30대</label>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox"
-								class="custom-control-input" id="40th"> <label
-								class="custom-control-label" for="40th">40대</label>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox"
-								class="custom-control-input" id="50up"> <label
-								class="custom-control-label" for="50up">50대 이상</label>
+					<div class="row" style="margin-top: 10px;">
+						<div class="col-md-6 text-center">인원 수</div>
+						<div class="col-md-6" style="padding-left: 50px;">
+							<select class="headCount">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+							</select>
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
+		<br> <br>
+		<div class="form-group ">
+			<div class="rows">
+				<div class="row">
+					<div class="custom-control custom-radio col-4"></div>
+					<div class="custom-control custom-radio col-1">
+						<input type="radio" id="whatever" name="gender"
+							class="custom-control-input" checked> <label
+							class="custom-control-label" for="whatever">성별 무관</label>
+					</div>
+					<div class="custom-control custom-radio col-1">
+						<input type="radio" id="man" name="customRadio2"
+							class="custom-control-input"> <label
+							class="custom-control-label" for="man">남자</label>
+					</div>
+					<div class="custom-control custom-radio col-1">
+						<input type="radio" id="woman" name="customRadio2"
+							class="custom-control-input"> <label
+							class="custom-control-label" for="woman">여자</label>
+					</div>
+					<div class="custom-control custom-radio col-5"></div>
+				</div>
+				<div class="row">
+					<div class="custom-control custom-checkbox col-4 "></div>
+					<div class="custom-control custom-checkbox col-1 ">
+						<input type="checkbox" class="custom-control-input" id="teens"
+							name="ages" checked> <label class="custom-control-label"
+							for="teens">10대</label>
+					</div>
+					<div class="custom-control custom-checkbox col-1">
+						<input type="checkbox" class="custom-control-input" id="2teens"
+							name="ages"> <label class="custom-control-label"
+							for="2teens">20대</label>
+					</div>
+					<div class="custom-control custom-checkbox col-1">
+						<input type="checkbox" class="custom-control-input" id="3teens"
+							name="ages"> <label class="custom-control-label"
+							for="3teens">30대</label>
+					</div>
+					<div class="custom-control custom-checkbox col-1">
+						<input type="checkbox" class="custom-control-input" id="4teens"
+							name="ages"> <label class="custom-control-label"
+							for="4teens">40대</label>
+					</div>
+					<div class="custom-control custom-checkbox col-1">
+						<input type="checkbox" class="custom-control-input" id="5teens"
+							name="ages"> <label class="custom-control-label"
+							for="5teens">50대</label>
+					</div>
+					<div class="custom-control custom-checkbox col-3 "></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-2"></div>
+			<div class="col-8">
+				<div class="card">
+					<div class="card-body">날짜 API 넣을 곳 </div>
+				</div>
+			</div>
+			<div class="col-2"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-2"></div>
+			<div class="col-8">
+				<div class="card">
+					<div class="card-body">강해지고 싶은자...</div>
+				</div>
+			</div>
+			<div class="col-2"></div>
 		</div>
 	</div>
 </div>
