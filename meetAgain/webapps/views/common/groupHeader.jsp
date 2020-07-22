@@ -33,16 +33,16 @@
 			</li>
 		</ul>
  -->
-			<button id="btn1" class="btn btn-outline-secondary"
+			<button id="group-boardbtn" class="btn btn-outline-secondary"
 			onclick="location.href='/meetAgain/views/sgroup/groupBoard.jsp'">게시판</button>
 			&nbsp;
-			<button id="btn2" class="btn btn-outline-secondary"
+			<button id="group-mapbtn" class="btn btn-outline-secondary"
 			onclick="location.href='/meetAgain/views/sgroup/groupMap.jsp'">&nbsp;지도&nbsp;</button>
 			&nbsp;
-			<button id="btn3" class="btn btn-outline-secondary"
+			<button id="group-calbtn" class="btn btn-outline-secondary"
 			onclick="location.href='/meetAgain/views/sgroup/groupCalendar.jsp'">캘린더</button>
 			&nbsp;
-			<button id="btn4" class="btn btn-outline-secondary"
+			<button id="group-albumbtn" class="btn btn-outline-secondary"
 			onclick="location.href='/meetAgain/views/sgroup/groupAlbum.jsp'">사진첩</button>
 	
 	</div>

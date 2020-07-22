@@ -67,6 +67,10 @@
 function findRoad(){
 	location.href='https://map.kakao.com/link/to/카카오판교오피스,37.402056,127.108212';
 }
-
+$(function(){
+	$("#group-mapbtn").attr('class','btn btn-secondary');
+	
+	}
+);
 </script>
 <c:import url="/views/common/footer.jsp" />

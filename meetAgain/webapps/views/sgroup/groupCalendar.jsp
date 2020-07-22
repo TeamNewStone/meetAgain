@@ -172,5 +172,12 @@ body {
 	<br /> <br />
 </div>
 
+<script>
+$(function(){
+	$("#group-calbtn").attr('class','btn btn-secondary');
+	
+	}
+);
+</script>
 
 <c:import url="/views/common/footer.jsp" />
