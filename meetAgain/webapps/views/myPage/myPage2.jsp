@@ -80,6 +80,8 @@
           <div class="col-12 col-md-9"><input type="text" class="form-control" name="addressDetail3"></div>                                                   
         </div>
         
+        <div class="col-12"><hr></div>
+        
         <div class="row">
           <div class="col-12 col-md-4">
           <button type="button" class="btn btn-outline-primary btn-pill" onclick="mainMyPage();" id="Btn">마이페이지</button></div>

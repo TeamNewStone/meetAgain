@@ -89,115 +89,129 @@
 <div class="container">
   <div class="info">
     <div class="row">
-	    <div class="col-12 col-md-4 text-center">
+	    <div class="col-4 text-center">
 		    <img src="${ pageContext.request.contextPath }/resources/img/lorde.png" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 180px;">
 	    </div>
 	    
-      <div class="col-12 col-md-4">
-        
-        <div class="row" id="textline">            
-          <div class="col-12 col-md-4 text-right"><p id="textFm">별자리</p></div>
-          <div class="col-12 col-md-4" style="margin-bottom: 10px;"><input type="email" class="form-control"></div>
-          <div class="col-12 col-md-4"></div>
+      	<div class="col-4">
 
-          <div class="col-12 col-md-4 text-right"><p id="textFm">MBTI</p></div>
-          <div class="col-12 col-md-4" style="margin-bottom: 10px;"><input type="text"class="form-control"></div>
-          
-          <div class="col-12 col-md-4"><button type="button" id="_mbtiBtn" class="btn btn-light" style="font-size: 10px;
-            padding-bottom: 3px; 
-            padding-top: 3px;
-            padding-left: 5px;
-            padding-right: 3px;
-            margin-left: 20px;
-            margin-top: 7px;" onclick="mbtiTest()">테스트해보기</button></div>
-          <div class="col-12 col-md-4 text-right"><p id="textFm">혈액형</p></div>
-          <div class="col-12 col-md-8" style="margin-top: 5px; margin-bottom: 10px;">A</div>
-          <div class="col-12 col-md-4 text-right" style="margin-top: 5px;"><p id="textFm">키워드</p></div>
-          <div class="col-12 col-md-8"><input type="text"class="form-control"></div>
-          
-          <div class="col-12 col-md-12"><br></div>
-          
-          <div class="form-group col-12 text-center" style="background: beige;">
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="_makeitem" value="option1">
-              <label class="form-check-label" for="inlineCheckbox1">만들기</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="_car" value="option2">
-              <label class="form-check-label" for="inlineCheckbox2">자동차</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="_book" value="option1">
-              <label class="form-check-label" for="inlineCheckbox1">책</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="_service" value="option2">
-              <label class="form-check-label" for="inlineCheckbox2">봉사</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="_game" value="option1">
-              <label class="form-check-label" for="inlineCheckbox1">게임</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="_lang" value="option2">
-              <label class="form-check-label" for="inlineCheckbox2">외국어</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="_relation" value="option1">
-              <label class="form-check-label" for="inlineCheckbox1">사교/인맥</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="_cook" value="option2">
-              <label class="form-check-label" for="inlineCheckbox2">요리</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="_concert" value="option1">
-              <label class="form-check-label" for="inlineCheckbox1">문화/공연</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="_pics" value="option2">
-              <label class="form-check-label" for="inlineCheckbox2">사진/영상</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="_animal" value="option1">
-              <label class="form-check-label" for="inlineCheckbox1">반려동물</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="_music" value="option2">
-              <label class="form-check-label" for="inlineCheckbox2">음악/댄스</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="_sport" value="option2">
-              <label class="form-check-label" for="inlineCheckbox2">스포츠</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="_travel" value="option2">
-              <label class="form-check-label" for="inlineCheckbox2">여행</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="_freedom" value="option2">
-              <label class="form-check-label" for="inlineCheckbox2">자유주제</label>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-12"><br></div>
-          
-            <div class="col-12 col-md-4"><button type="button" class="btn btn-outline-primary btn-pill" onclick="mainMyPage();" id="Btn">마이페이지</button></div>          
-            <div class="col-12 col-md-4"><button type="reset" class="btn btn-outline-primary btn-pill" style="margin-left: 13px;" id="Btn">초기화</button></div>          
-            <div class="col-12 col-md-4"><button type="button" class="btn btn-outline-primary btn-pill" id="Btn">수정완료</button></div>
-            <button onclick="location.href='test_groupMap.jsp'">테스트이동</button>
-
-        </div>
-
-      </div>
-
-			
-			
-      
-			<!-- row end -->	
+			<form action="" method="get">	                   
+	                
+	            <div class="row">
+		            <div class="col-12 col-md-3 text-right"><p id="textFm">별자리</p></div>          
+		            <div class="col-6">
+			            <div class="input-group">
+			              <input type="text" class="form-control" name="constellation">		              
+			            </div>
+		            </div>
+		            <div class="col-3"></div>
+		            
+		            <div class="col-12"><br></div>
+		            
+		            <div class="col-12 col-md-3 text-right"><p id="textFm">혈액형</p></div>          
+		            <div class="col-6">
+			            <div class="input-group">
+			              <input type="text" class="form-control" name="constellation">		              
+			            </div>
+		            </div>
+		            <div class="col-3"></div>
+		            
+		            <div class="col-12"><br></div>
+					
+					<div class="col-3 text-right"><p id="textFm">MBTI</p></div>
+					
+					<div class="col-9">
+						<div class="input-group mb-3">
+						  <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2">
+						  <div class="input-group-append">
+						    <button class="btn btn-outline-secondary" type="button" onclick="mbtiTest()">테스트하기</button>
+						  </div>
+						</div>
+					</div>
+		          
+		          <div class="col-12"><br></div>
+		          
+	          </div>
+	          	          
+	          <div class="form-group col-12 text-center" style="background: beige;">
+	          
+	            <div class="form-check form-check-inline">
+	              <input class="form-check-input" type="checkbox" id="_makeitem" value="option1">
+	              <label class="form-check-label" for="inlineCheckbox1">만들기</label>
+	            </div>
+	            <div class="form-check form-check-inline">
+	              <input class="form-check-input" type="checkbox" id="_car" value="option2">
+	              <label class="form-check-label" for="inlineCheckbox2">자동차</label>
+	            </div>
+	            <div class="form-check form-check-inline">
+	              <input class="form-check-input" type="checkbox" id="_book" value="option1">
+	              <label class="form-check-label" for="inlineCheckbox1">책</label>
+	            </div>
+	            <div class="form-check form-check-inline">
+	              <input class="form-check-input" type="checkbox" id="_service" value="option2">
+	              <label class="form-check-label" for="inlineCheckbox2">봉사</label>
+	            </div>
+	            <div class="form-check form-check-inline">
+	              <input class="form-check-input" type="checkbox" id="_game" value="option1">
+	              <label class="form-check-label" for="inlineCheckbox1">게임</label>
+	            </div>
+	            <div class="form-check form-check-inline">
+	              <input class="form-check-input" type="checkbox" id="_lang" value="option2">
+	              <label class="form-check-label" for="inlineCheckbox2">외국어</label>
+	            </div>
+	            <div class="form-check form-check-inline">
+	              <input class="form-check-input" type="checkbox" id="_relation" value="option1">
+	              <label class="form-check-label" for="inlineCheckbox1">사교/인맥</label>
+	            </div>
+	            <div class="form-check form-check-inline">
+	              <input class="form-check-input" type="checkbox" id="_cook" value="option2">
+	              <label class="form-check-label" for="inlineCheckbox2">요리</label>
+	            </div>
+	            <div class="form-check form-check-inline">
+	              <input class="form-check-input" type="checkbox" id="_concert" value="option1">
+	              <label class="form-check-label" for="inlineCheckbox1">문화/공연</label>
+	            </div>
+	            <div class="form-check form-check-inline">
+	              <input class="form-check-input" type="checkbox" id="_pics" value="option2">
+	              <label class="form-check-label" for="inlineCheckbox2">사진/영상</label>
+	            </div>
+	            <div class="form-check form-check-inline">
+	              <input class="form-check-input" type="checkbox" id="_animal" value="option1">
+	              <label class="form-check-label" for="inlineCheckbox1">반려동물</label>
+	            </div>
+	            <div class="form-check form-check-inline">
+	              <input class="form-check-input" type="checkbox" id="_music" value="option2">
+	              <label class="form-check-label" for="inlineCheckbox2">음악/댄스</label>
+	            </div>
+	            <div class="form-check form-check-inline">
+	              <input class="form-check-input" type="checkbox" id="_sport" value="option2">
+	              <label class="form-check-label" for="inlineCheckbox2">스포츠</label>
+	            </div>
+	            <div class="form-check form-check-inline">
+	              <input class="form-check-input" type="checkbox" id="_travel" value="option2">
+	              <label class="form-check-label" for="inlineCheckbox2">여행</label>
+	            </div>
+	            <div class="form-check form-check-inline">
+	              <input class="form-check-input" type="checkbox" id="_freedom" value="option2">
+	              <label class="form-check-label" for="inlineCheckbox2">자유주제</label>
+	            </div>
+	            
+	          </div>
+	          
+	          <div class="row">
+	          <div class="col-4"><button type="button" class="btn btn-outline-primary btn-pill" onclick="mainMyPage();" id="Btn">마이페이지</button></div>          
+	          <div class="col-4"><button type="reset" class="btn btn-outline-primary btn-pill" style="margin-left: 13px;" id="Btn">초기화</button></div>          
+	          <div class="col-4"><button type="button" class="btn btn-outline-primary btn-pill" id="Btn">수정완료</button></div>
+	          </div>
+	          <button onclick="location.href='test_groupMap.jsp'">테스트이동</button>
+	          
+	         </form>
+	         
+         </div>
+         
     </div>
     
-    <div class="profile profile-tabs tab-content">
+    <%-- <div class="profile profile-tabs tab-content">
       <div class="tab-pane fade show active" id="photos">
         <div class="row">
 
@@ -212,7 +226,7 @@
 
         </div>
       </div>
-    </div>
+    </div> --%>
 
   </div>
 	
