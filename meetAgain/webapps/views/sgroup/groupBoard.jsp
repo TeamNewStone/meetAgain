@@ -59,4 +59,11 @@
 	<br /> <br /> <br /> <br />
 </div>
 
+<script>
+$(function(){
+	$("#group-boardbtn").attr('class','btn btn-secondary');
+	
+	}
+);
+</script>
 <c:import url="/views/common/footer.jsp" />

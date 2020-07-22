@@ -78,7 +78,7 @@
               <a class="nav-link" href="#" id="nav-inner-primary_dropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="goNotice();">공지사항</a>
             </li>
             <li class="nav-item dropdown" id="review">
-              <a class="nav-link" href="#" id="nav-inner-primary_dropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">소모임</a>
+              <a class="nav-link" href="#" id="nav-inner-primary_dropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="goGroup();">소모임</a>
             </li>
             </ul>
 			<ul class="navbar-nav ml-auto" id="login-nav">
@@ -117,6 +117,9 @@
     	location.href='/meetAgain/views/board/notice.jsp';
     }
     
+    function goGroup(){
+    	location.href='/meetAgain/views/sgroup/group.jsp';
+    }
 
     </script>
     <!-- header 끝 -->

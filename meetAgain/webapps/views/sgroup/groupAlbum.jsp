@@ -103,5 +103,11 @@
 <br>
 <br>
 <br>
-<br>
+<script>
+$(function(){
+	$("#group-albumbtn").attr('class','btn btn-secondary');
+	
+	}
+	);
+</script>
 <c:import url="/views/common/footer.jsp" />
