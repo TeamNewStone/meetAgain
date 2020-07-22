@@ -16,7 +16,7 @@
 					<button class="btn btn-secondary dropdown-toggle" type="button"
 						id="dropdownMenuButton" data-toggle="dropdown"
 						aria-haspopup="true" aria-expanded="false"
-						style="margin-left: 100px;" >지역선택</button>
+						style="margin-left: 100px;">지역선택</button>
 					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 						<a class="dropdown-item" href="#">역삼2동</a> <a
 							class="dropdown-item" href="#">역삼3동</a> <a class="dropdown-item"
@@ -113,16 +113,18 @@
 						</div>
 					</div>
 
-					<div class="row mx-auto" style="margin-top: 10px;">
+					<div class="row" style="margin-top: 10px;">
 						<div class="col-1.5 custom-control custom-radio my-2">
 							<input type="radio" id="whatever" name="gender"
 								class="custom-control-input"> <label
-								class="custom-control-label" for="whatever">성별 무관 </label>
+								class="custom-control-label" for="whatever"
+								style="padding-right: 6px;">성별 무관 </label>
 						</div>
 						<div class="col-1.5 custom-control custom-radio my-2">
 							<input type="radio" id="man" name="gender"
 								class="custom-control-input"> <label
-								class="custom-control-label" for="man">남자</label>
+								class="custom-control-label" for="man"
+								style="padding-right: 6px;">남자</label>
 						</div>
 						<div class="col-1.5 custom-control custom-radio my-2">
 							<input type="radio" id="woman" name="gender"
@@ -147,10 +149,9 @@
 			<div class="component">
 				<div class="card">
 					<div class="card-header">
-						<iframe class="img-fluid"
-							src="../../resources/img/mountainGangster1.jpg"
-							style="width: 100%; display: block; margin: 0px auto;">
-						</iframe>
+						<img class="img-fluid"
+							src="../../resources/img/mountainGangster4.jpg"
+							style="width: 100%; display: block; margin: 0px auto; width: 271px; height: 117px;">
 					</div>
 					<div class="card-body" style="height: 100%;">
 						<span class="badge badge-secondary mb-2">camping</span>
@@ -166,10 +167,9 @@
 			<div class="component">
 				<div class="card">
 					<div class="card-header">
-						<iframe class="img-fluid"
+						<img class="img-fluid"
 							src="../../resources/img/mountainGangster2.jpg"
-							style="width: 100%; display: block; margin: 0px auto;">
-						</iframe>
+							style="width: 100%; display: block; margin: 0px auto; width: 271px; height: 117px;">
 					</div>
 					<div class="card-body" style="height: 100%;">
 						<span class="badge badge-secondary mb-2">camping</span>
@@ -185,10 +185,9 @@
 			<div class="component">
 				<div class="card">
 					<div class="card-header">
-						<iframe class="img-fluid"
+						<img class="img-fluid"
 							src="../../resources/img/mountainGangster3.jpg"
-							style="width: 100%; display: block; margin: 0px auto;">
-						</iframe>
+							style="width: 100%; display: block; margin: 0px auto; width: 271px; height: 117px;">
 					</div>
 					<div class="card-body" style="height: 100%;">
 						<span class="badge badge-secondary mb-2">cook</span>
@@ -204,10 +203,9 @@
 			<div class="component">
 				<div class="card">
 					<div class="card-header">
-						<iframe class="img-fluid"
+						<img class="img-fluid"
 							src="../../resources/img/mountainGangster4.jpg"
-							style="width: 100%; display: block; margin: 0px auto;">
-						</iframe>
+							style="width: 100%; display: block; margin: 0px auto; width: 271px; height: 117px;">
 					</div>
 					<div class="card-body" style="height: 100%;">
 						<span class="badge badge-secondary mb-2">drink</span>
@@ -226,9 +224,8 @@
 			<div class="component">
 				<div class="card">
 					<div class="card-header">
-						<iframe class="img-fluid" src="../../resources/img/rebuild.png"
-							style="width: 100%; display: block; margin: 0px auto;">
-						</iframe>
+						<img class="img-fluid" src="../../resources/img/rebuild.png"
+							style="width: 100%; display: block; margin: 0px auto; width: 271px; height: 117px;">
 					</div>
 					<div class="card-body" style="height: 100%;">
 						<span class="badge badge-secondary mb-2">Hobby</span>
@@ -242,9 +239,8 @@
 			<div class="component">
 				<div class="card">
 					<div class="card-header">
-						<iframe class="img-fluid" src="../../resources/img/rebuild.png"
-							style="width: 100%; display: block; margin: 0px auto;">
-						</iframe>
+						<img class="img-fluid" src="../../resources/img/rebuild.png"
+							style="width: 100%; display: block; margin: 0px auto; width: 271px; height: 117px;">
 					</div>
 					<div class="card-body" style="height: 100%;">
 						<span class="badge badge-secondary mb-2">Hobby</span>
@@ -258,9 +254,8 @@
 			<div class="component">
 				<div class="card">
 					<div class="card-header">
-						<iframe class="img-fluid" src="../../resources/img/rebuild.png"
-							style="width: 100%; display: block; margin: 0px auto;">
-						</iframe>
+						<img class="img-fluid" src="../../resources/img/rebuild.png"
+							style="width: 100%; display: block; margin: 0px auto; width: 271px; height: 117px;">
 					</div>
 					<div class="card-body" style="height: 100%;">
 						<span class="badge badge-secondary mb-2">Hobby</span>
@@ -274,9 +269,8 @@
 			<div class="component">
 				<div class="card">
 					<div class="card-header">
-						<iframe class="img-fluid" src="../../resources/img/rebuild.png"
-							style="width: 100%; display: block; margin: 0px auto;">
-						</iframe>
+						<img class="img-fluid" src="../../resources/img/rebuild.png"
+							style="width: 100%; display: block; margin: 0px auto; width: 271px; height: 117px;">
 					</div>
 					<div class="card-body" style="height: 100%;">
 						<span class="badge badge-secondary mb-2">Hobby</span>
@@ -293,9 +287,8 @@
 			<div class="component">
 				<div class="card">
 					<div class="card-header">
-						<iframe class="img-fluid" src="../../resources/img/rebuild.png"
-							style="width: 100%; display: block; margin: 0px auto;">
-						</iframe>
+						<img class="img-fluid" src="../../resources/img/rebuild.png"
+							style="width: 100%; display: block; margin: 0px auto; width: 271px; height: 117px;">
 					</div>
 					<div class="card-body" style="height: 100%;">
 						<span class="badge badge-secondary mb-2">Hobby</span>
@@ -309,9 +302,8 @@
 			<div class="component">
 				<div class="card">
 					<div class="card-header">
-						<iframe class="img-fluid" src="../../resources/img/rebuild.png"
-							style="width: 100%; display: block; margin: 0px auto;">
-						</iframe>
+						<img class="img-fluid" src="../../resources/img/rebuild.png"
+							style="width: 100%; display: block; margin: 0px auto; width: 271px; height: 117px;">
 					</div>
 					<div class="card-body" style="height: 100%;">
 						<span class="badge badge-secondary mb-2">Hobby</span>
@@ -325,9 +317,8 @@
 			<div class="component">
 				<div class="card">
 					<div class="card-header">
-						<iframe class="img-fluid" src="../../resources/img/rebuild.png"
-							style="width: 100%; display: block; margin: 0px auto;">
-						</iframe>
+						<img class="img-fluid" src="../../resources/img/rebuild.png"
+							style="width: 100%; display: block; margin: 0px auto; width: 271px; height: 117px;">
 					</div>
 					<div class="card-body" style="height: 100%;">
 						<span class="badge badge-secondary mb-2">Hobby</span>
@@ -341,9 +332,8 @@
 			<div class="component">
 				<div class="card">
 					<div class="card-header">
-						<iframe class="img-fluid" src="../../resources/img/rebuild.png"
-							style="width: 100%; display: block; margin: 0px auto;">
-						</iframe>
+						<img class="img-fluid" src="../../resources/img/rebuild.png"
+							style="width: 100%; display: block; margin: 0px auto; width: 271px; height: 117px;">
 					</div>
 					<div class="card-body" style="height: 100%;">
 						<span class="badge badge-secondary mb-2">Hobby</span>
@@ -362,46 +352,6 @@
 		});
 	});
 </script>
-<footer class="footer-1 bg-light text-dark">
-	<div class="container">
-		<div
-			class="d-flex flex-column flex-md-row justify-content-between align-items-center">
-			<div class="links">
-				<ul
-					class="footer-menu list-unstyled d-flex flex-row text-center text-md-left">
-					<li><a href="https://bootstrapbay.com/" target="_blank">Store</a></li>
-					<li><a href="https://bootstrapbay.com/about" target="_blank">About
-							Us</a></li>
-					<li><a href="https://bootstrapbay.com/blog/" target="_blank">Blog</a></li>
-					<li><a href="https://bootstrapbay.com/terms" target="_blank">Terms
-							& Conditions</a></li>
-				</ul>
-			</div>
-			<div class="social mt-4 mt-md-0">
-				<a class="twitter btn btn-outline-primary btn-icon"
-					href="https://twitter.com/bootstrapbay" target="_blank"> <i
-					class="fab fa-twitter"></i> <span class="sr-only">View our
-						Twitter Profile</span>
-				</a> <a class="facebook btn btn-outline-primary btn-icon"
-					href="https://www.facebook.com/bootstrapbayofficial/"
-					target="_blank"> <i class="fab fa-facebook"></i> <span
-					class="sr-only">View our Facebook Profile <span></a> <a
-					class="github btn btn-outline-primary btn-icon"
-					href="https://github.com/bootstrapbay" target="_blank"> <i
-					class="fab fa-github"></i> <span class="sr-only">View our
-						GitHub Profile</span>
-				</a>
-			</div>
-		</div>
-		<div class="copyright text-center">
-			<hr />
-			<p class="small">
-				&copy; 2019, made with <span class="text-danger"><i
-					class="fas fa-heart"></i></span> by BootstrapBay
-			</p>
-		</div>
-	</div>
-</footer>
 
 <!-- optional plugins -->
 <script
