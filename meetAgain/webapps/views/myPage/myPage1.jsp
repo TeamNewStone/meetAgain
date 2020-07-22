@@ -184,9 +184,7 @@
     <!-- 마인펭이지 메인 스크립트작성 -->
     <!--   jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="/meetAgain/resources/vendor/popper/popper.min.js"></script>
-    <script src="/meetAgain/resources/vendor/bootstrap/bootstrap.min.js" ></script>
-	<!-- optional plugins -->
-    <script src="/meetAgain/resources/vendor/nouislider/js/nouislider.min.js"></script>
+    <script src="/meetAgain/resources/vendor/bootstrap/bootstrap.min.js" ></script>	
       <!-- lazy javascript -->
     <script src="/meetAgain/resources/js/lazy.js"></script>
     
