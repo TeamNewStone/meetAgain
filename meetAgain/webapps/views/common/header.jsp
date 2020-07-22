@@ -15,7 +15,8 @@
     <link href="${ pageContext.request.contextPath }/resources/img/favicon.ico" rel="icon" type="image/png">
 	
     <script src="${ pageContext.request.contextPath }/resources/vendor/jquery/jquery-3.5.1.min.js"></script>
-    
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+	<link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/vendor/bootstrap/bootstrap.min.css">
 	<link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/css/lazy.css">
 	<link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/css/demo.css">
@@ -67,7 +68,7 @@
 	text-align : center;
 }
 
-
+* { font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif'; }
     </style>
   </head>
   <body class="index">

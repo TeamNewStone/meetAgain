@@ -13,6 +13,8 @@
 <meta name="description"
 	content="A new design system for developing with less effort.">
 <meta name="author" content="BootstrapBay">
+<link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+<link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css' rel='stylesheet' type='text/css'>
 <script
 	src="${ pageContext.request.contextPath }/resources/vendor/jquery/jquery-3.5.1.min.js"></script>
 <script type="text/javascript"
@@ -37,6 +39,7 @@
 	display: none;
 }
 
+* { font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif'; }
 </style>
 </head>
 <body class="documentation language-html">
