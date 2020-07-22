@@ -22,18 +22,18 @@
     <meta name="description" content="A new design system for developing with less effort.">
     <meta name="author" content="BootstrapBay">
 
-    <link href="/meetAgain/resources/img/favicon.ico" rel="icon" type="image/png">
+    <link href="${ pageContext.request.contextPath }/resources/img/favicon.ico" rel="icon" type="image/png">
     
-    <link rel="stylesheet" href="/meetAgain/resources/vendor/bootstrap/bootstrap.min.css">
-		<link rel="stylesheet" href="/meetAgain/resources/css/lazy.css">
-		<link rel="stylesheet" href="/meetAgain/resources/css/demo.css">
+    <link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/vendor/bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/css/lazy.css">
+		<link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/css/demo.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css">
   </head>
   <body class="profile">
     <nav class="navbar navbar-expand-md navbar-dark bg-primary mb-4 fixed-top">
     <div class="container">
 
-      <a class="navbar-brand d-flex align-items-center" href="../../index.jsp"><img src="/meetAgain/resources/img/logo_white.svg" alt="Example Navbar 1" class="mr-2" height="30">다시 만나</a>
+      <a class="navbar-brand d-flex align-items-center" href="../../index.jsp"><img src="${ pageContext.request.contextPath }/resources/img/logo_white.svg" alt="Example Navbar 1" class="mr-2" height="30">다시 만나</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown-3" aria-controls="navbarNavDropdown-3"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -68,14 +68,17 @@
   <div class="info">
     <div class="row">
 	    <div class="col-12 col-md-4 text-center">
-		    <img src="/meetAgain/resources/img/lorde.png" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 180px;">
+		    <img src="${ pageContext.request.contextPath }/resources/img/lorde.png" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 180px;">
 	    </div>
 	    <div class="col-12 col-md-8 d-flex flex-column align-items-center align-items-lg-start">
 		    <div class="d-flex flex-row align-items-start mt-3 mt-lg-0">
 			    <div class="name">
 		    		<h2 class="mb-0">에바 그린</h2>
 			    </div>
+			    
+			    <form action="">
 		    	<a href="#a" class="btn btn-primary btn-pill btn-sm ml-3 mt-1">팔로우하기</a>
+		    	</form>
         </div>
         <br>
 		    <div class="stats d-flex flex-row align-items-center align-items-lg-start text-center text-lg-left" id="_follow">
@@ -84,7 +87,11 @@
 			    <div class="posts"><p class="lead" id="_fwfw"><b>201</b> 팔로잉</p></div>&nbsp;
           <div><button type="button" class="lead btn btn-sm btn-light" onclick="accountEdit();">정보수정</button></div>
 		    </div>
-		    <p class="lead mb-0 mt-2" style="color: green;"><b>나의 키워드</b></p>
+		    <p class="lead mb-0 mt-2" style="color: green;"><b>나의 키워드</b>
+
+		        <i class="fa fa-plus-circle" id="addKeyword" onclick="location.href='${ pageContext.request.contextPath }/#'"></i>
+		    </p>
+		    
         <p class="lead text-center text-lg-left">#키워드</p>
 	    </div>
     </div>
@@ -92,12 +99,12 @@
 	<div class="navigation d-flex justify-content-center">
     <ul class="nav nav-primary nav-tabs mt-3 d-flex flex-column flex-md-row">
       <li class="nav-item">
-        <a class="nav-link active" data-toggle="tab" href="#photos">
+        <a class="nav-link active" data-toggle="tab" href="#myGroupList">
           <i class="fa fa-heart"></i> 나의 소모임
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#saved">
+        <a class="nav-link" data-toggle="tab" href="#myPost">
           <i class="fa fa-list-alt"></i> 작성한 게시글
         </a>
       </li>      
@@ -105,39 +112,42 @@
   </div>
   
   <!-- 나의 소모임 시작 -->
+  <!-- 카드 고정폭 500px 더보기 아래로-->
   <div class="profile profile-tabs tab-content">
-    <div class="tab-pane fade show active" id="groupList">
+    <div class="tab-pane fade show active" id="myGroupList">
 				<!-- <div class="row">
 					<div class="col-12 col-md-4">
-						<div class="square" style="background-image:url('/meetAgain/resources/img/dog-4.jpg');"></div>
+						<div class="square" style="background-image:url('${ pageContext.request.contextPath }/resources/img/dog-4.jpg');"></div>
 					</div>
 					<div class="col-12 col-md-4">
-						<div class="square" style="background-image:url('/meetAgain/resources/img/dog-5.jpg');"></div>
+						<div class="square" style="background-image:url('${ pageContext.request.contextPath }/resources/img/dog-5.jpg');"></div>
 					</div>
 					<div class="col-12 col-md-4">
-						<div class="square" style="background-image:url('/meetAgain/resources/img/dog-6.jpg');"></div>
+						<div class="square" style="background-image:url('${ pageContext.request.contextPath }/resources/img/dog-6.jpg');"></div>
 					</div>
 					<div class="col-12 col-md-4">
-						<div class="square" style="background-image:url('/meetAgain/resources/img/dog-7.jpg');"></div>
+						<div class="square" style="background-image:url('${ pageContext.request.contextPath }/resources/img/dog-7.jpg');"></div>
 					</div>
 					<div class="col-12 col-md-4">
-						<div class="square" style="background-image:url('/meetAgain/resources/img/dog-8.jpg');"></div>
+						<div class="square" style="background-image:url('${ pageContext.request.contextPath }/resources/img/dog-8.jpg');"></div>
 					</div>
 					<div class="col-12 col-md-4">
-						<div class="square" style="background-image:url('/meetAgain/resources/img/dog-3.jpg');"></div>
+						<div class="square" style="background-image:url('${ pageContext.request.contextPath }/resources/img/dog-3.jpg');"></div>
 					</div>
 				</div> -->
 				<div class="row">
-				  <div class="col-md-6">
+				
+				<%-- <c:forEach var="Group" items="${cardGroupList}"> --%>
+								
+				  <div class="col-md-4" style="max-width: 500px;">
 				    <div class="component">
 				      <div class="card">
 				        <div class="card-header">
-				          <img class="card-img" src="assets/img/dog-3.jpg" alt="dog">
+				          <img class="card-img" src="${ pageContext.request.contextPath }/resources/img/dog-6.jpg" alt="dog">
 				        </div>
-				        <div class="card-body">
-				          <span class="badge badge-secondary">Hobby</span>
+				        <div class="card-body">				          
 				          <h4 class="card-title mt-2">Getting Started With Your Puppy</h4>
-				          <p class="card-text">This new addition to your family will require lots of love, attention and plenty of supplies. </p>
+				          <p class="card-text">This new addition to your family will require lots of love, attention and plenty of supplies. This new addition to your family will require lots of love, attention and plenty of supplies. This new addition to your family will require lots of love, attention and plenty of supplies. This new addition to your family will require lots of love, attention and plenty of supplies. </p>
 				        </div>
 				        <div class="card-footer">
 				          <a href="#a" class="btn btn-outline-primary">Read More</a>
@@ -145,14 +155,14 @@
 				      </div>
 				    </div>
 				  </div>
-				  <div class="col-md-6">
+				  
+				  <div class="col-md-4" style="max-width: 500px;">
 				    <div class="component">
 				      <div class="card">
 				        <div class="card-header">
 				          <img class="card-img" src="assets/img/dog-2.jpg" alt="dog">
 				        </div>
-				        <div class="card-body">
-				          <span class="badge badge-warning">Vacation</span>
+				        <div class="card-body">				          
 				          <h4 class="card-title mt-2">Woof! How to find dog-friendly beaches in Spain</h4>
 				          <p class="card-text">Considering Spain's abundant coastline, beaches that do allow you to take your pooch to feel sand... </p>
 				        </div>
@@ -162,6 +172,26 @@
 				      </div>
 				    </div>
 				  </div>
+				  
+				  <div class="col-md-4" style="max-width: 500px;">
+				    <div class="component">
+				      <div class="card">
+				        <div class="card-header">
+				          <img class="card-img" src="assets/img/dog-2.jpg" alt="dog">
+				        </div>
+				        <div class="card-body">				          
+				          <h4 class="card-title mt-2">Woof! How to find dog-friendly beaches in Spain</h4>
+				          <p class="card-text">Considering Spain's abundant coastline, beaches that do allow you to take your pooch to feel sand... </p>
+				        </div>
+				        <div class="card-footer">
+				          <a href="#a" class="btn btn-outline-primary">Read More</a>
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+				  
+				<%-- </c:forEach> --%>
+				  
 				</div>
 				
 				<div class="d-flex justify-content-center my-5">
@@ -170,9 +200,35 @@
     </div>
 
     <!-- 작성한 게시물 -->
-    <div class="tab-pane fade text-center" id="saved">
-      <p class="lead"><span class="text-danger"><i class="far fa-frown-open"></i></span> 비어있음.</p>
-    </div>    
+    <div class="tab-pane fade text-center" id="myPost">
+      <%-- 게시물 리스트. --%>
+
+		<%-- <c:forEach var="name" items="${myGroupList}" varStatus="status">
+		
+		</c:forEach> --%>
+
+			<table class="table">
+
+				<thead>
+					<tr>
+						<th>-</th>
+						<th>모임명</th>
+						<th>모임제목</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>굽남모임</td>
+						<td>제목1</td>
+					</tr>
+				</tbody>
+			</table>
+			
+      <p class="lead"><span class="text-danger"><i class="far fa-frown-open"></i></span>비어있음.</p>
+      
+
+		</div>    
   </div>
 
 </div>
@@ -220,10 +276,10 @@
 
     <!-- 마인펭이지 메인 스크립트작성 -->
     <!--   jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="/meetAgain/resources/vendor/popper/popper.min.js"></script>
-    <script src="/meetAgain/resources/vendor/bootstrap/bootstrap.min.js" ></script>	
+    <script src="${ pageContext.request.contextPath }/resources/vendor/popper/popper.min.js"></script>
+    <script src="${ pageContext.request.contextPath }/resources/vendor/bootstrap/bootstrap.min.js" ></script>	
       <!-- lazy javascript -->
-    <script src="/meetAgain/resources/js/lazy.js"></script>
+    <script src="${ pageContext.request.contextPath }/resources/js/lazy.js"></script>
     
     <script>
       function accountEdit() {
