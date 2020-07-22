@@ -37,8 +37,14 @@
 				if (status) {
 					/* (5) 필수적으로 받아야하는 프로필 정보가 있다면 callback처리 시점에 체크 */
 					var email = naverLogin.user.getEmail();
-					if( email == undefined || email == null) {
-						alert("이메일은 필수정보입니다. 정보제공을 동의해주세요.");
+					var name = naverLogin.user.getName();
+					var gender = naverLogin.user.getGender();			
+					var age = naverLogin.user.getAge();
+					if( email == undefined || email == null
+							|| name == undefined || name == null
+							|| gender == undefined || gender == null
+							|| age == undefined || age == null) {
+						alert("필수정보에 대한 정보제공을 모두 동의해주세요.");
 						/* (5-1) 사용자 정보 재동의를 위하여 다시 네아로 동의페이지로 이동함 */
 						naverLogin.reprompt();
 						return;
@@ -54,8 +60,8 @@
 		naverLogin.getLoginStatus(function (status) {
 			if (status) {
 				var email = naverLogin.user.getEmail();
-				var name = naverLogin.user.getNickName();
-				var birthday = naverLogin.user.getBirthday();			
+				var name = naverLogin.user.getName();
+				var gender = naverLogin.user.getGender();			
 				var age = naverLogin.user.getAge();
 			} else {
 				console.log("AccessToken이 올바르지 않습니다.");
