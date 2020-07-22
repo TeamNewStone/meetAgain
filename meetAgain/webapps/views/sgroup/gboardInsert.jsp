@@ -33,8 +33,8 @@ $(function(){
 		    ['font', ['strikethrough']],
 		    ['fontsize', ['fontsize']],
 		    ['fontname', ['fontname']],
-		    ['color', ['color']],
-		    ['para', ['ul', 'ol', 'paragraph']],
+		    ['color', ['forecolor', 'backcolor']],
+		    ['para', ['paragraph']],
 		    ['table', ['table']],
 		    ['insert', ['link', 'picture']],
 		  ]
@@ -42,5 +42,8 @@ $(function(){
 	 
 	}
 );
+$(function(){
+	   $('.note-btn-group').children('button').removeClass('dropdown-toggle');
+	});
 </script>
 <c:import url="/views/common/footer.jsp" />
