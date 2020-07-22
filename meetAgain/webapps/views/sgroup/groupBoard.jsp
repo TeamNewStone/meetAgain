@@ -28,7 +28,7 @@
 	</div>
 	
 	<div style="width: 33%; float: left;">
-		<button class="btn btn-secondary">작성하기</button>
+		<button class="btn btn-secondary" onclick="location.href='/meetAgain/views/sgroup/gboardInsert.jsp'">작성하기</button>
 	</div>
 	
 	<div style="width : 34%; float:left;">
