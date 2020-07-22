@@ -205,6 +205,7 @@
 	          </div>
 	          
 	         </form>
+	         
 	          <button onclick="location.href='test_groupMap.jsp'">테스트이동</button>
 	         
          </div>
