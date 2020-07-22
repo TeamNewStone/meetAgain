@@ -1,12 +1,4 @@
 @charset "UTF-8";
-     #star_grade a{
-        text-decoration: none;
-        color: gray;
-    }
-    #star_grade a.on{
-        color: red;
-    }
-    
     .rating .rate_radio {
     position: relative;
     display: inline-block;
