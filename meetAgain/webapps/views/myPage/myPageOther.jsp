@@ -90,7 +90,7 @@
   <div class="info">
     <div class="row">
 	    <div class="col-12 col-md-4 text-center">
-		    <img src="/meetAgain/resources/img/lorde.png" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 180px;">
+		    <img src="${ pageContext.request.contextPath }/resources/img/lorde.png" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 180px;">
 	    </div>
 	    
       <div class="col-12 col-md-4">
@@ -109,7 +109,7 @@
             padding-left: 5px;
             padding-right: 3px;
             margin-left: 20px;
-            margin-top: 7px;" onclick="mbtiTest();">테스트해보기</button></div>
+            margin-top: 7px;" onclick="mbtiTest()">테스트해보기</button></div>
           <div class="col-12 col-md-4 text-right"><p id="textFm">혈액형</p></div>
           <div class="col-12 col-md-8" style="margin-top: 5px; margin-bottom: 10px;">A</div>
           <div class="col-12 col-md-4 text-right" style="margin-top: 5px;"><p id="textFm">키워드</p></div>
@@ -184,8 +184,8 @@
           
             <div class="col-12 col-md-4"><button type="button" class="btn btn-outline-primary btn-pill" onclick="mainMyPage();" id="Btn">마이페이지</button></div>          
             <div class="col-12 col-md-4"><button type="reset" class="btn btn-outline-primary btn-pill" style="margin-left: 13px;" id="Btn">초기화</button></div>          
-            <div class="col-12 col-md-4"><button type="button" class="btn btn-outline-primary btn-pill" id="Btn">수정완료</button></div>  
-            <button type="reset">초기화</button>
+            <div class="col-12 col-md-4"><button type="button" class="btn btn-outline-primary btn-pill" id="Btn">수정완료</button></div>
+            <button onclick="location.href='test_groupMap.jsp'">테스트이동</button>
 
         </div>
 
@@ -203,11 +203,11 @@
 
           <div class="col-12 col-md-4">
             <div class="square"
-              style="background-image: url('/meetAgain/resources/img/dog-5.jpg');"></div>
+              style="background-image: url('${ pageContext.request.contextPath }/resources/img/dog-5.jpg');"></div>
           </div>
           <div class="col-12 col-md-8">
             <div class="square"
-              style="background-image: url('/meetAgain/resources/img/dog-5.jpg');"></div>
+              style="background-image: url('${ pageContext.request.contextPath }/resources/img/dog-5.jpg');"></div>
           </div>
 
         </div>
@@ -262,12 +262,10 @@
 
     <!-- 부가정보 스크립트 작성 -->    
     <!--   jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="/meetAgain/resources/vendor/popper/popper.min.js"></script>
-    <script src="/meetAgain/resources/vendor/bootstrap/bootstrap.min.js" ></script>
-	<!-- optional plugins -->
-    <script src="/meetAgain/resources/vendor/nouislider/js/nouislider.min.js"></script>
+    <script src="${ pageContext.request.contextPath }/resources/vendor/popper/popper.min.js"></script>
+    <script src="${ pageContext.request.contextPath }/resources/vendor/bootstrap/bootstrap.min.js" ></script>	
       <!-- lazy javascript -->
-    <script src="/meetAgain/resources/js/lazy.js"></script>    
+    <script src="${ pageContext.request.contextPath }/resources/js/lazy.js"></script>    
 
     <script>
       function mainMyPage() {
