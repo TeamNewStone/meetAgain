@@ -13,7 +13,7 @@
 				<h1>공지사항</h1>
 				<br />
 				<table class="table" id="noticeTable">
-					<thead class="thead-light">
+					<thead style="background-color:#122b5f;color:white;">
 						<tr>
 							<th scope="col">#</th>
 							<th scope="col">First</th>
@@ -45,6 +45,10 @@
 
 			</div>
 		</div>
+		<!-- 작성하기 버튼은 admin만 보이게! -->
+		<div id="noticeBtn">
+			<button type="button" class="btn btn-outline-secondary" onclick="noticeInsert();">작성하기</button>
+		</div>
 	</div>
 </div>
 <div style="width: 10%; margin: 0 auto; text-align: center;">
@@ -55,7 +59,8 @@
 		</li>
 		<li class="page-item"><a class="page-link" href="#a">2</a></li>
 		<li class="page-item"><a class="page-link" href="#a">3</a></li>
-		<li class="page-item"><a class="page-link" href="#a"><i class="fas fa-long-arrow-alt-right"></i></a></li>
+		<li class="page-item"><a class="page-link" href="#a"><i
+				class="fas fa-long-arrow-alt-right"></i></a></li>
 	</ul>
 </div>
 <!-- 임시 : 데이터 삽입 후 삭제! -->
@@ -68,11 +73,22 @@
 <br />
 <br />
 <script>
-	$(function(){
-		$("#noticeTable td").click(function(){
-			var noticeNo = $(this).parent().children().eq(0).text();
-			location.href="${ pageContext.request.contextPath }/notice/noticeDetail.do?noticeNo=" + noticeNo;
-		});
+	$(function() {
+		$("#noticeTable td").click(function() {
+			//var noticeNo = $(this).parent().children().eq(0).text();
+			//location.href="${ pageContext.request.contextPath }/views/board/noticeDetail.do?noticeNo=" + noticeNo;
+			location.href = "/meetAgain/views/board/noticeDetail.jsp";
+
+		}).mouseenter(function() {
+			$(this).parent().css({
+				"cursor" : "pointer"
+			});
+
+		})
 	});
+	
+	function noticeInsert(){
+		location.href="${pageContext.request.contextPath}/views/board/noticeInsert.jsp";
+	}
 </script>
 <c:import url="/views/common/footer.jsp" />
