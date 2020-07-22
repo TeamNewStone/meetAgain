@@ -11,6 +11,8 @@
 	<div id="mapArea" style="width: 50%; float: left;">
 	
 		<div id="map" style="width: 90%; height: 500px;"></div>
+		<hr />
+		<div id="clickLatlng"></div>
 		
 			<p>
 				<input type="checkbox" id="chkUseDistrict" onclick="setOverlayMapTypeId()" /> 지적편집도 정보 보기
@@ -22,84 +24,66 @@
 			</p>
 			<!-- 카카오맵 API 지도생성 -->
 			<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cdb0daf359d098be072ce9f3ea29cdf8"></script>
-			<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cdb0daf359d098be072ce9f3ea29cdf8&libraries=services,clusterer,drawing"></script>
+				<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cdb0daf359d098be072ce9f3ea29cdf8&libraries=services,clusterer,drawing"></script>
+	
 			<script>
+			
 				var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-					mapOption = {
-						center: new kakao.maps.LatLng(37.4992176,127.0326873), // 지도의 중심좌표
-						level: 3, // 지도의 확대 레벨
-						mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
-					}; 
-		
+				mapOption = {
+					center : new kakao.maps.LatLng(37.4992176, 127.0326873), // 지도의 중심좌표
+					level : 3, // 지도의 확대 레벨
+					mapTypeId : kakao.maps.MapTypeId.ROADMAP
+				// 지도종류
+				};
+	
 				// 지도를 생성한다 
-				var map = new kakao.maps.Map(mapContainer, mapOption); 
-		
+				var map = new kakao.maps.Map(mapContainer, mapOption);
+	
 				// 지도 타입 변경 컨트롤을 생성한다
 				var mapTypeControl = new kakao.maps.MapTypeControl();
-		
+	
 				// 지도의 상단 우측에 지도 타입 변경 컨트롤을 추가한다
-				map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);	
-		
+				map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+	
 				// 지도에 확대 축소 컨트롤을 생성한다
 				var zoomControl = new kakao.maps.ZoomControl();
-		
+	
 				// 지도의 우측에 확대 축소 컨트롤을 추가한다
 				map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
-		
-				// 지도 중심 좌표 변화 이벤트를 등록한다
-				kakao.maps.event.addListener(map, 'center_changed', function () {
-					console.log('지도의 중심 좌표는 ' + map.getCenter().toString() +' 입니다.');
-				});
-		
-				// 지도 확대 레벨 변화 이벤트를 등록한다
-				kakao.maps.event.addListener(map, 'zoom_changed', function () {
-					console.log('지도의 현재 확대레벨은 ' + map.getLevel() +'레벨 입니다.');
-				});
-		
-				// 지도 영역 변화 이벤트를 등록한다
-				kakao.maps.event.addListener(map, 'bounds_changed', function () {
-					var mapBounds = map.getBounds(),
-						message = '지도의 남서쪽, 북동쪽 영역좌표는 ' +
-									mapBounds.toString() + '입니다.';
-		
-					console.log(message);	
-				});
-		
-				// 지도 시점 변화 완료 이벤트를 등록한다
-				kakao.maps.event.addListener(map, 'idle', function () {
-					var message = '지도의 중심좌표는 ' + map.getCenter().toString() + ' 이고,' + 
-									'확대 레벨은 ' + map.getLevel() + ' 레벨 입니다.';
-					console.log(message);
-				});
-		
-				// 지도 클릭 이벤트를 등록한다 (좌클릭 : click, 우클릭 : rightclick, 더블클릭 : dblclick)
-				kakao.maps.event.addListener(map, 'click', function (mouseEvent) {
-					console.log('지도에서 클릭한 위치의 좌표는 ' + mouseEvent.latLng.toString() + ' 입니다.');
-				});	
-		
-				// 지도 드래깅 이벤트를 등록한다 (드래그 시작 : dragstart, 드래그 종료 : dragend)
-				kakao.maps.event.addListener(map, 'drag', function () {
-					var message = '지도를 드래그 하고 있습니다. ' + 
-									'지도의 중심 좌표는 ' + map.getCenter().toString() +' 입니다.';
-					console.log(message);
-				});
-		
-				// 마커가 표시될 위치입니다 
-				var markerPosition = new kakao.maps.LatLng(37.4992176,127.0326873); 
-		
-				// 마커를 생성합니다
-				var marker = new kakao.maps.Marker({
-					position: markerPosition
-				});
-		
-				// 마커가 지도 위에 표시되도록 설정합니다
+				
+
+				// 마커
+				
+				// 지도를 클릭한 위치에 표출할 마커입니다
+				var marker = new kakao.maps.Marker({ 
+				    // 지도 중심좌표에 마커를 생성합니다 
+				    position: map.getCenter() 
+				}); 
+				// 지도에 마커를 표시합니다
 				marker.setMap(map);
-		
-				// 마커가 드래그 가능하도록 설정합니다 
-				marker.setDraggable(true); 
-		
+
+				// 지도에 클릭 이벤트를 등록합니다
+				// 지도를 클릭하면 마지막 파라미터로 넘어온 함수를 호출합니다
+				kakao.maps.event.addListener(map, 'click', function(mouseEvent) {        
+				    
+				    // 클릭한 위도, 경도 정보를 가져옵니다 
+				    var latlng = mouseEvent.latLng; 
+				    
+				    // 마커 위치를 클릭한 위치로 옮깁니다
+				    marker.setPosition(latlng);
+				    
+				    var message = '클릭한 위치의 위도는 ' + latlng.getLat() + ' 이고, <br>';
+				    message += '경도는 ' + latlng.getLng() + ' 입니다';
+				    
+				    var resultDiv = document.getElementById('clickLatlng'); 
+				    resultDiv.innerHTML = message;
+				    
+				});
+				
+				
 			</script>
-			
+	
+			<!-- 교통정보 -->
 			<script>
 			
 				// 지도 타입 정보를 가지고 있을 객체입니다
@@ -214,6 +198,7 @@
 			</div>
 			<div style="float: left;">
 				<h3>호산빌딩 모임장소 이름</h3>
+				<h3> ← 지도 마우스 클릭 테스트 </h3>
 			</div>
 		</div>
 
@@ -223,11 +208,12 @@
 			<h5>도로명 주소가 들어갈 공간입니다</h5>
 			<br />
 			<h5>전화번호가 들어갈 공간입니다.</h5>
-			</br>
+			<br />
 			<div>
 				<button type="button" class="btn btn-info"	onclick="findRoad();">
 					&nbsp;&nbsp;&nbsp;길찾기&nbsp;&nbsp;&nbsp;</button>
-				<button type="button" class="btn btn-light">&nbsp;&nbsp;장소변경&nbsp;&nbsp;</button>
+				<!-- <button type="button" class="btn btn-light">&nbsp;&nbsp;장소변경&nbsp;&nbsp;</button> -->
+				<button type="reset" class="btn btn-light">&nbsp;&nbsp;장소변경&nbsp;&nbsp;</button>
 			</div>
 		</div>
 
