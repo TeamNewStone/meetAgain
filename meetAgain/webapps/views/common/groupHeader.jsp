@@ -8,13 +8,13 @@
 	style="overflow: hidden; height: auto; display: flex; align-items: center;">
 	<div id="gnameMenu" style="float: left; padding: 10px;">
 
-		<img src="/meetAgain/resources/img/usericon.png" alt="usericon"
+		<img src="${ pageContext.request.contextPath }/resources/img/usericon.png" alt="usericon"
 			data-toggle="dropdown" class="img-fluid rounded-circle"
 			style="width: 70px; right: 5%; top: 5%;">
 	</div>
 
-	<div id="gname" style="float: left; padding: 10px;">
-		<a href="/meetAgain/views/sgroup/groupDetail.jsp"><h4>소모임 이름</h4></a>
+	<div id="gname" style="float: left; padding: 10px;">		
+		<button class="btn bg-transparent" onclick="location.href='${ pageContext.request.contextPath }/views/sgroup/groupDetail.jsp'"><h4>소모임 이름</h4></button>
 	</div>
 	<div id="btnMenu" style="margin-left: auto;">
 <!-- 
@@ -34,16 +34,16 @@
 		</ul>
  -->
 			<button id="group-boardbtn" class="btn btn-outline-secondary"
-			onclick="location.href='/meetAgain/views/sgroup/groupBoard.jsp'">게시판</button>
+			onclick="location.href='${ pageContext.request.contextPath }/views/sgroup/groupBoard.jsp'">게시판</button>
 			&nbsp;
 			<button id="group-mapbtn" class="btn btn-outline-secondary"
-			onclick="location.href='/meetAgain/views/sgroup/groupMap.jsp'">&nbsp;지도&nbsp;</button>
+			onclick="location.href='${ pageContext.request.contextPath }/views/sgroup/groupMap.jsp'">&nbsp;지도&nbsp;</button>
 			&nbsp;
 			<button id="group-calbtn" class="btn btn-outline-secondary"
-			onclick="location.href='/meetAgain/views/sgroup/groupCalendar.jsp'">캘린더</button>
+			onclick="location.href='${ pageContext.request.contextPath }/views/sgroup/groupCalendar.jsp'">캘린더</button>
 			&nbsp;
 			<button id="group-albumbtn" class="btn btn-outline-secondary"
-			onclick="location.href='/meetAgain/views/sgroup/groupAlbum.jsp'">사진첩</button>
+			onclick="location.href='${ pageContext.request.contextPath }/views/sgroup/groupAlbum.jsp'">사진첩</button>
 	
 	</div>
 </div>

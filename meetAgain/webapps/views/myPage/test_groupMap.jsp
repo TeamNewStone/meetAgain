@@ -22,18 +22,17 @@
 				<input type="checkbox" id="chkTraffic" onclick="setOverlayMapTypeId()" /> 교통정보 보기       
 				<input type="checkbox" id="chkBicycle" onclick="setOverlayMapTypeId()" /> 자전거도로 정보 보기
 			</p>
-			<!-- 카카오맵 API 지도생성 -->
+			<!-- 카카오맵 API  -->
 			<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cdb0daf359d098be072ce9f3ea29cdf8"></script>
 				<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cdb0daf359d098be072ce9f3ea29cdf8&libraries=services,clusterer,drawing"></script>
 	
 			<script>
-			
+			    // 지도생성
 				var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
 				mapOption = {
 					center : new kakao.maps.LatLng(37.4992176, 127.0326873), // 지도의 중심좌표
-					level : 3, // 지도의 확대 레벨
-					mapTypeId : kakao.maps.MapTypeId.ROADMAP
-				// 지도종류
+					level : 3, // 지도의 확대 레벨 기본값3  1~14
+					mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
 				};
 	
 				// 지도를 생성한다 
