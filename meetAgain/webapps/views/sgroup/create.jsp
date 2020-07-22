@@ -32,7 +32,7 @@
 		</div>
 		<div class="row">
 			<h4 class="card-title" style="display: block; margin: 0px auto;">송파구
-				팔굽치 단련 모임</h4>
+				팔굽치 단련 모임 </h4>
 			<br><br><br>
 		</div>
 		<div class="row">
