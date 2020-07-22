@@ -9,8 +9,10 @@
 		<div class="col-2"></div>
 		<div class="col-10 content">
 			<br>
-			<button type="button" class="btn btn-secondary btn-pill">진행 중인 모임</button>
-			<button type="button" class="btn btn-outline-secondary btn-pill">종료
+			<button type="button" class="btn btn-secondary btn-pill"
+			onclick="location.href='/meetAgain/views/admin/adGroupManage1.jsp'">진행 중인 모임</button>
+			<button type="button" class="btn btn-outline-secondary btn-pill"
+			onclick="location.href='/meetAgain/views/admin/adGroupManage2.jsp'">종료
 				된 모임</button>
 			<div class="rows">
 				<div class="row">
@@ -18,10 +20,9 @@
 						<div class="component">
 							<div class="card">
 								<div class="card-header">
-									<iframe class="img-fluid"
+									<img class="img-fluid"
 										src="../../resources/img/mountainGangster1.jpg"
-										style="width: 100%; display: block; margin: 0px auto;">
-									</iframe>
+										style="width: 100%; display: block;margin: 0px auto; width: 271px; height: 117px;">
 								</div>
 								<div class="card-body" style="height: 100%;">
 									<span class="badge badge-secondary mb-2">camping</span>
@@ -35,10 +36,9 @@
 						<div class="component">
 							<div class="card">
 								<div class="card-header">
-									<iframe class="img-fluid"
+									<img class="img-fluid"
 										src="../../resources/img/mountainGangster2.jpg"
-										style="width: 100%; display: block; margin: 0px auto;">
-									</iframe>
+										style="width: 100%; display: block;margin: 0px auto; width: 271px; height: 117px;">
 								</div>
 								<div class="card-body" style="height: 100%;">
 									<span class="badge badge-secondary mb-2">camping</span>
@@ -52,10 +52,9 @@
 						<div class="component">
 							<div class="card">
 								<div class="card-header">
-									<iframe class="img-fluid"
+									<img class="img-fluid"
 										src="../../resources/img/mountainGangster3.jpg"
-										style="width: 100%; display: block; margin: 0px auto;">
-									</iframe>
+										style="width: 100%;display: block;margin: 0px auto; width: 271px; height: 117px;">
 								</div>
 								<div class="card-body" style="height: 100%;">
 									<span class="badge badge-secondary mb-2">cook</span>
@@ -69,10 +68,9 @@
 						<div class="component">
 							<div class="card">
 								<div class="card-header">
-									<iframe class="img-fluid"
+									<img class="img-fluid"
 										src="../../resources/img/mountainGangster4.jpg"
-										style="width: 100%; display: block; margin: 0px auto;">
-									</iframe>
+										style="width: 100%; display: block;margin: 0px auto; width: 271px; height: 117px;">
 								</div>
 								<div class="card-body" style="height: 100%;">
 									<span class="badge badge-secondary mb-2">drink</span>
@@ -88,6 +86,4 @@
 		</div>
 	</div>
 </div>
-
-</body>
-</html>
+<c:import url="/views/common/adminFooter.jsp"/>
