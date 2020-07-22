@@ -56,6 +56,7 @@
 
     <!--   lazy javascript -->
     <script src="${ pageContext.request.contextPath }/resources/js/lazy.js"></script>
-    <script src="${ pageContext.request.contextPath }/resources/js/demo.js"></script>  
+    <script src="${ pageContext.request.contextPath }/resources/js/demo.js"></script>
+    <script src="${ pageContext.request.contextPath }/resources/js/graph.js"></script>  
  </body>
 </html>
