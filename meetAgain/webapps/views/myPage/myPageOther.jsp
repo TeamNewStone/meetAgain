@@ -203,9 +203,9 @@
 	          <div class="col-4"><button type="reset" class="btn btn-outline-primary btn-pill" style="margin-left: 13px;" id="Btn">초기화</button></div>          
 	          <div class="col-4"><button type="button" class="btn btn-outline-primary btn-pill" id="Btn">수정완료</button></div>
 	          </div>
-	          <button onclick="location.href='test_groupMap.jsp'">테스트이동</button>
 	          
 	         </form>
+	          <button onclick="location.href='test_groupMap.jsp'">테스트이동</button>
 	         
          </div>
          
