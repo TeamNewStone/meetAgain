@@ -23,7 +23,7 @@
 	<div class="row"></div>
 	<div class="row">
 		<img src="../../resources/img/mamekim.jpg"
-			style="width: 40%; display: block; margin: 0px auto;">
+			style="width: 450px;display: block;margin: 0px auto;height: 550px;">
 	</div>
 	<div class="card-body">
 		<div class="row">
@@ -72,7 +72,7 @@
 						</div>
 					</div>
 					<div class="row" style="margin-top: 10px;">
-						<div class="col-md-6 text-center">단기/장기</div>
+						<div class="col-md-6 text-center" style="margin-top: 10px;">단기/장기</div>
 						<div class="dropdown">
 							<button class="btn btn-secondary dropdown-toggle " type="button"
 								id="dropdownMenuButton" data-toggle="dropdown"
@@ -85,7 +85,7 @@
 						</div>
 					</div>
 					<div class="row" style="margin-top: 10px;">
-						<div class="col-md-6 text-center">회비 여부</div>
+						<div class="col-md-6 text-center" style="margin-top: 5px;">회비 여부</div>
 						<div class="col-md-6" style="padding-left: 0px;">
 							<input type="checkbox" name="joinFee" value="fee" checked /> 금액
 							: <input type="text" name="" value="" style="width: 78px;" />
@@ -94,7 +94,7 @@
 					<div class="row" style="margin-top: 10px;">
 						<div class="col-md-6 text-center">인원 수</div>
 						<div class="col-md-6" style="padding-left: 50px;">
-							<select class="headCount">
+							<select class="headCount" style="width: 49px;">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -111,13 +111,13 @@
 				</div>
 			</div>
 		</div>
-		<br> <br>
+		<br>
 		<div class="form-group ">
 			<div class="rows">
 				<div class="row">
 					<div class="custom-control custom-radio col-4"></div>
 					<div class="custom-control custom-radio col-1">
-						<input type="radio" id="whatever" name="gender"
+						<input type="radio" id="whatever" name="customRadio2"
 							class="custom-control-input" checked> <label
 							class="custom-control-label" for="whatever">성별 무관</label>
 					</div>
