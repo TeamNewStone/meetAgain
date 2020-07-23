@@ -89,9 +89,10 @@
 				            var detailAddr = !!result[0].road_address ? '<div>도로명주소 : ' + result[0].road_address.address_name + '</div>' : '';
 				            detailAddr += '<div>지번 주소 : ' + result[0].address.address_name + '</div>';
 				            
-				            var content = '<div class="bAddr">' +
-				                            '<span class="title">선택하신 위치</span>' + 
+				            var content = '<div class="bAddr" style="width: 350px; height: 130px;">' +
+				                            '<span class="title">선택하신 위치</span><br>' + 
 				                            detailAddr + 
+				                            '<button type="button" class="btn btn-info" onclick="findRoad();">출발지</button>' + 
 				                        '</div>';
 
 				            // 마커를 클릭한 위치에 표시합니다 
