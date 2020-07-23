@@ -14,6 +14,7 @@
 		<hr />
 		<div id="clickLatlng"></div>
 		
+			<hr>
 			<p>
 				<input type="checkbox" id="chkUseDistrict" onclick="setOverlayMapTypeId()" /> 지적편집도 정보 보기
 				<input type="checkbox" id="chkTerrain" onclick="setOverlayMapTypeId()" /> 지형정보 보기 
@@ -23,7 +24,7 @@
 				<input type="checkbox" id="chkBicycle" onclick="setOverlayMapTypeId()" /> 자전거도로 정보 보기
 			</p>
 			<!-- 카카오맵 API  -->
-			<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cdb0daf359d098be072ce9f3ea29cdf8"></script>
+			<!-- <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cdb0daf359d098be072ce9f3ea29cdf8"></script> -->
 				<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cdb0daf359d098be072ce9f3ea29cdf8&libraries=services,clusterer,drawing"></script>
 	
 			<script>
@@ -37,20 +38,20 @@
 	
 				// 지도를 생성한다 
 				var map = new kakao.maps.Map(mapContainer, mapOption);
-	
+				var geocoder = new kakao.maps.services.Geocoder();
+				infowindow = new kakao.maps.InfoWindow({zindex:1}); // 클릭한 위치에 대한 주소를 표시할 인포윈도우입니다
 				// 지도 타입 변경 컨트롤을 생성한다
 				var mapTypeControl = new kakao.maps.MapTypeControl();
 	
 				// 지도의 상단 우측에 지도 타입 변경 컨트롤을 추가한다
 				map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
-	
+
 				// 지도에 확대 축소 컨트롤을 생성한다
 				var zoomControl = new kakao.maps.ZoomControl();
 	
 				// 지도의 우측에 확대 축소 컨트롤을 추가한다
 				map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 				
-
 				// 마커
 				
 				// 지도를 클릭한 위치에 표출할 마커입니다
@@ -71,14 +72,61 @@
 				    // 마커 위치를 클릭한 위치로 옮깁니다
 				    marker.setPosition(latlng);
 				    
-				    var message = '클릭한 위치의 위도는 ' + latlng.getLat() + ' 이고, <br>';
-				    message += '경도는 ' + latlng.getLng() + ' 입니다';
+				    // 위도경도
+				    var message1 = '클릭한 정확한 위치의 위도는 ' + latlng.getLat() + ' 이고, <br>';
+				    message1 += '경도는 ' + latlng.getLng() + ' 입니다.';
 				    
-				    var resultDiv = document.getElementById('clickLatlng'); 
-				    resultDiv.innerHTML = message;
+				    var resultDiv1 = document.getElementById('clickLatlng');
+				    resultDiv1.innerHTML = message1;
 				    
+				    
+				    // 마커 주소 전달
+				    
+				    // 미등록된 도로명주소는 무시됨
+				    
+				    searchDetailAddrFromCoords(latlng, function(result, status) {
+				        if (status === kakao.maps.services.Status.OK) {
+				            var detailAddr = !!result[0].road_address ? '<div>도로명주소 : ' + result[0].road_address.address_name + '</div>' : '';
+				            detailAddr += '<div>지번 주소 : ' + result[0].address.address_name + '</div>';
+				            
+				            var content = '<div class="bAddr">' +
+				                            '<span class="title">선택하신 위치</span>' + 
+				                            detailAddr + 
+				                        '</div>';
+
+				            // 마커를 클릭한 위치에 표시합니다 
+				            marker.setPosition(latlng);
+				            marker.setMap(map);
+
+				            // 인포윈도우에 클릭한 위치에 대한 법정동 상세 주소정보를 표시합니다
+				            infowindow.setContent(content);
+				            infowindow.open(map, marker);
+				            
+				            var message2 = '<br>선택하신 장소는 <br>도로명 : ' + result[0].road_address.address_name + '<br>지번 : ' + result[0].address.address_name + '<hr>법정동 기준 : '+ detailAddr;
+						    						    
+						    var resultDiv2 = document.getElementById('_mapMakerCheck'); 
+						    resultDiv2.innerHTML = message2;
+						    	    
+						    
+						    var message3 = '도로명주소 : ' + result[0].road_address.address_name + '<br>지번주소 : ' + result[0].address.address_name;
+						    
+						    var resultDiv3 = document.getElementById('_mapAddr'); 
+						    resultDiv3.innerHTML = message3;
+						    
+						    
+				            //var message3 = latlng.getLat() + '<br>' + latlng.getLng();
+				            
+						   /*  var resultDiv3 = document.getElementById('_mapAddr');
+						    resultDiv3.innerHTML = message3; */
+				        }   
+				    });
 				});
 				
+				function searchDetailAddrFromCoords(coords, callback) {
+				    // 좌표로 법정동 상세 주소 정보를 요청합니다
+				    geocoder.coord2Address(coords.getLng(), coords.getLat(), callback);
+				}
+
 				
 			</script>
 	
@@ -187,26 +235,27 @@
 
 	<div id="infoArea" style="width: 50%; float: left;">
 		<div id="areaName" style="display: flex; align-items: center;">
-			<div style="float: left;">
+			<!-- <div style="float: left;">
 				<svg width="3em" height="3em" viewBox="0 0 16 16"
 					class="bi bi-geo-alt" fill="currentColor"
 					xmlns="http://www.w3.org/2000/svg">
 		  <path fill-rule="evenodd"
 						d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
 		</svg>
-			</div>
+			</div> -->
 			<div style="float: left;">
-				<h3>호산빌딩 모임장소 이름</h3>
-				<h3> ← 지도 마우스 클릭 테스트 </h3>
+				<i class="fa fa-map-marker fa-3x" aria-hidden="true"></i><p><h3>[모임장소위치]</h3></p>
+				<h6><span id="_mapMakerCheck">기본-호산빌딩</span></h6>
+				<!-- <h3> ← 지도 마우스 클릭 테스트 </h3> -->
 			</div>
 		</div>
 
 		<div>
 			<br />
-			<h5>주소가 들어갈 공간입니다.</h5>
-			<h5>도로명 주소가 들어갈 공간입니다</h5>
-			<br />
-			<h5>전화번호가 들어갈 공간입니다.</h5>
+			<hr />
+			<!-- <h5><span id="_mapAddr">주소 : </span></h5> -->
+			<!-- <h5><span id="_streetName">도로명 주소가 들어갈 공간입니다</span></h5> -->			
+			<h3><span id="_mapPhone">전화번호가 들어갈 공간입니다.</span></h3>
 			<br />
 			<div>
 				<button type="button" class="btn btn-info"	onclick="findRoad();">
