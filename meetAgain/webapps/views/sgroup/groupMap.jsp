@@ -103,16 +103,22 @@
 				            infowindow.setContent(content);
 				            infowindow.open(map, marker);
 				            
-				            var message2 = '<br>선택하신 장소는 <br>도로명 : ' + result[0].road_address.address_name + '<br>지번 : ' + result[0].address.address_name + '<hr>법정동 기준 : '+ detailAddr;
+				            // var message2 = '<br>선택하신 장소는 <br>도로명 : ' + result[0].road_address.address_name + '<br>지번 : ' + result[0].address.address_name;
+				            var message2 = '<br>선택하신 장소는' + '<br>' + detailAddr;
 						    						    
 						    var resultDiv2 = document.getElementById('_mapMakerCheck'); 
 						    resultDiv2.innerHTML = message2;
+						    
+						    /* var message3 = '<hr>법정동 기준 : '+ detailAddr;
+						    
+						    var resultDiv3 = document.getElementById('_mapMakerCheck'); 
+						    resultDiv3.innerHTML = message3; */
 						    	    
 						    
-						    var message3 = '도로명주소 : ' + result[0].road_address.address_name + '<br>지번주소 : ' + result[0].address.address_name;
+						    /* var message3 = '도로명주소 : ' + result[0].road_address.address_name + '<br>지번주소 : ' + result[0].address.address_name;
 						    
 						    var resultDiv3 = document.getElementById('_mapAddr'); 
-						    resultDiv3.innerHTML = message3;
+						    resultDiv3.innerHTML = message3; */
 						    
 						    
 				            //var message3 = latlng.getLat() + '<br>' + latlng.getLng();
@@ -245,7 +251,7 @@
 		</svg>
 			</div> -->
 			<div style="float: left;">
-				<i class="fa fa-map-marker fa-3x" aria-hidden="true"></i><p><h3>[모임장소위치]</h3></p>
+				<p><i class="fa fa-map-marker fa-3x" aria-hidden="true"></i><h3>[모임장소위치]</h3><p>
 				<h6><span id="_mapMakerCheck">기본-호산빌딩</span></h6>
 				<!-- <h3> ← 지도 마우스 클릭 테스트 </h3> -->
 			</div>
@@ -262,7 +268,7 @@
 				<button type="button" class="btn btn-info"	onclick="findRoad();">
 					&nbsp;&nbsp;&nbsp;길찾기&nbsp;&nbsp;&nbsp;</button>
 				<!-- <button type="button" class="btn btn-light">&nbsp;&nbsp;장소변경&nbsp;&nbsp;</button> -->
-				<button type="reset" class="btn btn-light">&nbsp;&nbsp;장소변경&nbsp;&nbsp;</button>
+				<button type="button" class="btn btn-light" id="reloadmap">&nbsp;&nbsp;장소변경&nbsp;&nbsp;</button>
 			</div>
 		</div>
 
@@ -271,11 +277,21 @@
 </div>
 
 <script>
-function findRoad(){
-	var url = 'https://map.kakao.com/link/to/카카오판교오피스,37.402056,127.108212';
-	window.open(url, '_blank');
-}
-
+	function findRoad(){
+		var url = 'https://map.kakao.com/link/to/카카오판교오피스,37.402056,127.108212';
+		window.open(url, '_blank');
+	}
+	
+	/* ${'#_mapMakerCheck'}on.('click', function() {
+		var mappy = ${'#_mapMakerCheck'}.val();
+		
+		if(mappy == 'message2'){
+			location.reload();
+		}
+	}); */
+	$('#reloadmap').click(function() {
+		location.reload();		
+	});	
 </script>
 <c:import url="/views/common/footer.jsp" />
 
