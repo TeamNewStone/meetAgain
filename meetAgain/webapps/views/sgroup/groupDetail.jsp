@@ -106,8 +106,8 @@
 
 					</tr>
 					<tr>
-						<td><h5>평균나이</h5></td>
-						<td colspan="2"><label>21.4</label>세</td>
+						<td><h5>평균연령</h5></td>
+						<td colspan="2"><label>20</label>대(그래프로 대체)</td>
 					</tr>
 					<tr>
 						<td><h5>성비</h5></td>
