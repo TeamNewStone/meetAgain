@@ -12,11 +12,13 @@
 		<ul class="footer-menu list-unstyled d-flex flex-row text-center text-md-left">
 			<li><a href="/meetAgain/views/board/notice.jsp">공지사항</a></li>
 			<li><a href="/meetAgain/views/serviceCenter/faq.jsp">고객센터</a></li>
+			<li><a href="${ pageContext.request.contextPath }/views/board/notice.jsp">공지사항</a></li>
+			<li><a href="${ pageContext.request.contextPath }/views/board/faq.jsp">자주묻는 질문</a></li>
 		</ul>
 		<br />
 		<ul class="footer-menu list-unstyled d-flex flex-row text-center text-md-left">
-			<li><a href="https://bootstrapbay.com/blog/">마이페이지</a></li>
-			<li><a href="/meetAgain/views/board/review.jsp">리뷰</a></li>
+			<li><a href="${ pageContext.request.contextPath }/views/myPage/myPage1.jsp">마이페이지</a></li>
+			<li><a href="${ pageContext.request.contextPath }/views/board/review.jsp">리뷰</a></li>
 		</ul>
 		
 	</div>
